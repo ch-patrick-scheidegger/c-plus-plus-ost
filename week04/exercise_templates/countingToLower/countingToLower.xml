@@ -1,0 +1,34 @@
+<testsuites>
+	<testsuite name="AllTests" tests="6">
+		<testcase classname="AllTests" name="lowerFirstCharacter">
+			<failure message="../src/Test.cpp:12 lowerFirstCharacter: 1 == countingToLower(str) expected:	1	but was:	42	">
+lowerFirstCharacter: 1 == countingToLower(str) expected:	1	but was:	42	
+			</failure>
+		</testcase>
+		<testcase classname="AllTests" name="lowerSeveralCharacters">
+			<failure message="../src/Test.cpp:18 lowerSeveralCharacters: 4 == countingToLower(str) expected:	4	but was:	42	">
+lowerSeveralCharacters: 4 == countingToLower(str) expected:	4	but was:	42	
+			</failure>
+		</testcase>
+		<testcase classname="AllTests" name="lowerNone">
+			<failure message="../src/Test.cpp:24 lowerNone: 0 == countingToLower(str) expected:	0	but was:	42	">
+lowerNone: 0 == countingToLower(str) expected:	0	but was:	42	
+			</failure>
+		</testcase>
+		<testcase classname="AllTests" name="lowerAll">
+			<failure message="../src/Test.cpp:30 lowerAll: 3 == countingToLower(str) expected:	3	but was:	42	">
+lowerAll: 3 == countingToLower(str) expected:	3	but was:	42	
+			</failure>
+		</testcase>
+		<testcase classname="AllTests" name="lowerEmpty">
+			<failure message="../src/Test.cpp:36 lowerEmpty: 0 == countingToLower(str) expected:	0	but was:	42	">
+lowerEmpty: 0 == countingToLower(str) expected:	0	but was:	42	
+			</failure>
+		</testcase>
+		<testcase classname="AllTests" name="umlautsAreNotChanged">
+			<failure message="../src/Test.cpp:42 umlautsAreNotChanged: 0 == countingToLower(str) expected:	0	but was:	42	">
+umlautsAreNotChanged: 0 == countingToLower(str) expected:	0	but was:	42	
+			</failure>
+		</testcase>
+	</testsuite>
+</testsuites>
