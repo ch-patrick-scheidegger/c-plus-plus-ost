@@ -53,20 +53,7 @@ int main(int argc, char **argv) {
 ## 1 _Testat-Exercise 1_: Calculator with Retro Style Output
 **Hand in time is Monday Oct 21 2019, 12:00 (noon) (CEST)**
 
-**Hand in all your source files attached to a single email to thomas.corbat@hsr.ch, peter.sommerlad@hsr.ch . NO ZIP, NO object files, NO eclipse project.**
-*  Subject: **[C++-testat-1] hsrname1 hsrname2 hsrname3**
-  *  replace hsrname1, hsrname2 and hsrname3 with the HSR ids of the students in the team
-
-  *  Example
-    *  Subject: [C++-testat-1] m1huber fmorgner
-    *  To: thomas.corbat@hsr.ch, peter.sommerlad@hsr.ch
-
-*  Team size **2-3 students**! (please team up accordingly)
-  *  (almost) identical hand ins from different teams will be considered cheating!
-*  Your list of files should be the following: **Test.cpp, main.cpp, calc.h, calc.cpp, sevensegment.h, sevensegment.cpp, pocketcalculator.h, pocketcalculator.cpp**
-*  the files calc.h calc.cpp sevensegment.h sevensegment.cpp should be those from the last weeks' exercises or newer versions of them.
-*  Test.cpp combines all test functions you created for calc(), seven segment functions, and the new tests for the integrated pocketcalculator.
-
+Hand in you solution via MS Teams using the assignment **Testat 1**.
 
 Use the functions implemented in the previous weeks to create a simple pocket calculator simulation. Allow the user to enter a calculation using two integers and an infix operator symbol. This input should stand on a single line and the result of the calculation should be displayed in a large way using your seven segment display simulation from last week. In this exercise the display width should be limited to a maximum number of eight digits (<=8) including a large minus sign for negative numbers. This limitation should be implemented in the pocket calculator, not the seven segment functionality itself. For the underlying calculation use your function **`calc()`**. Read the input line by line (`std::getline()`) and interpret each line as a calculation (operand operator operand). Expected signature: `void pocketcalculator(std::istream &, std::ostream&)`
 
