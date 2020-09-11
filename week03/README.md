@@ -45,7 +45,7 @@ Provide unit tests for the output of that number. An example output for the digi
 For the "production code" of `printLargeDigit` and `printLargeNumber`, create a separate library project with a header declaring the function(s) and an implementation file for their implementation. Note that you should minimize dependencies to other files, even the standard library, in header files. 
 
 Tips: 
-*  use a `std::vector<std::vector<std::string>>` and initialize it with the 5 lines representing each digit, e.g., use `" - ", "| |"` for the first two rows of digit zero. The "outer" vector contains 10 digits and the inner vector the representation of each digit (the five lines).
+*  use a `std::array<std::array<std::string, 5>, 10>` and initialize it with the 5 lines representing each digit, e.g., use `" - ", "| |"` for the first two rows of digit zero. The "outer" vector contains 10 digits and the inner vector the representation of each digit (the five lines).
 *  Can you minimize the use of hand-written loops? Note: `printLargeDigit` can be solved without custom loops.
 *  Show your solution as early as possible to your supervisor for feedback. 
 *  Work in small teams (up to 3) to speed up your programming time and increase your result quality.
