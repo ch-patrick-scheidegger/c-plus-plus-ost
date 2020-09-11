@@ -2,6 +2,7 @@
 
 This repository contains all materials for the C++ (CPl) modules at OST.
 We use the `TS-CPl-HS20` channel on the OST MS Teams instance.
+Lectures will be available on [Switch Tube](https://tube.switch.ch/channels/889a82a4).
 
 ## Goal
 
