@@ -28,22 +28,22 @@ While it is possible to use other IDEs, only Cevelop is:
 
 ## Lecture Plan and Resources (TBA)
 
-| Week | Lecture       | Plan | Exercise                                                                                | Topics                                                 | Remarks        |
-|------|---------------|------|-----------------------------------------------------------------------------------------|--------------------------------------------------------|----------------|
-| 38   | [L01](week01) | COT  | [E01](week01/README.md) ([PDF](/../-/jobs/artifacts/master/file/week01.pdf?job=week01)) | Introduction                                           |                |
-| 39   | [L02](week02) | COT  | [E02](week02/README.md) ([PDF](/../-/jobs/artifacts/master/file/week02.pdf?job=week02)) | Values                                                 |                |
-| 40   | [L03](week03) | COT  | [E03](week03/README.md) ([PDF](/../-/jobs/artifacts/master/file/week03.pdf?job=week03)) | Sequences and Iterators                                |                |
-| 41   | [L04](week04) | COT  | [E04](week04/README.md) ([PDF](/../-/jobs/artifacts/master/file/week04.pdf?job=week04)) | Functions and Exceptions                               | **Testat 1**   |
-| 42   | [L05](week05) | COT  | [E05](week05/README.md) ([PDF](/../-/jobs/artifacts/master/file/week05.pdf?job=week05)) | Classes and Operator Overloading                       |                |
-| 43   | [L06](week06) | COT  | [E06](week06/README.md) ([PDF](/../-/jobs/artifacts/master/file/week06.pdf?job=week06)) | Namespaces, Arithmetic Overloading, Enums              |                |
-| 44   | [L07](week07) | COT  | [E07](week07/README.md) ([PDF](/../-/jobs/artifacts/master/file/week07.pdf?job=week07)) | Standard Containers                                    |                |
-| 45   | [L08](week08) | MOF  | [E08](week08/README.md) ([PDF](/../-/jobs/artifacts/master/file/week08.pdf?job=week08)) | Algorithms                                             | **Testat 2**   |
-| 46   | [L09](week09) | MOF  | [E09](week09/README.md) ([PDF](/../-/jobs/artifacts/master/file/week09.pdf?job=week09)) | Function Templates                                     |                |
-| 47   | [L10](week10) | MOF  | [E10](week10/README.md) ([PDF](/../-/jobs/artifacts/master/file/week10.pdf?job=week10)) | Class Templates(1)                                     |                |
-| 48   | [L11](week11) | MOF  | [E11](week11/README.md) ([PDF](/../-/jobs/artifacts/master/file/week11.pdf?job=week11)) | Class Templates(2)                                     | **Testat 3**   |
-| 49   | [L12](week12) | MOF  | [E12](week12/README.md) ([PDF](/../-/jobs/artifacts/master/file/week12.pdf?job=week12)) | Heap Memory, Smart Pointers                            |                |
-| 50   | [L13](week13) | MOF  | [E13](week13/README.md) ([PDF](/../-/jobs/artifacts/master/file/week13.pdf?job=week13)) | Dynamic Polymorphism, Variant                          |                |
-| 51   | [L14](week14) | MOF  | [E14](week14/README.md) ([PDF](/../-/jobs/artifacts/master/file/week14.pdf?job=week14)) | TBD                                                    |                |
+| Week | Lecture                                                           | Plan | Exercise                                                                                | Topics                                                 | Remarks        |
+|------|-------------------------------------------------------------------|------|-----------------------------------------------------------------------------------------|--------------------------------------------------------|----------------|
+| 38   | [Slides](week01), [Video](https://tube.switch.ch/videos/41b34752) | COT  | [E01](week01/README.md) ([PDF](/../-/jobs/artifacts/master/file/week01.pdf?job=week01)) | Introduction                                           |                |
+| 39   | [Slides](week02), [Video](https://tube.switch.ch/videos/af786ac1) | COT  | [E02](week02/README.md) ([PDF](/../-/jobs/artifacts/master/file/week02.pdf?job=week02)) | Values                                                 |                |
+| 40   | [Slides](week03), [Video](https://tube.switch.ch/videos/0216adb3) | COT  | [E03](week03/README.md) ([PDF](/../-/jobs/artifacts/master/file/week03.pdf?job=week03)) | Sequences and Iterators                                |                |
+| 41   | [Slides](week04), [Video](https://tube.switch.ch/videos/ffb06a12) | COT  | [E04](week04/README.md) ([PDF](/../-/jobs/artifacts/master/file/week04.pdf?job=week04)) | Functions and Exceptions                               | **Testat 1**   |
+| 42   | [Slides](week05), [Video](https://tube.switch.ch/videos/3f9e7d90) | COT  | [E05](week05/README.md) ([PDF](/../-/jobs/artifacts/master/file/week05.pdf?job=week05)) | Classes and Operator Overloading                       |                |
+| 43   | [Slides](week06), [Video](https://tube.switch.ch/videos/cb762743) | COT  | [E06](week06/README.md) ([PDF](/../-/jobs/artifacts/master/file/week06.pdf?job=week06)) | Namespaces, Arithmetic Overloading, Enums              |                |
+| 44   | [Slides](week07), [Video](https://tube.switch.ch/videos/a00095cb) | COT  | [E07](week07/README.md) ([PDF](/../-/jobs/artifacts/master/file/week07.pdf?job=week07)) | Standard Containers                                    |                |
+| 45   | [Slides](week08)                                                  | MOF  | [E08](week08/README.md) ([PDF](/../-/jobs/artifacts/master/file/week08.pdf?job=week08)) | Algorithms                                             | **Testat 2**   |
+| 46   | [Slides](week09)                                                  | MOF  | [E09](week09/README.md) ([PDF](/../-/jobs/artifacts/master/file/week09.pdf?job=week09)) | Function Templates                                     |                |
+| 47   | [Slides](week10)                                                  | MOF  | [E10](week10/README.md) ([PDF](/../-/jobs/artifacts/master/file/week10.pdf?job=week10)) | Class Templates(1)                                     |                |
+| 48   | [Slides](week11)                                                  | MOF  | [E11](week11/README.md) ([PDF](/../-/jobs/artifacts/master/file/week11.pdf?job=week11)) | Class Templates(2)                                     | **Testat 3**   |
+| 49   | [Slides](week12)                                                  | MOF  | [E12](week12/README.md) ([PDF](/../-/jobs/artifacts/master/file/week12.pdf?job=week12)) | Heap Memory, Smart Pointers                            |                |
+| 50   | [Slides](week13)                                                  | MOF  | [E13](week13/README.md) ([PDF](/../-/jobs/artifacts/master/file/week13.pdf?job=week13)) | Dynamic Polymorphism, Variant                          |                |
+| 51   | [Slides](week14)                                                  | MOF  | [E14](week14/README.md) ([PDF](/../-/jobs/artifacts/master/file/week14.pdf?job=week14)) | TBD                                                    |                |
 
 ### Useful Links
 
