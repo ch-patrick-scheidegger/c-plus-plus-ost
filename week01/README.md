@@ -14,7 +14,7 @@ Of course you can also install Cevelop in a virtual machine environment if you p
 
 ### Ctylechecker & Constificator
 
-We have implemented plug-ins for Cevelop that check your code for various glitches, e.g. missing includes of standard headers and constness of your code. They focus on various issues we usually also criticize in testat exercises. You should install this plug-ins into your Cevelop.
+We have implemented plug-ins for Cevelop that check your code for various glitches, e.g. missing includes of standard headers and constness of your code. They focus on various issues we usually also criticize in testat exercises. The plug-ins are shipped with the current release of Cevelop (>=1.14.1). If you don't have them yet, you can install them separately:
 
 In the IDE:
 
