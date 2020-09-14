@@ -9,7 +9,7 @@ Read the program and try to figure out what it does. The following topics occur 
 *  Namespaces (Not yet covered)
 *  Lambdas (Week 4)
 
-```
+```c++
 #include <iostream>
 #include <algorithm>
 #include <iterator>
@@ -97,18 +97,16 @@ If the format is wrong or the calculation is invalid, display "Error". You can d
 
 Our platform for automated testat checking (ALF) will expect you to provide the following files:
 
-```
-calc.h
-calc.cpp
-sevensegment.h
-sevensegment.cpp
-pocketcalculator.h
-pocketcalculator.cpp
-```
+* calc.h
+* calc.cpp
+* sevensegment.h
+* sevensegment.cpp
+* pocketcalculator.h
+* pocketcalculator.cpp
 
 Which provide functions with the following signatures:
 
-```cpp
+```c++
 //From calc.h/.cpp
 int calc(int, int, char);
 int calc(std::istream &);
@@ -143,7 +141,7 @@ Implement a function **countingToLower** that makes the following test cases pas
   *  Note, it can be auto-generated from the test cases via CTRL-1 quick fix, but first try to make your own guess.
 *  Is the resulting design and interface of the function countingToLower a good design? Why is it not good? If so, how could it be improved?
 
-```
+```c++
 #include "cute.h"
 #include "ide_listener.h"
 #include "xml_listener.h"
@@ -243,7 +241,7 @@ In most cases you do not need to care about these details, because the linker wi
 ### Experiment: Timing Parameter Passing Variation 
 The following code frame uses a function that creates a large vector and pass this large vector 100 times by value, effectively copying it to a function. To avoid having an optimizer optimize it away the function itself returns a random element from the given vector.
 
-```
+```c++
 #include <vector>
 #include <string>
 #include <iostream>
