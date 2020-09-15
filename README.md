@@ -1,4 +1,4 @@
-# Module: C++
+# Module: C++ in HS20
 
 This repository contains all materials for the C++ (CPl) modules at OST.
 We use the `TS-CPl-HS20` channel on the OST MS Teams instance.
