@@ -53,6 +53,8 @@ Create a C++ project (Hello World Executable Project) in Cevelop, compile and ru
     - Running the project will build it if necessary.
     - Subsequent launches of the executable are accessible through the `Run` button in the tool bar.
 
+![Project Structure Eclipse Hello World](images/0_project_structure_eclipse_hw.png)
+
 ### Hello World with separate Compilation Unit
 
   - Create a single C++ project with [Header](week01/exercise_templates/sayhello.h), [Implementation](week01/exercise_templates/sayhello.cpp) and [Main Program](week01/exercise_templates/mainsayhello.cpp)
@@ -67,6 +69,9 @@ Create a C++ project (Hello World Executable Project) in Cevelop, compile and ru
     - Since `sayHello()` is a function, you can call it from itself (`sayhello.cpp`). What happens if you call it after the output statement? What happens if you call it in front of the output statement? Why does this happen?
       -  On Linux or Mac you should limit the stack size using `ulimit -s 32` before you run your change program or better run it in a debugger
     - Experiment with the code by applying small modifications to prevent the compilation from succeeding. See what happens in Cevelop and when you try to build your project. Try to understand the error messages.
+
+
+![Project Structure Hello World with Separate Compilation Unit](images/1_project_structure_separate_compilation_unit.png)
 
 ### Hello World Library Project and Unit Test
 
@@ -84,6 +89,9 @@ Create a C++ project (Hello World Executable Project) in Cevelop, compile and ru
     - If unsure how to use it, try to access the documentation of CUTE test plug-in. Where is it?
   - Why don't you violate the One-Definition-Rule with the second `main()` function in the library?
 
+
+![Project Structure Hello World with Separate Library](images/2_project_structure_separate_library.png)
+
 ### Hello World Class
 
   - Read chapter *0.6 A First Class* of the [Lucid C++ Book](https://gitlab.dev.ifs.hsr.ch/psommerl/cpp-module/wikis/Lucid-C---Book) material first.
@@ -96,6 +104,9 @@ Breaking the code:
   - Remove the include guard and add another `#include` for the file `Hello.h` containing the class `Hello`. Do you expect an error? Do you get one? Why?
   - What happens when you compile `Hello.cpp` without the implementation file containing the definition of `sayHello()`? Can you explain the error message?
 
+
+![Project Structure Hello World Class](images/3_project_structure_hello_class_test.png)
+
 ### Main for Hello World Class
 
 Create a separate empty exexutable C++ project (`HelloMain`) that depends on your library class `Hello`. Add a C++ source file to that new project (`helloclassmain.cpp`) and use your `Hello` class there (descriped in chapter 0.6 of the book, it corresponds to `hello3.cpp`). To be able to compile that file using the library, you need to set in the `project's properties->C++ General->Paths and Symbols` on the following tabs the corresponding entries (The CUTE Library Project wizard will do that for you):
@@ -105,6 +116,9 @@ Create a separate empty exexutable C++ project (`HelloMain`) that depends on you
   - Library Paths: add `/Hello/Debug` as a workspace path
   - Referencs: tick the Hello project as referenced project (Active configuration) 
   - See: [Adding a Library Dependency](https://gitlab.dev.ifs.hsr.ch/psommerl/cpp-module/wikis/Adding-a-Library-Dependency)
+
+
+![Project Structure Hello World Class Main](images/4_project_structure_hello_class_main.png)
 
 
 ### Common Problems
