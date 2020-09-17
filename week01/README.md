@@ -62,6 +62,10 @@ Create a C++ project (Hello World Executable Project) in Cevelop, compile and ru
     - Read the output in the build console and understand the executed commands. You should be familiar with similar compiler calls from the Bsys module.
   - Breaking the code:
     - What happens, when you remove the `#include` preprocessor directives from either the main program or the sayhello source file?
+    - Remove the declaration  from `main()`. The declaration of `sayHello()` is located in the header file, i.e. you remove the declaration of the function if you delete the `#include`.
+    - Remove the include guard from the header file `sayhello.h` and include the file twice in the corresponding main program `mainsayhello.cpp`. Do you expect an error? Do you get one? Why?
+    - Since `sayHello()` is a function, you can call it from itself (`sayhello.cpp`). What happens if you call it after the output statement? What happens if you call it in front of the output statement? Why does this happen?
+      -  On Linux or Mac you should limit the stack size using `ulimit -s 32` before you run your change program or better run it in a debugger
     - Experiment with the code by applying small modifications to prevent the compilation from succeeding. See what happens in Cevelop and when you try to build your project. Try to understand the error messages.
 
 ### Hello World Library Project and Unit Test
@@ -88,11 +92,13 @@ Create a C++ project (Hello World Executable Project) in Cevelop, compile and ru
   - Add the member function implementation to an implementation file `Hello.cpp`
   - Create a `CUTE Library Test Project` to actually test your class `Hello`.
 
-### Compiler Errors
+Breaking the code:
+  - Remove the include guard and add another `#include` for the file `Hello.h` containing the class `Hello`. Do you expect an error? Do you get one? Why?
+  - What happens when you compile `Hello.cpp` without the implementation file containing the definition of `sayHello()`? Can you explain the error message?
 
-Please try the following variations of the code given and observe if you get compile errors, or if you get interesting results from running the program.
+### Main for Hello World Class
 
-0. Create a separate empty C++ project that depends on your library class `Hello`. Add a C++ source file to that new project and use your `Hello` class there. To be able to compile that file using the library, you need to set in the `project's properties->C++ General->Paths and Symbols` on the following tabs the corresponding entries (The CUTE Library Project wizard will do that for you):
+Create a separate empty exexutable C++ project (`HelloMain`) that depends on your library class `Hello`. Add a C++ source file to that new project (`helloclassmain.cpp`) and use your `Hello` class there (descriped in chapter 0.6 of the book, it corresponds to `hello3.cpp`). To be able to compile that file using the library, you need to set in the `project's properties->C++ General->Paths and Symbols` on the following tabs the corresponding entries (The CUTE Library Project wizard will do that for you):
 
   - Includes: add to GNU C++ the project Hello as a workspace path
   - Libraries: add `Hello` as the library (-> file will be `libHello.a`)
@@ -100,13 +106,6 @@ Please try the following variations of the code given and observe if you get com
   - Referencs: tick the Hello project as referenced project (Active configuration) 
   - See: [Adding a Library Dependency](https://gitlab.dev.ifs.hsr.ch/psommerl/cpp-module/wikis/Adding-a-Library-Dependency)
 
-1. Remove the declaration of `sayHello()` from `main()`. The declaration is located in the header file, i.e. you have to remove the include of this header. What happens when you try to compile it?
-2. Remove the include guard from the header file `sayhello.h` and include the file twice in the corresponding main program `hello.cpp`. Do you expect an error? Do you get one? Why?
-3. Perform the same removal of the include guard and double inclusion with the file `Hello.h` containing the class `Hello`. Do you expect an error? Do you get one? Why?
-4. What happens when you compile `Hello.cpp` without the implementation file containing the definition of `sayHello()`? Can you explain the error message?
-5. Since `sayHello()` is a function, you can call it from itself (`sayhello.cpp`). What happens if you call it after the output statement? What happens if you call it in front of the output statement? Why does this happen?
-
-    -  On Linux or Mac you should limit the stack size using `ulimit -s 32` before you run your change program or better run it in a debugger
 
 ### Common Problems
 
