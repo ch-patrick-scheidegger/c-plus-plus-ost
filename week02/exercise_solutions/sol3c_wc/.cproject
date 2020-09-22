@@ -11,17 +11,7 @@
                 				
                 <extensions>
                     					
-                    <extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
-                    					
-                    <extension id="org.eclipse.cdt.core.MachO64" point="org.eclipse.cdt.core.BinaryParser"/>
-                    					
-                    <extension id="org.eclipse.cdt.core.Cygwin_PE" point="org.eclipse.cdt.core.BinaryParser"/>
-                    					
-                    <extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
-                    					
-                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    					
-                    <extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+                    <extension id="org.eclipse.cdt.core.PE64" point="org.eclipse.cdt.core.BinaryParser"/>
                     					
                     <extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
                     					
@@ -39,53 +29,51 @@
                     					
                     <folderInfo id="cdt.managedbuild.config.gnu.exe.debug.1703897558." name="/" resourcePath="">
                         						
-                        <toolChain id="cdt.managedbuild.toolchain.gnu.exe.debug.414309138" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.exe.debug">
+                        <toolChain id="cdt.managedbuild.toolchain.gnu.mingw.base.728520686" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.base">
                             							
-                            <targetPlatform binaryParser="org.eclipse.cdt.core.ELF;org.eclipse.cdt.core.MachO64;org.eclipse.cdt.core.Cygwin_PE;org.eclipse.cdt.core.PE" id="cdt.managedbuild.target.gnu.platform.exe.debug.280296182" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.exe.debug"/>
+                            <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.PE64" id="cdt.managedbuild.target.gnu.platform.mingw.base.964726456" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.mingw.base"/>
                             							
-                            <builder buildPath="${workspace_loc:/wc/Debug}" id="cdt.managedbuild.target.gnu.builder.exe.debug.2098879909" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.exe.debug"/>
+                            <builder buildPath="${workspace_loc:/sol3c_wc}/Debug" id="cdt.managedbuild.tool.gnu.builder.mingw.base.1300044678" name="CDT Internal Builder.Debug" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
                             							
-                            <tool id="cdt.managedbuild.tool.gnu.archiver.base.1151559708" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
-                            							
-                            <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1439631540" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug">
+                            <tool id="cdt.managedbuild.tool.gnu.assembler.mingw.base.62354123" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.base">
                                 								
-                                <option id="gnu.cpp.compiler.exe.debug.option.optimization.level.1979845706" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
-                                								
-                                <option id="gnu.cpp.compiler.exe.debug.option.debugging.level.823098748" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
-                                								
-                                <option id="gnu.cpp.compiler.option.dialect.std.1449032840" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.c++1y" valueType="enumerated"/>
-                                								
-                                <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1508872176" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                                <inputType id="cdt.managedbuild.tool.gnu.assembler.input.1410969535" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
                                 							
                             </tool>
                             							
-                            <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1132044742" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
+                            <tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.659708300" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base.2081530258" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base">
                                 								
-                                <option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.81439776" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+                                <option id="gnu.cpp.compiler.option.optimization.level.512489193" superClass="gnu.cpp.compiler.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
                                 								
-                                <option id="gnu.c.compiler.exe.debug.option.debugging.level.1926743190" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+                                <option defaultValue="gnu.cpp.compiler.debugging.level.max" id="gnu.cpp.compiler.option.debugging.level.931719418" superClass="gnu.cpp.compiler.option.debugging.level" valueType="enumerated"/>
                                 								
-                                <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.215235152" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                                <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.76598280" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                                 							
                             </tool>
                             							
-                            <tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.720429421" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug"/>
-                            							
-                            <tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.1190368491" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
+                            <tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.base.394395664" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.base">
                                 								
-                                <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.3853035" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+                                <option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.1797521520" superClass="gnu.c.compiler.option.optimization.level" valueType="enumerated"/>
+                                								
+                                <option defaultValue="gnu.c.debugging.level.max" id="gnu.c.compiler.option.debugging.level.780764527" superClass="gnu.c.compiler.option.debugging.level" valueType="enumerated"/>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.337528416" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.base.1511576421" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.base"/>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base.1776148934" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base">
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.589069016" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
                                     									
                                     <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
                                     									
                                     <additionalInput kind="additionalinput" paths="$(LIBS)"/>
                                     								
                                 </inputType>
-                                							
-                            </tool>
-                            							
-                            <tool id="cdt.managedbuild.tool.gnu.assembler.exe.debug.2122346479" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug">
-                                								
-                                <inputType id="cdt.managedbuild.tool.gnu.assembler.input.1459617365" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
                                 							
                             </tool>
                             						
