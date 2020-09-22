@@ -238,11 +238,7 @@ In this exercise you will...
   - experiment with invalid input in `std::istream`
 
 
-## a) Experiment: unspecified sequence
- 
-Modify the program `greeting.cpp` from the lecture material. Add a second string parameter to `sayGreeting()` and output it together with name. Call it with calling `inputName()` twice. What happens? Is the sequence of words the same as you entered it? Is the program safe to use? 
-
-## b) Experiment: output with conditional operator
+## a) Experiment: output with conditional operator
  
 What happens if the following piece of code gets compiled and executed as part of a main function? 
 
@@ -259,7 +255,7 @@ Can you explain your observation? Can you fix the code to get what one might exp
 
 **Hint:** [CPPReference](http://en.cppreference.com/w/cpp/language/operator_precedence) might help.
 
-## c) Questions/Experiments on input behavior
+## b) Questions/Experiments on input behavior
 
   - What happens if a user provides an invalid number to `std::cin >> anAnswer;`? Can the program continue to read further numbers?
   - How can you read a `std::string name` with the code `std::cin >> name;` if the name provided consists of several words? How can you read the rest of the input into the string variable?
