@@ -31,11 +31,18 @@ Create a function `printLargeNumber(int i, std::ostream &out)` that allows you t
   ||    |  |  || |  || |  || |
     -  -     -  -     -  -  - 
 ```
-This function should also be able to cope with negative numbers.
+This function should also be able to cope with negative numbers. For example `-12`:
+```
+       - 
+     |  |
+ -     - 
+     ||  
+       - 
+```
 
-*Note:* Stick with the representation above in order to check your solution against ALF, a tool for preliminary checks of the testat solution.
+**Note:** Stick with the representation above in order to check your solution against ALF, a tool for preliminary checks of the testat solution.
 
-To get used to the data structure containing the digits, first start with a function `printLargeDigit(int i, std::ostream &out)` to print such a single large digit given by a number. `printLargeDigit(int i, std::ostream &out)` will produce a simulated 7-segment-digit for the numbers 0,1,2,...,9 given as parameter `i`. 
+To get used to the data structure containing the digits, first start with a function `printLargeDigit(int i, std::ostream &out)` to print a single large digit given by a number. `printLargeDigit(int i, std::ostream &out)` will produce a simulated 7-segment-digit for the numbers 0, 1, 2,..., 9 given as parameter `i`. This function does not consider negative values or values above nine valid input.
 
 Provide unit tests for the output of that number. An example output for the digit 8 looks as follows:
 ```
