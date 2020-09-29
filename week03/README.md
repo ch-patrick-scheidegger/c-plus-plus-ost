@@ -31,9 +31,11 @@ Create a function `printLargeNumber(int i, std::ostream &out)` that allows you t
   ||    |  |  || |  || |  || |
     -  -     -  -     -  -  - 
 ```
+This function should also be able to cope with negative numbers.
+
 *Note:* Stick with the representation above in order to check your solution against ALF, a tool for preliminary checks of the testat solution.
 
-To achieve that goal, first start with a function `printLargeDigit(int i, std::ostream &out)` to print such a single large digit given by a number. `printLargeDigit(int i, std::ostream &out)` will produce a simulated 7-segment-digit for the numbers 0,1,2,...,9 given as parameter `i`. 
+To get used to the data structure containing the digits, first start with a function `printLargeDigit(int i, std::ostream &out)` to print such a single large digit given by a number. `printLargeDigit(int i, std::ostream &out)` will produce a simulated 7-segment-digit for the numbers 0,1,2,...,9 given as parameter `i`. 
 
 Provide unit tests for the output of that number. An example output for the digit 8 looks as follows:
 ```
@@ -67,8 +69,6 @@ void testPrintLargeDigitZero() {
                " - \n", output.str());
 }
 ```
-
-**Note for 2019:** State clearly that negative Numbers should be printed as well! Hand-in must include both: `printLargeDigit` and `printLargeNumber`.
 
 # 2. Counting again - without loops
 This week we repeat some of the exercises of last week. However, now you need to solve the task without writing a loop of your own, but by using iterators and algorithms of the standard library. One function you might need to know about is `std::distance()` that takes two iterators forming a range and returns the number of elements in that range. Using distance is convenient for counting all elements in a range.
