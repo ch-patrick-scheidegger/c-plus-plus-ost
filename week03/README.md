@@ -21,7 +21,9 @@ If your workspace accumulates too many projects and you loose the overview on wh
 
 # 1. Simulated 7-Segment Display for Numbers
 
-**This exercise will be part of the "Testat" hand in**.
+**This exercise will be part of the "Testat" hand in**. Please read and understand the whole task first, before you start.
+
+## Goal
 
 Create a function `printLargeNumber(int i, std::ostream &out)` that allows you to output a large number on a simulated 7-segment digits display. We will use that function later on for the Testat. For example, the number 1234567890 should be output as
 ```
@@ -42,6 +44,8 @@ This function should also be able to cope with negative numbers. For example `-1
 
 **Note:** Stick with the representation above in order to check your solution against ALF, a tool for preliminary checks of the testat solution.
 
+## First Step `printLargeDigit`
+
 To get used to the data structure containing the digits, first start with a function `printLargeDigit(int i, std::ostream &out)` to print a single large digit given by a number. `printLargeDigit(int i, std::ostream &out)` will produce a simulated 7-segment-digit for the numbers 0, 1, 2,..., 9 given as parameter `i`. This function does not consider negative values or values above nine valid input.
 
 Provide unit tests for the output of that number. An example output for the digit 8 looks as follows:
@@ -53,15 +57,19 @@ Provide unit tests for the output of that number. An example output for the digi
  - 
 ```
 
+## Create a Library (not required for hand-in)
+
 For the "production code" of `printLargeDigit` and `printLargeNumber`, create a separate library project with a header declaring the function(s) and an implementation file for their implementation. Note that you should minimize dependencies to other files, even the standard library, in header files. 
 
-Tips: 
+## Tips for your Implementation 
 *  use a `std::array<std::array<std::string, 5>, 10>` and initialize it with the 5 lines representing each digit, e.g., use `" - ", "| |"` for the first two rows of digit zero. The "outer" vector contains 10 digits and the inner vector the representation of each digit (the five lines).
 *  Can you minimize the use of hand-written loops? Note: `printLargeDigit` can be solved without custom loops.
 *  Show your solution as early as possible to your supervisor for feedback. 
 *  Work in small teams (up to 3) to speed up your programming time and increase your result quality.
 *  Getting this working together with appropriate unit tests is important, since you need the solution for your testat exercise next week.
 *  You won't be able to use `printLargeDigit` to implement `printLargeNumber`.
+
+## Testing
 
 For unit testing your functions you can rely on string splicing to have a nice representation of the expected result. String splicing combines (splices) adjacent string literals at compile-time to single string literal. Example test case:
 
