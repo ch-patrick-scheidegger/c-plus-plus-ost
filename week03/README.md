@@ -31,6 +31,8 @@ Create a function `printLargeNumber(int i, std::ostream &out)` that allows you t
   ||    |  |  || |  || |  || |
     -  -     -  -     -  -  - 
 ```
+*Note:* Stick with the representation above in order to check your solution against ALF, a tool for preliminary checks of the testat solution.
+
 To achieve that goal, first start with a function `printLargeDigit(int i, std::ostream &out)` to print such a single large digit given by a number. `printLargeDigit(int i, std::ostream &out)` will produce a simulated 7-segment-digit for the numbers 0,1,2,...,9 given as parameter `i`. 
 
 Provide unit tests for the output of that number. An example output for the digit 8 looks as follows:
