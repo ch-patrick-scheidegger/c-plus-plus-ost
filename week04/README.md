@@ -51,7 +51,7 @@ int main(int argc, char **argv) {
 **Note:** This example is artificial, some parts of it are not solved in the shortest possible way.
 
 ## 1 _Testat-Exercise 1_: Calculator with Retro Style Output
-**Hand in time is Monday Oct 21 2019, 12:00 (noon) (CEST)**
+**Hand in time is Monday Oct 19 2020, 11:30 (AM) (CEST)**
 
 Hand in you solution via MS Teams using the assignment **Testat 1**.
 
@@ -120,11 +120,11 @@ void printLargeError(std::ostream &out);
 void pocketcalculator(std::istream &in, std::ostream &out);
 ```
 
-The testat verification tool is still experimental. You can upload your testat to https://uploader.alf.infs.ch/ in order to get a first feedback. Your chances to get positive feedback are very high if all unit tests pass. As we need to know who uploads what you need an account on https://gitlab.dev.ifs.hsr.ch for this. Please note that external login (oauth) is not activated, but you can create an account with your HSR mail address.
+The testat verification tool is still experimental. You can upload your testat to https://uploader.alf.infs.ch/ in order to get a first feedback. Your chances to get positive feedback are very high if all unit tests pass. As we need to know who uploads what you need an account on https://gitlab.dev.ifs.hsr.ch for this. Please note that external login (oauth) is not activated, but you can create an account with your HSR/OST mail address.
 
 
 ## 2 Word List
-Write a program **wlist** that reads all words (as defined by std::string's input operator >>) from the standard input and produce a sorted list of all occurring words, where each word only is printed once. What data structure and algorithms are you using? Do not write your own loops nor use `std::for_each`.
+Write a program **wlist** that reads all words (as defined by `std::string`'s input operator `>>`) from the standard input and produce a sorted list of all occurring words, where each word only is printed once. What data structure and algorithms are you using? Do not write your own loops nor use `std::for_each`.
 
 *  Can you ignore the case of letters, so that `Hello == hello` ?
 
