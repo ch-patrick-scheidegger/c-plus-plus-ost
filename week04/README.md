@@ -122,6 +122,7 @@ void pocketcalculator(std::istream &in, std::ostream &out);
 
 The testat verification tool is still experimental. You can upload your testat to https://uploader.alf.infs.ch/ in order to get a first feedback. Your chances to get positive feedback are very high if all unit tests pass. As we need to know who uploads what you need an account on https://gitlab.dev.ifs.hsr.ch for this. Please note that external login (oauth) is not activated, but you can create an account with your HSR/OST mail address.
 
+*IMPORTANT:* ALF temporarily has a new home. Someone is working overtime to get him up and running again in his natural habitat, but meanwhile you have to look for him here: https://alf-uploader.sifs0005.infs.ch
 
 ## 2 Word List
 Write a program **wlist** that reads all words (as defined by `std::string`'s input operator `>>`) from the standard input and produce a sorted list of all occurring words, where each word only is printed once. What data structure and algorithms are you using? Do not write your own loops nor use `std::for_each`.
