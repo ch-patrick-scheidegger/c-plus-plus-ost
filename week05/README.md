@@ -60,14 +60,6 @@ Write a test that checks what happens at the end of the input with the input str
 Based on this class Word, implement the exercise **wlist** from last week ExW4 with this class. How does the program become simpler with your library class instead of using `std::string` (it should)?
 
 
-
-# Extra Exercises (Optional)
-## Class Design for Retro-Calculator
-
-Create classes for the different functional units of last weeks' exercises with 7-segment display and calculation. Can you implement the "accumulator" that keeps the displayed value around as first operand for further computations?
-
-Where does it make sense to combine functions as member functions into a class, and where not? Document your judgement in SolW5.
-
 # self study video
 
 Classes and Operators: https://skripte.hsr.ch/Informatik/Fachbereich/C++/CPl/Videos/5.%20classes%20and%20operators.mp4
