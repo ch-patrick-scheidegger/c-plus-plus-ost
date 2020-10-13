@@ -124,6 +124,9 @@ The testat verification tool is still experimental. You can upload your testat t
 
 *IMPORTANT:* ALF temporarily has a new home. Someone is working overtime to get him up and running again in his natural habitat, but meanwhile you have to look for him here: https://alf-uploader.sifs0005.infs.ch
 
+
+**Undefined References:** If you have structured your testat into multiple libraries (`calc`, `sevensegment` and `pocketcalculator`) and you want to use them all in an executable or CUTE test project, you have to be careful with the library dependencies. It might be possible that the libraries themselves can be compiled properly. However, external symbols of static libraries won't be linked until you use them to create an executable. Due to optimizations of the GCC linker the order of the specified libraries is important. The linker will get rid of the symbols contained in a library if there is no further symbol required from that library. Thus you have to specify the libraries with inbound and outbound dependencies first. I.e. `pocketcalculator` will probably be used by `main` and depend on the other two libs. Subsequently, `pocketcalculator` needs to be specified before `calc` and `sevensegment`. Otherwise, you might get `Undefined Reference` errors during the link process. You can reorder the library dependencies in Cevelop: `Project Properties (of the executable or test project) -> C/C++ General -> Paths and Symbols -> "Libraries" tab`. `pocketcalculator` needs to be on top (There are `Move up` and `Move down` buttons to adjust the order).
+
 ## 2 Word List
 Write a program **wlist** that reads all words (as defined by `std::string`'s input operator `>>`) from the standard input and produce a sorted list of all occurring words, where each word only is printed once. What data structure and algorithms are you using? Do not write your own loops nor use `std::for_each`.
 
