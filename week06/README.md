@@ -7,7 +7,7 @@ Chances are high that you haven't been able to solve all exercises from the prev
 
 The class `Date` from the lecture examples is confusing to use, because we specify day, month and year as numbers. Change the `Date` class from the template to use an `enum` type for month.
 
-* Provide overloads of `Date`'s constructors to allow writing `Date{1, Nov, 2012}` and `Date{Nov, 1, 2012}`? 
+* Is it possible to provide the overloads of `Date`'s constructors to allow writing `Date{1, Nov, 2012}` and `Date{Nov, 1, 2012}`? 
 * Implement a member function `dayOfWeek()` for your `Date` class that calculates if a given date is `Monday`, `Tuesday` etc. Define a corresponding `enum` type within the `Date` class.
   * Should this be an `enum class` or is an `enum` sufficient? 
 
