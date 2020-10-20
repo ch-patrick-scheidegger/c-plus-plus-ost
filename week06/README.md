@@ -46,30 +46,7 @@ Remove all operator implementations you can replace with Boost operators.
 * Apply Boost operators to your `Field5`
  
 
-# 4 (Optional) Code Reading Example from {cvu} (Code Critique 106)
 
- This is a code reading exercise that contains various C++ features you should be familiar with:
-
-* Classes (Week 5)
-* Operator Overloading (Week 5/6)
-* Enumerations (Week 6)
-* I/O with Streams (Week 2)
-* Exceptions (Week 4) 
-
-You can ignore that some features of C++ are used that your are not familiar with yet:
-
-* `constexpr` Keyword
-* `static_assert`
-
-The magazine {cvu} has a column about C++ code that does not what it is supposed to do. You should have a look at the submission on [page 19 of the September 2017](https://accu.org/var/uploads/journals/CVu29-4_with_cover.pdf) issue: 
-
-**Quick summary:** The code is supposed to count different kinds of meals attendees of an event have ordered. Possibilities are any combination of `breakfast`, `lunch` and `dinner`. The programm should print the total number of attendess and the total number of each meal ordered. But somehow the result is not as expected.
-
-To make finding the error easier for you we have created a CUTE executable project with some test cases for the code.
-
-* Can you find and fix the error just by reading the code?
-* Does it help to have the unit tests we provide in the project?
- 
 
 # 5 (Optional)  Ring Modulo 6
 
@@ -163,3 +140,29 @@ Details about the stream flags can be found [here](http://en.cppreference.com/w/
 # Self Study Video
 
 Namespaces and ADL: https://skripte.hsr.ch/Informatik/Fachbereich/C++/CPl/Videos/6.%20namespaces%20and%20adl.mp4
+
+
+
+# Not available anymore - Code Reading Example from {cvu} (Code Critique 106)
+
+ This is a code reading exercise that contains various C++ features you should be familiar with:
+
+* Classes (Week 5)
+* Operator Overloading (Week 5/6)
+* Enumerations (Week 6)
+* I/O with Streams (Week 2)
+* Exceptions (Week 4) 
+
+You can ignore that some features of C++ are used that your are not familiar with yet:
+
+* `constexpr` Keyword
+* `static_assert`
+
+The magazine {cvu} has a column about C++ code that does not what it is supposed to do. You should have a look at the submission on [page 19 of the September 2017](https://accu.org/var/uploads/journals/CVu29-4_with_cover.pdf) issue: 
+
+**Quick summary:** The code is supposed to count different kinds of meals attendees of an event have ordered. Possibilities are any combination of `breakfast`, `lunch` and `dinner`. The programm should print the total number of attendess and the total number of each meal ordered. But somehow the result is not as expected.
+
+To make finding the error easier for you we have created a CUTE executable project with some test cases for the code.
+
+* Can you find and fix the error just by reading the code?
+* Does it help to have the unit tests we provide in the project?
