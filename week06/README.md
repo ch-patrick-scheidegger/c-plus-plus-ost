@@ -1,7 +1,6 @@
-# 0. Catch Up
+# 0 Catch Up
 
 Chances are high that you haven't been able to solve all exercises from the previous weeks due to the testat. So first complete the remaining non-extra exercises you missed.
-
 
 # 1 Date with enum for Month and Weekday
 
@@ -21,7 +20,6 @@ Maybe another internal representation than 3 numbers for day-month-year, like th
 
 To exercise an enum type with hidden values we implement a class `Switch`. The `Switch` simulates three states: `off`, `on`, `blinking`. It comes with a single button simulated with the member function `pressButton()` that switches from `off` to `on` to `blinking` and then to `off` again. Do not expose the enum values in your `Switch.h` file. 
 
-
 # 3 Finite Field Modulo 5
 
 In this exercise you have to implement a finite field (galois field/endlicher KÃ¶rper). You can take the code of `Ring5` from the lecture as a starting point. Beyond the addition and multiplication a `Ring5` features, you should add the following functionality:
@@ -36,7 +34,6 @@ In this exercise you have to implement a finite field (galois field/endlicher KÃ
   * First figure out for each `x` (excluding `0`), what `y` provides `1 / x = y -> 1 = x * y`
   * Does it make sense to provide relational operators for `Field5`?
 
-
 ## Simplification with Boost
 
 Remove all operator implementations you can replace with Boost operators.
@@ -45,10 +42,7 @@ Remove all operator implementations you can replace with Boost operators.
 * Have a look at the documentation for [Boost operators](https://www.boost.org/doc/libs/1_71_0/libs/utility/operators.htm)
 * Apply Boost operators to your `Field5`
  
-
-
-
-# 5 (Optional)  Ring Modulo 6
+# 5 (Optional) Ring Modulo 6
 
 Implement a class `Ring6` that implements modulo arithmetic for unsigned integers modulo `6`.
 
@@ -60,10 +54,9 @@ Implement a class `Ring6` that implements modulo arithmetic for unsigned integer
 * Is it useful to implement subtraction for `Ring6`?
 * Is it useful/possible to implement division for `Ring6`? 
  
-
 # 6 (Optional) Refresher on Stream States
 
- As a little help to guide you through reading the Word(s) from an input stream you can follow the rule of thumb: "do as the ints do". Below you see a piece of code you can copy into a Cevelop project and run directly.
+As a little help to guide you through reading the Word(s) from an input stream you can follow the rule of thumb: "do as the ints do". Below you see a piece of code you can copy into a Cevelop project and run directly.
 
 ```cpp
 #include <iostream>
@@ -141,11 +134,9 @@ Details about the stream flags can be found [here](http://en.cppreference.com/w/
 
 Namespaces and ADL: https://skripte.hsr.ch/Informatik/Fachbereich/C++/CPl/Videos/6.%20namespaces%20and%20adl.mp4
 
-
-
 # Not available anymore - Code Reading Example from {cvu} (Code Critique 106)
 
- This is a code reading exercise that contains various C++ features you should be familiar with:
+This is a code reading exercise that contains various C++ features you should be familiar with:
 
 * Classes (Week 5)
 * Operator Overloading (Week 5/6)
