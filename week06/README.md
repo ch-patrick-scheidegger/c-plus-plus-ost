@@ -22,7 +22,7 @@ To exercise an enum type with hidden values we implement a class `Switch`. The `
 
 # 3 Finite Field Modulo 5
 
-In this exercise you have to implement a finite field (galois field/endlicher Körper). You can take the code of `Ring5` from the lecture as a starting point. Beyond the addition and multiplication a `Ring5` features, you should add the following functionality:
+In this exercise you have to implement a finite field (galois field/endlicher Koerper). You can take the code of `Ring5` from the lecture as a starting point. Beyond the addition and multiplication a `Ring5` features, you should add the following functionality:
 
 * Provide subtraction as inverse of addition.
   * Can it be mapped directly to integer subtraction?
