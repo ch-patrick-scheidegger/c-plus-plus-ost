@@ -2,6 +2,10 @@
 
 In this exercise you will facilitate an associative container to create a histogram of `Word` (your own `Word` class) objects and use an `std::set` to create a sorted occurrence structure.
 
+## Preparation - Move `Word` to namespace `text`
+
+In this exercise (and also on ALF) we expect your `Word` class to be located in the `text` namespace. If your `Word` class is not already located in that namespace, adapt your implementation according to this requirement.
+
 ## Histogram Function
 
 Create the header and source files `statistics.h` and `statistics.cpp` featuring a namespace `statistics`. In these files implement a function `histogram` that counts `Word` occurrences on an `std::istream` and creates an `std::map` with the `Word` as key and the count of type `int` as value:
