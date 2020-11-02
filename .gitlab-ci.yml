@@ -101,8 +101,8 @@ week06:
 week07:
   extends: .job_template_exercise
 
-# week08:
-#   extends: .job_template_exercise
+week08:
+  extends: .job_template_exercise
 
 # week09:
 #   extends: .job_template_exercise
