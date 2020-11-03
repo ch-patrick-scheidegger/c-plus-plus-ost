@@ -5,30 +5,24 @@
 Hand in your solution via MS Teams using the assignment Testat 2.
 Hand in the following files
 
-```
-Test.cpp
-main.cpp
-word.h
-word.cpp
-kwic.h
-kwic.cpp
-```
+* Test.cpp
+* main.cpp
+* word.h
+* word.cpp
+* kwic.h
+* kwic.cpp
 
-* `Test.cpp` combines all test functions you created for your `Word` class as well as for your `kwic` solution.
-* `main.cpp` contains the `main()` function for your `kwic` program.
+`Test.cpp` combines all test functions you created for your `Word` class as well as for your `kwic` solution.
+`main.cpp` contains the `main()` function for your `kwic` program.
 
 ## KWIC - Keyword in Context (Testat)
 
 From Parnas [[Parnas72](http://dl.acm.org/citation.cfm?id=361623&coll=ACM&dl=ACM)] we have a concise definition of the Keyword in Context problem:
 
-```
-    The KWIC index system accepts an ordered set of lines, 
-    each line is an ordered set of words, 
-    and each word is an ordered set of characters. 
-    Any line may be "circularly shifted" by repeatedly removing the first word
-    and appending it at the end of the line. 
-    The KWIC index system outputs a listing of all circular shifts of all lines in alphabetical order. 
-```
+
+> The KWIC index system accepts an ordered set of lines,  each line is an ordered set of words, and each word is an ordered set of characters. 
+Any line may be "circularly shifted" by repeatedly removing the first word and appending it at the end of the line. 
+The KWIC index system outputs a listing of all circular shifts of all lines in alphabetical order. 
 
 **Note:** In the description *ordered set* does not mean a sorted set like the `std::set` but rather a *sequence thereof*. If you lookup the definition in [Wikipedia](https://en.wikipedia.org/wiki/Key_Word_in_Context), you are expected to implement the functionality depicted in the *KWAC* example.
 
@@ -37,44 +31,44 @@ Write a function `kwic` that reads lines from standard input and creates the var
 Example input:
 
 ```
- this is a test
- this is another test
+this is a test
+this is another test
 ```
 
 result:
 
 ```
- a test this is
- another test this is
- is a test this
- is another test this
- test this is a
- test this is another
- this is a test
- this is another test
+a test this is
+another test this is
+is a test this
+is another test this
+test this is a
+test this is another
+this is a test
+this is another test
 ```
 
 Clarifying example input:
 
 ```
- a b c d
- a a b
- b b c
+a b c d
+a a b
+b b c
 ```
 
 result:
 
 ```
- a a b
- a b a
- a b c d
- b a a
- b b c
- b c b
- b c d a
- c b b
- c d a b
- d a b c
+a a b
+a b a
+a b c d
+b a a
+b b c
+b c b
+b c d a
+c b b
+c d a b
+d a b c
 ```
  
 
