@@ -40,9 +40,9 @@ While it is possible to use other IDEs, only Cevelop is:
 | 45   | [Slides](week08)                                                  | MOF  | [E08](week08/README.md) ([PDF](/../-/jobs/artifacts/master/file/week08.pdf?job=week08)) | Algorithms                                             | **Testat 2**   |
 | 46   | [Slides](week09)                                                  | MOF  | [E09](week09/README.md) ([PDF](/../-/jobs/artifacts/master/file/week09.pdf?job=week09)) | Function Templates                                     |                |
 | 47   | [Slides](week10)                                                  | MOF  | [E10](week10/README.md) ([PDF](/../-/jobs/artifacts/master/file/week10.pdf?job=week10)) | Class Templates                                        |                |
-| 48   | [Slides](week11)                                                  | MOF  | [E11](week11/README.md) ([PDF](/../-/jobs/artifacts/master/file/week11.pdf?job=week11)) | Class Templates(2)                                     | **Testat 3**   |
-| 49   | [Slides](week12)                                                  | MOF  | [E12](week12/README.md) ([PDF](/../-/jobs/artifacts/master/file/week12.pdf?job=week12)) | Heap Memory, Smart Pointers                            |                |
-| 50   | [Slides](week13)                                                  | MOF  | [E13](week13/README.md) ([PDF](/../-/jobs/artifacts/master/file/week13.pdf?job=week13)) | Dynamic Polymorphism, Variant                          |                |
+| 48   | [Slides](week11)                                                  | MOF  | [E11](week11/README.md) ([PDF](/../-/jobs/artifacts/master/file/week11.pdf?job=week11)) | Heap Memory                                            | **Testat 3**   |
+| 49   | [Slides](week12)                                                  | MOF  | [E12](week12/README.md) ([PDF](/../-/jobs/artifacts/master/file/week12.pdf?job=week12)) | Dynamic Polymorphism, Variant                          |                |
+| 50   | [Slides](week13)                                                  | MOF  | [E13](week13/README.md) ([PDF](/../-/jobs/artifacts/master/file/week13.pdf?job=week13)) | TBD                                                    |                |
 | 51   | [Slides](week14)                                                  | MOF  | [E14](week14/README.md) ([PDF](/../-/jobs/artifacts/master/file/week14.pdf?job=week14)) | TBD                                                    |                |
 
 ### Useful Links
