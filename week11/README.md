@@ -7,7 +7,7 @@ Create a class template `indexableSet<typename T, typename COMPARE=std::less<T>>
 Write Test cases and implementation code for `indexableSet` for the following aspects:
 *  All constructors available for `std::set` have to work identically for `indexableSet`
 *  Index access (with `operator[]` and `at()`) should reveal the stored values in sorted order
-*  Negative indices should index the set from the end, so that `s![-1]` is the last available (the greatest) element in the set and `s[-s.size()] == s![0] `
+*  Negative indices should index the set from the end, so that `s[-1]` is the last available (the greatest) element in the set and `s[-s.size()] == s[0] `
 *  Provide member functions `front()` and `back()`
 *  All of your operations that might result in undefined behavior, because an index is out of range, or no elements exist should throw a corresponding standard exception (`std::out_of_range`).
 *  Allow instantiating `indexableSet` with a different compare functor. Demonstrate that with a test case with your own `caselessCompare` functor for `std::string`. (`indexableSet<std::string, caselessCompare>`)
