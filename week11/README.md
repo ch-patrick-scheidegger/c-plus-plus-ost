@@ -16,8 +16,7 @@ Write Test cases and implementation code for `indexableSet` for the following as
 *  Implement the template class `indexableSet` as header-only (`indexableSet.h`) within your CUTE test project.
 *  Remember the rules for class templates inheriting from a class that also depends on a template parameter! Otherwise interesting effects for name lookup might happen. Omitting that will cause you to fail!
 *  When inheriting constructors from a base class, you will not inherit the deduction guides. Therefore, you will not be able to omit the class template arguments when using `indexableSet` in your tests.
-*  We have added the possibility to submit your `indexableSet` implementation to [ALF](https://uploader.alf.infs.ch/)
-  *   (You need an account with a HSR email address on  )
+*  We have added the possibility to submit your `indexableSet` implementation to [ALF](https://alf-uploader.sifs0005.infs.ch/)
   *  You are expected to upload a file named `indexableSet.h` that contains your template, defined in the global namespace.
   *  We extended the checking automation to catch segmentation faults (program crashes due to illegal memory access) which are likely for this exercise. If your program compiles successfully but the test results print something similiar to what you see below, you should probably check your index acesses:
 ```
