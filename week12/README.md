@@ -194,7 +194,7 @@ Each shape class might need to read a different number of values from the stream
  
 ### Optional Extension: Arbitrary Polygons (very hard)
 
-Extend your garden planning software with arbitrary regular polygon shapes, such as a pentagon or hexagon. Can you also represent trapezoids and arbitrary convex ?
+Extend your garden planning software with arbitrary regular polygon shapes, such as a pentagon or hexagon. Can you also represent trapezoids?
 What about arbitrary convex polygons.
 
 ### Optional Extension: Position in the garden (extremly hard)
