@@ -1,0 +1,43 @@
+# 0 Initialization
+
+Given the following piece of code, name the forms of initialization used:
+
+```cpp
+#include <array>
+#include <vector>
+#include <iostream>
+
+std::array<char const *, 4> names{{"Freely", "Cally", "Sofieus", "Avren"}};
+
+void print_names(std::ostream & out) {
+  std::size_t name_count;
+  name_count = names.size();
+
+  for(int i = 0; i < name_count; ++i) {
+    std::string name{names[i]};
+    out << name << '\n';
+  }
+}
+
+int main() {
+  std::size_t name_count(names.size());
+
+  std::cout << "will print " << name_count << " names\n";
+
+  print_names(std::cout);
+}
+```
+
+# 1 Phone Book
+
+Implement a simple phone-book type library.
+Write the following types:
+
+* `Address` with the fields `zipCode`, `city`, and `street`
+* `Person` with the fields `firstName`, `lastName`
+* `Entry`, representing a simple phone-book entry with the following fields: `person`, `address`, `phoneNumber`.
+
+Implement all three types as aggregates.
+Use appropriate types for the respective fields.
+Make sure an `Entry` can be printed on the console (implement the required support functionality in `Address` and `Person`).
+Test your implementation using suitable unit tests.
