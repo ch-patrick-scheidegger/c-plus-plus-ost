@@ -1,7 +1,7 @@
 # Module: C++ in HS20
 
 This repository contains all materials for the C++ (CPl) modules at OST.
-We use the [`TS-CPl-HS20`](https://teams.microsoft.com/l/team/19%3aee9d1b0dc838423686a103f7b8cbf2c9%40thread.tacv2/conversations?groupId=40fb7d97-bf4e-48c6-b28c-681a2d2fdf04&tenantId=a6e70fa3-1c7a-4aa2-a25e-836eea52ca22) channel on the OST MS Teams instance.
+We use the [`TS-CPl-HS21`](https://teams.microsoft.com/l/team/19%3aee9d1b0dc838423686a103f7b8cbf2c9%40thread.tacv2/conversations?groupId=40fb7d97-bf4e-48c6-b28c-681a2d2fdf04&tenantId=a6e70fa3-1c7a-4aa2-a25e-836eea52ca22) channel on the OST MS Teams instance.
 Lectures will be available on [Switch Tube](https://tube.switch.ch/channels/889a82a4).
 
 ## Goal
