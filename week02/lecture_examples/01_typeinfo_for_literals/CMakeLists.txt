@@ -1,3 +1,0 @@
-cmake_minimum_required(VERSION 3.19)
-
-add_executable(typeinfo_for_literals typeinfo_for_literals.cpp)

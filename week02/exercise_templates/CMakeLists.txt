@@ -1,4 +1,0 @@
-add_subdirectory(ex3a_charc)
-add_subdirectory(ex3b_allcharc)
-add_subdirectory(ex3c_wc)
-add_subdirectory(ex3d_lc)

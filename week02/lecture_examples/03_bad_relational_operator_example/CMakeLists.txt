@@ -1,3 +1,0 @@
-cmake_minimum_required(VERSION 3.19)
-
-add_executable(bad_relational_operator_example bad_relational_operator_example.cpp)

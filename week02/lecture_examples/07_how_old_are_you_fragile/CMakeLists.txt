@@ -1,3 +1,0 @@
-cmake_minimum_required(VERSION 3.19)
-
-add_executable(how_old_are_you_fragile how_old_are_you_fragile.cpp)
