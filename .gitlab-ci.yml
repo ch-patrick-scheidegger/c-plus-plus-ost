@@ -3,6 +3,7 @@ variables:
 
 stages:
 - build
+- deploy
 
 before_script:
 
@@ -171,3 +172,19 @@ Create-Solutions-And-Cleanup-Markdown:
     paths:
     - './*.md'
     - '**/*.md'
+
+pages:
+  stage: deploy
+  image: alpine
+  only:
+    - master
+  script:
+    - mkdir .public
+    - cp *.pdf .public
+    - mv .public public
+    - ls -lah public/
+  artifacts:
+    paths:
+      - public
+
+
