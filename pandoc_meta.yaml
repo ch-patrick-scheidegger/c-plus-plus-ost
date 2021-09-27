@@ -1,10 +1,10 @@
 ---
 #title: "Document Title" # taken from specific documents metadata
-subtitle: 'C++, HS 2019'
+subtitle: 'C++, HS 2021'
 mycopyright: '`\copyright 2019 Thomas~Corbat. All rights reserved.`{=latex}'
-author: ["Prof. Peter Sommerlad", "Thomas Corbat"]
-institute: ["HSR Hochschule für Technik Rapperswil", "IFS", "Oberseestrasse 10", "CH-8640 Rapperswil"]
-contact: ["T +41 55 222 46 30", "F +41 55 222 46 29", "ifs@hsr.ch", "\\url{https://ifs.hsr.ch}"]
+author: ["Thomas Corbat", "Felix Morgner"]
+institute: [OST Ostschweizerfachhochschule", "Studiengang I", "Oberseestrasse 10", "CH-8640 Rapperswil"]
+contact: ["T +41 55 222 46 30", "F +41 55 222 46 29", "ifs@hsr.ch", "\\url{https://www.ost.ch}"]
 keywords: []
 date: 2019-02-01
 titlepage: True
