@@ -134,7 +134,7 @@ Details about the stream flags can be found [here](http://en.cppreference.com/w/
 
 Namespaces and ADL: https://skripte.hsr.ch/Informatik/Fachbereich/C++/CPl/Videos/6.%20namespaces%20and%20adl.mp4
 
-# Not available anymore - Code Reading Example from {cvu} (Code Critique 106)
+# Code Reading Exercise from "cvu - Code Critique 106"
 
 This is a code reading exercise that contains various C++ features you should be familiar with:
 
@@ -149,7 +149,9 @@ You can ignore that some features of C++ are used that your are not familiar wit
 * `constexpr` Keyword
 * `static_assert`
 
-The magazine {cvu} has a column about C++ code that does not what it is supposed to do. You should have a look at the submission on [page 19 of the September 2017](https://accu.org/var/uploads/journals/CVu29-4_with_cover.pdf) issue: 
+The magazine cvu has a column about C++ code that does not what it is supposed to do. You should have a look at the submission on [page 19 of the September 2017](https://accu.org/var/uploads/journals/CVu29-4_with_cover.pdf). Unfortunately, it is not accessible anymore to non-accu members.
+
+Summary of the issue: 
 
 **Quick summary:** The code is supposed to count different kinds of meals attendees of an event have ordered. Possibilities are any combination of `breakfast`, `lunch` and `dinner`. The programm should print the total number of attendess and the total number of each meal ordered. But somehow the result is not as expected.
 
