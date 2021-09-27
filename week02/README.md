@@ -223,7 +223,7 @@ After you have implemented all functions you can split up the structure as follo
 
 **Note:** Do not write any fancy "UI", so that you can use your programs also as filters within a shell-pipeline.
 
-Compare the result of your function with the size of the file you use as input on the console (e.g., `$ allcharc < file.txt`). You executables should be located in the `Debug` directory of the executable project.
+Compare the result of your function with the size of the file you use as input on the console (e.g., `$ allcharc < file.txt`). Your executables should be located in the `Debug` directory of the executable project.
 
 
 ---
