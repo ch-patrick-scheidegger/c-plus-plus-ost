@@ -7,7 +7,7 @@ If your workspace accumulates too many projects and you loose the overview on wh
 # 0. Self-study 
 
 ## a) Self-Study on CPP Reference
-* Take a look at the features of std::array and std::string:
+* Take a look at the features of `std::array` and `std::string`:
   * http://en.cppreference.com/w/cpp/container/array
   * http://en.cppreference.com/w/cpp/string
 
@@ -16,8 +16,8 @@ If your workspace accumulates too many projects and you loose the overview on wh
 
 ## b) Videos
 
-* [Iterators and Algorithms](https://skripte.hsr.ch/Informatik/Fachbereich/C++/CPl/Videos/3.%20iterators%20and%20algorithms.mp4) (On Skripte server, only accessible from HSR)
-* [ 105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=bXkWuUe9V2I) - Jonathan Boccara ACCU 2018 on YouTube
+* [Iterators and Algorithms](https://skripte.hsr.ch/Informatik/Fachbereich/C++/CPl/Videos/3.%20iterators%20and%20algorithms.mp4) (On Skripte server, only accessible from OST)
+* [105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=bXkWuUe9V2I) - Jonathan Boccara ACCU 2018 on YouTube
 
 # 1. Simulated 7-Segment Display for Numbers
 
