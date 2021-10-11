@@ -51,7 +51,7 @@ int main(int argc, char **argv) {
 **Note:** This example is artificial, some parts of it are not solved in the shortest possible way.
 
 ## 1 _Testat-Exercise 1_: Calculator with Retro Style Output
-**Hand in time is Monday Oct 25 2020, 10:00 (AM) (CEST)**
+**Hand in time is Monday Oct 25 2021, 10:00 (AM) (CEST)**
 
 Hand in you solution via MS Teams using the assignment **Testat 1**.
 
