@@ -93,7 +93,7 @@ If the format is wrong or the calculation is invalid, display "Error". You can d
 
 *  Create a separate executable project that uses your library and only consists of a very simple `main()` function passing `std::cin` and `std::cout` to your `pocketcalculator()` function.
 
-### Automated Checking
+### Automated Checking (*Not yet available*)
 
 Our platform for automated testat checking (ALF) will expect you to provide the following files:
 
@@ -119,8 +119,6 @@ void printLargeError(std::ostream &out);
 //From pocketcalculator.h/.cpp
 void pocketcalculator(std::istream &in, std::ostream &out);
 ```
-
-*Not yet available:*
 
 The testat verification tool is still experimental. You can upload your testat to https://uploader.alf.infs.ch/ in order to get a first feedback. Your chances to get positive feedback are very high if all unit tests pass. As we need to know who uploads what you need an account on https://gitlab.ost.ch for this. Please note that external login (oauth) is not activated, but you can create an account with your HSR/OST mail address.
 
