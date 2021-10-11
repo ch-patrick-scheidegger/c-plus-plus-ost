@@ -93,7 +93,7 @@ If the format is wrong or the calculation is invalid, display "Error". You can d
 
 *  Create a separate executable project that uses your library and only consists of a very simple `main()` function passing `std::cin` and `std::cout` to your `pocketcalculator()` function.
 
-### Automated Checking (*Not yet available*)
+### Automated Checking
 
 Our platform for automated testat checking (ALF) will expect you to provide the following files:
 
@@ -120,10 +120,7 @@ void printLargeError(std::ostream &out);
 void pocketcalculator(std::istream &in, std::ostream &out);
 ```
 
-The testat verification tool is still experimental. You can upload your testat to https://uploader.alf.infs.ch/ in order to get a first feedback. Your chances to get positive feedback are very high if all unit tests pass. As we need to know who uploads what you need an account on https://gitlab.ost.ch for this. Please note that external login (oauth) is not activated, but you can create an account with your HSR/OST mail address.
-
-*IMPORTANT:* ALF temporarily has a new home. Someone is working overtime to get him up and running again in his natural habitat, but meanwhile you have to look for him here: https://alf-uploader.sifs0005.infs.ch
-
+The testat verification tool is still experimental. You can upload your testat to https://alf-uploader.sifs0005.infs.ch in order to get a first feedback. Your chances to get positive feedback are very high if all unit tests pass. As we need to know who uploads what you need an account on https://gitlab.ost.ch for this. Your normal OST-account should work. Unfortunately, you cannot submit your solution through ALF yet. A team of students is currently working on that in a term project.
 
 **Undefined References:** If you have structured your testat into multiple libraries (`calc`, `sevensegment` and `pocketcalculator`) and you want to use them all in an executable or CUTE test project, you have to be careful with the library dependencies. It might be possible that the libraries themselves can be compiled properly. However, external symbols of static libraries won't be linked until you use them to create an executable. Due to optimizations of the GCC linker the order of the specified libraries is important. The linker will get rid of the symbols contained in a library if there is no further symbol required from that library. Thus you have to specify the libraries with inbound and outbound dependencies first. I.e. `pocketcalculator` will probably be used by `main` and depend on the other two libs. Subsequently, `pocketcalculator` needs to be specified before `calc` and `sevensegment`. Otherwise, you might get `Undefined Reference` errors during the link process. You can reorder the library dependencies in Cevelop: `Project Properties (of the executable or test project) -> C/C++ General -> Paths and Symbols -> "Libraries" tab`. `pocketcalculator` needs to be on top (There are `Move up` and `Move down` buttons to adjust the order).
 
