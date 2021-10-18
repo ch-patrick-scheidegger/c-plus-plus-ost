@@ -46,7 +46,7 @@ Write a test that checks what happens at the end of the input with the input str
 
 **Hints:** 
 
-*   [Here](https://gitlab.dev.ifs.hsr.ch/psommerl/cpp-module/blob/master/week05/exercise_templates/README.md) are some ideas for tests (not necessarily complete).
+*   [Here](https://gitlab.ost.ch/cxx/cpl/blob/master/week05/exercise_templates/README.md) are some ideas for tests (not necessarily complete).
 *  Constructors callable with a single argument should be `explicit`
 *  Implementing `operator==` using `operator<` is inefficient for word. Use an appropriate algorithm that does the job in a single pass each.
 *  Avoid creating a case-less intermediate string representation of the word content for comparison.
