@@ -76,7 +76,7 @@ If the format is wrong or the calculation is invalid, display "Error". You can d
 
 **Hint:** Use your knowledge about exceptions from the lecture to handle error cases properly!
 
-**Hint:** If you have not done already, use the same trick as for Ero also for the large space and minus sign to put in front of your number.
+**Hint:** If you have not done already, use the same trick as for Ero also for the minus sign to put in front of your number.
 
 ```
 1/0
