@@ -38,8 +38,11 @@ In this exercise you have to implement a finite field (galois field/endlicher Ko
 
 Remove all operator implementations you can replace with Boost operators.
 
-* If you don't already have it, install it first on your system.
-* Have a look at the documentation for [Boost operators](https://www.boost.org/doc/libs/1_71_0/libs/utility/operators.htm)
+* If you don't already have it, install it first on your system:
+  * This usually works with your package manger
+  * E.g. under Windows if you have installed MinGW using Msys2: `$ pacman -S mingw-w64-x86_64-boost` (maybe you need to run the msys2 mingw64 shell with admin rights)
+  * Otherwise, you can download Boost from [boost.org](https://www.boost.org/users/download/) and extract it on your local drive. You then need to configure the project (in cevelop) to use that directory as include path (for C++)
+* Have a look at the documentation for [Boost operators](https://www.boost.org/doc/libs/1_77_0/libs/utility/operators.htm)
 * Apply Boost operators to your `Field5`
  
 # 5 (Optional) Ring Modulo 6
