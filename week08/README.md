@@ -1,6 +1,6 @@
 # Testat-Exercise 2: KWIC with word class
 
-**Hand-in time is Monday 16. Nov 2019, 11:30 (AM) (CET)**
+**Hand-in time is Monday 29. Nov 2021, 10:00 (AM) (CET)**
 
 Hand in your solution via MS Teams using the assignment Testat 2.
 Hand in the following files
