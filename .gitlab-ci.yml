@@ -1,5 +1,6 @@
 variables:
-  PANDOC_IMAGE: gitlab.dev.ifs.hsr.ch:45023/ifs/gitlabmarkdowntopdf/pandoc:v19.02.4
+  # PANDOC_IMAGE: gitlab.dev.ifs.hsr.ch:45023/ifs/gitlabmarkdowntopdf/pandoc:v19.02.4
+  PANDOC_IMAGE: registry.gitlab.ost.ch:45023/ifs/gitlabmarkdowntopdf/pandoc:v21.09.1
 
 stages:
 - build
