@@ -54,7 +54,45 @@ How do you refer to members inherited from a dependent type within a class templ
 ### Template Specialization
 Is it neccessary for a (partial) specialization of a class template to provide the same interface (same member functions) as the unspecialized template?
 
-## 2 Topological Sort
+## 2 A vector with backward indexing using negative indices
+
+The goal is to a) get familiar with the standard library's container interface and b) to exercise writing a template class.
+
+Many scripting languages allow dynamic arrays to be indexed with negative indices where `a[-1] ` denotes the last element in the array`a[size-1] `  and `a[-size] ` the first element `a[0] `.
+
+Create a template class dynArray<T> that uses a std::vector<T> as a member (not as a super class) for its implementation. Implement the indexing member functions similar to std::vector for dynArray in a way that negative indices are allowed and every index access is actually bounds checked (use std::vector's facility for that).
+
+*  Provide constructors for the following initializations, as it would be with std::vector (ignore allocator argument versions of std::vector) :
+```
+dynArray<char> a1{};
+dynArray<int> a2{1,2,3,4,5}; // initializer_list
+dynArray<double> a3(10,3.14); // count + value
+dynArray<std::string> a4(std::istream_iterator<std::string>{std::cin},std::istream_iterator<std::string>{}); // any iterator type!
+```
+
+*  Provide a Factory Function template makedynArray() that takes an initializer_list<T> and returns a dynArray<T> filled with the elements from the initializer list.
+
+
+*  Create Unit Tests for all of your template class' behaviors. Best, one or more tests for a feature, before you implement it.
+  *  Use different element types for your template class in the tests to prove that it works with different instantiations
+  *  you must implement your class in a header file (dynArray.h) in the unit test project, a separate library won't work easily, because a template class lacks a .cpp file with content the linker is happy with.
+
+The following functions of std::vector you **should not implement**:
+*  allocator template parameter and functions using it
+*  `getallocator()`
+*  `reserve()`,`max_size()`
+*  `operator=()` -- automatically provided one should be OK
+*  `assign()`
+*  `data()`
+*  `shrink_to_fit()`
+*  `emplace()`, `emplace_back()`, `insert()`
+*  `swap`
+*  `comparison operators`
+*  all rvalue-reference overloads (unless you want to)
+
+But you must implement all other members of std::vector by delegating to the corresponding member functions of your template class' data member of type std::vector.
+
+## 3 Topological Sort
 
 Solve the exercise from the OO module in C++ using (smart) pointers to build the graph of objects.
 Read dependencies from a file, where the first string provides the current module name and the following strings its pre-requisites.
