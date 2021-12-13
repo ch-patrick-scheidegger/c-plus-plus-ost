@@ -1,4 +1,3 @@
-
 ## Theory Questions
 
 *  Your class `Derived` is derived from the class `Base`. You have hidden the member function `process(int)` from your base class (`Base::process(int)`) with the member function `process(float)` (`Derived::process(float)`). How can you make the hidden member function visible again in your derived class?
@@ -153,7 +152,7 @@ Tips:
 
 ### Optional Extension: Circles and Ellipses
 
-Look at the following article in Wikipedia  in section "Pins and String method" or in german Wikipedia  how a gardener would create an elliptical garden bed.
+Look at the following article in Wikipedia ([Ellipse](https://en.wikipedia.org/wiki/Ellipse#Pins-and-string_method)) in section "Pins and String method" or in german Wikipedia  how a gardener would create an elliptical garden bed.
 
 You can not put pegs in the "corners" of a circle or an ellipse, but you can give the number of pegs to construct the given shape and the length of string required for the construction plus for marking the circumference of the circle or ellipse constructed.
 
