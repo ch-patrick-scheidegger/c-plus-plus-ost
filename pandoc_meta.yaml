@@ -4,9 +4,9 @@ subtitle: 'C++, HS 2021'
 mycopyright: '`\copyright 2019 Thomas~Corbat. All rights reserved.`{=latex}'
 author: ["Thomas Corbat", "Felix Morgner"]
 institute: [OST Ostschweizerfachhochschule", "Studiengang I", "Oberseestrasse 10", "CH-8640 Rapperswil"]
-contact: ["T +41 55 222 46 30", "F +41 55 222 46 29", "ifs@hsr.ch", "\\url{https://www.ost.ch}"]
+contact: ["thomas.corbat@ost.ch", "felix.morgner@ost.ch", "\\url{https://www.ost.ch}"]
 keywords: []
-date: 2019-02-01
+date: 2021-02-20
 titlepage: True
 # scrreprt scrartcl
 documentclass: scrartcl
