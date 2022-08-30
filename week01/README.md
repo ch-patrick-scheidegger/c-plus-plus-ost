@@ -1,3 +1,5 @@
+# TODO: UPDATE
+
 # Exercises Week1
 
 Goals of this weeks exercises:
