@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "CUTETest.cute-testing",
+        "ms-vscode.cmake-tools",
+        "ms-vscode.cpptools",
+        "llvm-vs-code-extensions.vscode-clangd"
+    ]
+}

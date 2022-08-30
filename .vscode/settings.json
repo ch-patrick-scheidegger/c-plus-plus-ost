@@ -1,0 +1,6 @@
+{
+    // Disable the C/C++ Tools extension's parts that are replaced by ClangD.
+    "C_Cpp.autocomplete": "Disabled",
+    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.intelliSenseEngine": "Disabled",
+}
