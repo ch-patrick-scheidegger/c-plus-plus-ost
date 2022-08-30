@@ -1,7 +1,7 @@
 #[===[ LIBRARY ]===]
 
 add_library("SayHello" STATIC
-    "lib/sayHello.cpp"
+    "lib/SayHello.cpp"
 )
 
 target_include_directories("SayHello" PUBLIC
@@ -28,7 +28,7 @@ add_test(NAME "SayHelloTests" COMMAND "SayHelloTests")
 #[===[ APPLICATION ]===]
 
 add_executable("SayHelloApp"
-    "app/main.cpp"
+    "app/SayHelloApp.cpp"
 )
 
 target_link_libraries("SayHelloApp" PRIVATE

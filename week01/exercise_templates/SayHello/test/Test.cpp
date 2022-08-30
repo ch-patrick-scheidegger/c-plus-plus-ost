@@ -1,4 +1,4 @@
-#include "sayHello.hpp"
+#include "SayHello.hpp"
 
 #include <cute/cute.h>
 #include <cute/cute_equals.h>
