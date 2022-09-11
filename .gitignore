@@ -52,3 +52,6 @@ Release
 # script zum konvertieren
 wiki2md.pl
 
+
+# compile commands für clangd
+compile_commands.json
