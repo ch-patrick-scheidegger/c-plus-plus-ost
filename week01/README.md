@@ -1,5 +1,3 @@
-# TODO: UPDATE
-
 # Exercises Week1
 
 Goals of this weeks exercises:
@@ -336,6 +334,12 @@ The `main` programm should always be as simple as the program above and only con
 
 Try to extend the `CMakeLists.txt` file on your own first. You need to create a new executable that depends on the `HelloLib`.
 
+
+### Exercise Repository
+
+If you have successfully complete the tasks above, you can swtich to the lecture repository. You can open the whole repository in VSCode. We have planned to supply all lecture examples, exercise template and solutions in this repository. As this contains quite a lot of C++ projects in total we have structured the CMake files a little more than above. But in principle we use the same basic configuration instructions you have seen today.
+
+If you open the workspace in VSCode you should get some recommendations of extensions to install. CMake Tools, Clangd, C++ Extensions and the CUTE Testing extensions are recommended. These will enable features like auto complete, simplified access to CMake builds and also running an executable. Almost everything is directly accessible through the status bar. The CUTE extension has been developed by OST students. We are currently extending it to be able to cope with the more complex structure of our repository. As soon as we achieve this, we will be able to run and navigate tests much easier. Until then we beg for some patience, as you will need to look at the console output to see the test results.
 
 
 ### Summary
