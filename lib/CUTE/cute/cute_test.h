@@ -103,10 +103,12 @@ namespace cute
 
 
 #define CUTE(name) cute::test((&name), (#name))
-#define TEST(name) void name ## _IMPL(); \
-  cute::test const name() { \
-    return cute::test((&name ## _IMPL), (cute::location(__FILE__, __LINE__)), (#name)); \
-  } \
-  void name ## _IMPL()
+
+#define TEST(name) \
+static auto name##_IMPL() -> void; \
+static auto name = [] { \
+    return cute::test{&name##_IMPL, (cute::location(__FILE__, __LINE__)), (#name)}; \
+  }(); \
+static auto name ## _IMPL() -> void
 
 #endif /*CUTE_TEST_H_*/
