@@ -1,36 +1,33 @@
 #[===[ LIBRARY ]===]
 
-add_library("SayHello" STATIC
-    "lib/SayHello.cpp"
+add_library("HelloLib" STATIC
+    "lib/Hello.cpp"
 )
 
-target_include_directories("SayHello" PUBLIC
+target_include_directories("HelloLib" PUBLIC
     "lib"
 )
 
-target_compile_features("SayHello" PUBLIC
-    "cxx_std_20"
-)
 
 #[===[ TESTS ]===]
 
-add_executable("SayHelloTests"
-    "test/Test.cpp"
+add_executable("HelloTests"
+    "test/HelloTest.cpp"
 )
 
-target_link_libraries("SayHelloTests" PRIVATE
-    "SayHello"
+target_link_libraries("HelloTests" PRIVATE
+    "HelloLib"
     "cpl::cute"
 )
 
-add_test(NAME "SayHelloTests" COMMAND "SayHelloTests")
+add_test(NAME "HelloTests" COMMAND "HelloTests")
 
 #[===[ APPLICATION ]===]
 
-add_executable("SayHelloApp"
-    "app/SayHelloApp.cpp"
+add_executable("HelloApp"
+    "app/HelloApp.cpp"
 )
 
-target_link_libraries("SayHelloApp" PRIVATE
-    "SayHello"
+target_link_libraries("HelloApp" PRIVATE
+    "HelloLib"
 )

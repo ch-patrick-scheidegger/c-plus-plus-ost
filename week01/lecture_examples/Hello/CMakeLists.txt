@@ -9,29 +9,25 @@ target_include_directories("Hello" PUBLIC
     "lib"
 )
 
-target_compile_features("Hello" PUBLIC
-    "cxx_std_20"
-)
-
 #[===[ TESTS ]===]
 
-add_executable("HelloTests"
+add_executable("SayHelloTests"
     "test/HelloTests.cpp"
 )
 
-target_link_libraries("HelloTests" PRIVATE
+target_link_libraries("SayHelloTests" PRIVATE
     "Hello"
     "cpl::cute"
 )
 
-add_test(NAME "HelloTests" COMMAND "HelloTests")
+add_test(NAME "SayHelloTests" COMMAND "SayHelloTests")
 
 #[===[ APPLICATION ]===]
 
-add_executable("HelloApp"
+add_executable("SayHelloApp"
     "app/HelloMain.cpp"
 )
 
-target_link_libraries("HelloApp" PRIVATE
+target_link_libraries("SayHelloApp" PRIVATE
     "Hello"
 )

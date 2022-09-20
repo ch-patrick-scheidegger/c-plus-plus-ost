@@ -3,6 +3,6 @@
 
 #include <iosfwd>
 
-auto sayHello(std::ostream &out) -> void;
+auto sayHello(std::ostream& out) -> void;
 
 #endif
