@@ -1,10 +1,8 @@
-#include <string>
 #include <iostream>
-int main(){
-	using namespace std::string_literals;
-	auto  s="hello"s;
-	std::cout << s;
+#include <string>
+
+auto main() -> int {
+  using namespace std::string_literals;
+  auto s = "hello"s;
+  std::cout << s;
 }
-
-
-

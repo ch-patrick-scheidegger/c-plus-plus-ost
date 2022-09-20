@@ -1,17 +1,21 @@
 #include <iostream>
 #include <string>
-void askForName(std::ostream &out){
+
+auto askForName(std::ostream &out) -> void {
   out << "What is your name? ";
 }
-std::string inputName(std::istream &in){
+
+auto inputName(std::istream &in) -> std::string {
   std::string name{};
   in >> name;
   return name;
 }
-void sayGreeting(std::ostream &out,std::string name){
+
+auto sayGreeting(std::ostream &out, std::string name) -> void {
   out << "Hello " << name << ", how are you?\n";
 }
-int main() {
+
+auto main() -> int {
   askForName(std::cout);
   sayGreeting(std::cout, inputName(std::cin));
 }

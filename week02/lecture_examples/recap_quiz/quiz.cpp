@@ -1,8 +1,9 @@
-#include "Point.h"
-#include "Square.h"
+#include "point.hpp"
+#include "square.hpp"
+
 #include <iostream>
 
-int main() {
+auto main() -> int {
   Point point{1, 2};
   Point other = modify(point);
   std::cout << '{' << point.x << '/' << point.y << "}\n";

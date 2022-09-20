@@ -7,7 +7,7 @@ struct Point {
   int y;
 };
 
-inline Point modify(Point in) {
+inline auto modify(Point in) -> Point {
   in.x = 3;
   in.y = 4;
   return in;

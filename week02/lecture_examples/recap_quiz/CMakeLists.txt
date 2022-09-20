@@ -1,3 +1,3 @@
-cmake_minimum_required(VERSION 3.19)
+#[===[ APPLICATION ]===]
 
-add_executable(recap_quiz main.cpp)
+add_executable("w02_recap_quiz" "quiz.cpp")

@@ -1,20 +1,21 @@
 #include <iostream>
 #include <string>
-void askForName(std::ostream &out){
-  out << "What is your name? ";
+
+auto askForName(std::ostream &out) -> void {
+  out << "Enter two names, please... ";
 }
-std::string inputName(std::istream &in){
+
+auto inputName(std::istream &in) -> std::string {
   std::string name{};
   in >> name;
   return name;
 }
-void sayGreeting(std::ostream &out,
-                 std::string name1,
-                 std::string name2){
-  out << "Hello " << name1 << ", do you love "
-      << name2 << "?\n";
+
+auto sayGreeting(std::ostream &out, std::string name1, std::string name2) -> void {
+  out << "Hello " << name1 << ", do you love " << name2 << "?\n";
 }
-int main() {
+
+auto main() -> int {
   askForName(std::cout);
   sayGreeting(std::cout, inputName(std::cin),
               inputName(std::cin)); // order is unspecified

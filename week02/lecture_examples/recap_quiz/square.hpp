@@ -2,7 +2,7 @@
 #define SQUARE_H_
 
 
-#include "Point.h"
+#include "point.hpp"
 
 struct Square {
 	Point p1;
