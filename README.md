@@ -1,30 +1,19 @@
-# Module: C++ in HS21
+# Module: C++ in HS22
 
 This repository contains all materials for the C++ (CPl) modules at OST.
-We use the [`TS-CPl-HS21`](https://teams.microsoft.com/l/team/19%3aee9d1b0dc838423686a103f7b8cbf2c9%40thread.tacv2/conversations?groupId=40fb7d97-bf4e-48c6-b28c-681a2d2fdf04&tenantId=a6e70fa3-1c7a-4aa2-a25e-836eea52ca22) channel on the OST MS Teams instance.
+We use the [`TS-CPl-HS22`](https://teams.microsoft.com/l/team/19%3afklDlnHjSarVrkvYZo1vHV3iWwNWWSDbqihG1H_RJcI1%40thread.tacv2/conversations?groupId=768978a4-af2b-4c69-827c-57e07334518c&tenantId=a6e70fa3-1c7a-4aa2-a25e-836eea52ca22) channel on the OST MS Teams instance.
 Lectures will be available on [Switch Tube](https://tube.switch.ch/channels/889a82a4).
 
 ## Goal
 
 In the course of this module students learn usage and understanding of modern C++.
 
-Code examples in the lecture and exercises target the current C++ standard, also known als C++17.
+Code examples in the lecture and exercises target the current C++ standard, also known als C++20.
 A pre-version of the language standard can be found [here](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf).
 This working draft lacks only minor editorial fixes compared to the official standard.
 
 A much more accessible reference to the standard document exists in [cppreference]( https://en.cppreference.com/w/)
 
-## Cevelop
-
-We strongly recommend to use the [Cevelop](https://www.cevelop.com) for our C++ courses.
-While it is possible to use other IDEs, only Cevelop is:
-
-- platform independent
-- free to use
-- provides suitable support for unit testing with [CUTE](https://www.cute-test.com)
-- has quality-of-life features like assisted inclusion of standard library headers
-- hints about common programming mistakes
-- and can visualize template instances
 
 ## Lecture Plan and Resources (TBA)
 
