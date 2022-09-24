@@ -29,16 +29,16 @@
     - `<no input>`
 
 ```cpp
-int main() {
   int i{};
   std::cin >> i;
   //...
-}
 ```
 
 ---
 
 **Important:** For all exercises working with standard input (`std::cin`) you might want to terminate the input stream. You should be able to do this on Windows with `ctrl-z` and on Unix-like systems with `ctrl-d`.
+
+If any program you run ends up in an infinite loop, you should be able to terminate it with `ctrl-c`.
 
 ---
 
@@ -51,48 +51,48 @@ In this exercise you will...
 
   - implement a function for performing different operations on function parameters and return the result.
   - read formatted input from an `std::istream`
-  - split a project containing an implementation and tests into tree projects: `library` (with implementation), `tests` and `executable`. This is a repetition of the modularization you have already performed on the `SayHello` project last week.
+  - split a project containing an implementation and tests into tree projects: `library` (with implementation), `tests` and `executable`.
 
 
+## a) Implement a `calc()` function
 
-## a) Implement a `calc` function
+Create a function with the signature `auto calc(int, int, char) -> int` that takes two numbers an a character denoting an operator symbol (`'+'`, `'-'`, `'*'`, `'/'` and `'%'`). The function `calc` should interpret the operator character and compute its result by combining the two integers accordingly. To give you a headstart we have prepared one CUTE test in `CalcTest.cpp`. Add additional test cases for the corner cases of the function. Consider and test valid and invalid input, e.g. unknown operators and division by zero. What options for error handling are feasible? Discuss them with your supervisor and your peers.
 
-Create a function with the signature `int calc(int, int, char)` that takes two numbers an a character denoting an operator symbol (`'+'`, `'-'`, `'*'`, `'/'` and `'%'`). The function `calc` should interpret the operator character and compute its result by combining the two integers accordingly. To give you a headstart you can use the code below in a CUTE Project as `Test.cpp`. Add additional test cases for the corner cases of the function. Consider and test valid and invalid input, e.g. unknown operators and division by zero. What options for error handling are feasible? Discuss them with your supervisor and your peers.
-
-To start, just use a single CUTE Test Project and develop your code there. In the last part of this exercise you will split the code into different projects.
 
 ```cpp
-#include "cute.h"
-#include "ide_listener.h"
-#include "xml_listener.h"
-#include "cute_runner.h"
+#include "Calc.hpp"
 
-int calc(int lhs, int rhs, char op) {
-  //TODO Implement functionality
-  return 0;
-}
+#include <cute/cute.h>
+#include <cute/cute_equals.h>
+#include <cute/cute_runner.h>
+#include <cute/ide_listener.h>
+#include <cute/summary_listener.h>
 
-void test_one_plus_one() {
+#include <sstream>
+
+//TODO: Add more tests
+
+TEST(testOnePlusOne) {
   auto result = calc(1, 1, '+');
   ASSERT_EQUAL(2, result);
 }
 
-//TODO Add more tests here
-
-
-bool runAllTests(int argc, char const *argv[]) {
-  cute::suite s { };
-  //TODO Register tests
-  s.push_back(CUTE(test_one_plus_one));
-  cute::xml_file_opener xmlfile(argc, argv);
-  cute::xml_listener<cute::ide_listener<>> lis(xmlfile.out);
-  auto runner { cute::makeRunner(lis, argc, argv) };
-  bool success = runner(s, "AllTests");
-  return success;
+auto createCalcSuite() -> cute::suite {
+  cute::suite calcSuite{
+    testOnePlusOne,
+  };
+  return calcSuite;
 }
 
-int main(int argc, char const *argv[]) {
-  return runAllTests(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE;
+auto main(int argc, char const* argv[]) -> int {
+    
+  cute::ide_listener<cute::summary_listener<>> listener{};
+  auto runner = cute::makeRunner(listener, argc, argv);
+
+  auto calcSuite = createCalcSuite();
+  bool suiteResult = runner(calcSuite, "Calc Suite");
+
+  return suiteResult ? EXIT_SUCCESS : EXIT_FAILURE;
 }
 ```
 
@@ -100,54 +100,21 @@ Hint for the implementation: Consider using a switch statement in the `calc` fun
 
 ## b) Extension: Simple calculator with stream input (future hand in)
 
-Extend your simple calculator from above and create an additional function `int calc(std::istream& in)` that will read a number, an operator character and another number from the `istream` `in` and compute the result of the operation. E.g. `1 + 1` results in `2`. Also provide unit tests for this new calculator. 
+Extend your simple calculator from above and create an additional function `auto calc(std::istream& in) -> int` that will read a number, an operator character and another number from the `istream` `in` and compute the result of the operation. E.g. `1 + 1` results in `2`. Also provide unit tests for this new calculator. 
 
 When tests for a function taking an `std::istream &` as argument, you have to create an `std::istringstream` that contains the given input.
 
 ```cpp
-void testCalcWithStream() {
+TEST(testCalcWithStream) {
   std::istringstream input{"95/5"};
   auto result = calc(input);
   //...
 }
 ```
 
-## c) Modularization: Separate Projects
+## c) (Optional) Extension: Implement an application
 
-You have implemented the complete functionality of the `calc` function in the unit test project. In order to use them in an executable it would be desirable to have them in a separate library. This is best realized stepwise.
-
-  - Separation into new compilation unit (`.cpp` file)
-    - Move the `calc` functions to a new source file (`calculator.cpp`) in the test project
-    - To be able to use the `calc` functions from the tests in the `Test.cpp` file a header file with the corresponding declarations is required. Create a header file (`calculator.h`) which contains an include guard and the declarations for both functions.
-    - Add an include directive for including the `calculator.h` header file to both source files `Test.cpp` and `calculator.cpp`.
-
-
-Now your test project should compile without errors and run as before. If not figure out why and fix remaining errors. 
-
-  - Separation into distinct projects
-    - Create a new Static Library Project
-    - Move the files `calculator.h` and `calculator.cpp` to this new project
-    - Now we need to tell Cevelop that there is a dependency from the test project to the new library project
-      - Open the references of the test project: Right-click on the test project `-> Properties -> C/C++ General -> Paths and Symbols -> References (Tab)`
-      - Tick the library project and press apply. This should automatically add the library project to the includes (Includes tab), the library of the library project (`Library` tab) and the library path of the library project (`Library Paths` tab). If those are missing add them manually - ask for assistance if it does not work.
-
-
-Now your test project should compile without errors and run as before. If not figure out why and fix remaining error. 
-
-  - Executable project 
-
-Now create an executable project with a `main.cpp` source file that contains the following main function. You have to set up the dependencies from the executable project to the library project as well (See steps above). Then you can use your calculator from the console.
-
-```cpp
-int main() {
-  while (std::cin) {
-    std::cout << '=' << calc(std::cin) << '\n';
-  }
-}
-```
-
-**Note:** The function `calc()` with all of its test will be part of the first hand in later ("Testat"). Show your solution including your CUTE unit tests to your exercise supervisor, you will get feedback!
-
+If you like you can use the second `calc()` overload to implement the calculation app. We have already added an empty `main()` function and set up the project.
 
 ---
 
@@ -162,24 +129,21 @@ In this exercise you will...
 **Hints:**
 
   - Please consult your C++ reference on `iostreams` to figure out which member function to use, if the input operator `>>` doesn’t help with solving the problem. 
-  - Like in the previous exercise start with a CUTE Project and implement the functions and tests directly in the `Test.cpp` file. Afterwards, when you are happy with your code you can separate the tests and the implementation as described above. 
   - You should use an `std::istringstream` to provide your input from in test cases.
   - Do not forget to write unit tests for the following cases:
     - How does your functional core behave with empty input? 
     - Do you always get the result you are expecting?
   - Try not to store too much of the input
-  - All the counting programs should look quite similar in structure
-  - If you experience problems because your program does not terminate properly try to shut down your program using the red box in the Console window it is running within Cevelop
-  - It can cause to hang your Cevelop IDE on some of the platforms (Mac). When that happens, you need to kill your own program from a terminal window or task manager/system monitor/activity monitor. This should make Cevelop usable again. If all fails, you might need to restart Cevelop as well
-
+  - We have prepared an exercise template with library, executables and tests.
+  - Do not write any fancy "UI", so that you can use your programs also as filters within a shell-pipeline.
 
 
 ## a) charc: Count non-whitespace char
  
-Write a function `charc()` to count non-whitespace char values by reading from an input stream (`std::istream)`). The result should be the number of characters found in the stream.
+Write a function `auto charc() -> unsigned` to count non-whitespace char values by reading from an input stream (`std::istream)`). The result should be the number of characters found in the stream.
 
 ```cpp
-unsigned charc(std::istream & input) {
+auto charc(std::istream & input) -> unsigned {
   //Your implementation of charc
 }
 ```
@@ -198,7 +162,7 @@ Create a function `allcharc()` with the same signature as `charc()`. The `allcha
   -  You should first write test cases for your new function, before implementing the function!
 
 
-**Question:** Can you find other means (than the member function of `std::istream`) to not skip the white space?
+**Question:** Can you find other means (than the member function of `std::istream`) to NOt SKIP White Space?
 
 ## c) wc: Count words
  
@@ -212,21 +176,8 @@ Write a function `lc()` to count the lines by reading from standard input.
 
 **Hint:** There are several means to achieve that, for example, count the characters matching the newline character `'\n'`, or, use the `getline()` function and count how often you can call it until you reach the end of the input.
 
-## e) Modularization
- 
-After you have implemented all functions you can split up the structure as follows:
-
-  - Library project that contains all the implementations of the functions. It contains two files `charcount.cpp` and `charcount.h`
-  - A test project for testing the library. It contains the `Test.cpp` file with all CUTE tests. You can also split the test functions into CUTE suites for each function, if you like.
-  - An executable project for each feature: `charc()`, `allcharc()`, `wc()` and `lc()`. In each executable project there only exists a `main.cpp` with a simple main that calls the corresponding library function with `std::cin` as argument and prints the result to `std::cout`.
 
 
-**Note:** Do not write any fancy "UI", so that you can use your programs also as filters within a shell-pipeline.
-
-Compare the result of your function with the size of the file you use as input on the console (e.g., `$ allcharc < file.txt`). Your executables should be located in the `Debug` directory of the executable project.
-
-
----
 
 
 # 4. Experiments (see also lecture code)
@@ -240,7 +191,7 @@ In this exercise you will...
 
 ## a) Experiment: unspecified sequence
  
-Modify the program `greeting.cpp` from the lecture material. Add a second string parameter to `sayGreeting()` and output it together with name. Call it with calling `inputName()` twice. What happens? Is the sequence of words the same as you entered it? Is the program safe to use? 
+Experiment with the `bad_greeting.cpp` from the lecture material. It features a second string parameter on `sayGreeting()`. It is called with `inputName()` supplying each argument. What happens? Is the sequence of words the same as you entered it? Is the program safe to use? 
 
 ## b) Experiment: output with conditional operator
  
@@ -249,7 +200,7 @@ What happens if the following piece of code gets compiled and executed as part o
 ```cpp
 #include <iostream>
 
-int main() {
+auto main() -> int {
     bool cond{};
     std::cout << cond ? "Hello" : "Peter";
 }

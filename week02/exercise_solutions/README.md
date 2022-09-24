@@ -55,7 +55,7 @@ The result of the program can be either that the left argument determined by `in
 
 ## 4b output with conditional operator
 
-The output operator (`<<`) bind stronger than the conditional operator (`?:`). Thus, the output will be the value of `cond` as integer, which is `0` converted from `false`. If you want to print `false` as a word for the output of a boolean expression you need the modifier `std::boolalpha`. The result of the expression is `"Hello"`, but that result is discarded.
+The output operator (`<<`) binds stronger than the conditional operator (`?:`). Thus, the output will be the value of `cond` as integer, which is `0` converted from `false`. If you want to print `false` as a word for the output of a boolean expression you need the modifier `std::boolalpha`. The result of the expression is `"Hello"`, but that result is discarded.
 
 ## 4c Questions on input behavior
 

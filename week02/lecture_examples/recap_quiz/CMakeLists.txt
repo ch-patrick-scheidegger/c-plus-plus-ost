@@ -1,3 +1,3 @@
 #[===[ APPLICATION ]===]
 
-add_executable("w02_recap_quiz" "quiz.cpp")
+add_executable("${CPL_TARGET_WEEK_PREFIX}recap_quiz" "quiz.cpp")

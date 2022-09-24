@@ -1,3 +1,5 @@
+set(CPL_TARGET_WEEK_PREFIX "w02_")
+
 add_subdirectory("lecture_examples/01_typeinfo_for_literals")
 add_subdirectory("lecture_examples/02_type_conversion_and_ub")
 add_subdirectory("lecture_examples/03_bad_relational_operator_example")
@@ -11,3 +13,11 @@ add_subdirectory("lecture_examples/10_how_old_are_you_robust_ignoring")
 add_subdirectory("lecture_examples/11_formatted_output")
 add_subdirectory("lecture_examples/12_tolower_chars")
 add_subdirectory("lecture_examples/recap_quiz")
+
+add_subdirectory("exercise_solutions/sol01_stream_state")
+add_subdirectory("exercise_solutions/sol03_counting")
+
+
+add_subdirectory("exercise_templates/ex02_calculator")
+add_subdirectory("exercise_templates/ex03_counting")
+add_subdirectory("exercise_templates/ex04_experiments")

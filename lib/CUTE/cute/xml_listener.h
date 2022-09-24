@@ -26,8 +26,8 @@
 #ifndef XML_LISTENER_H_
 #define XML_LISTENER_H_
 
-#include "cute_listener.h"
 #include "cute_xml_file.h" // for convenience
+#include "cute_listener.h"
 
 #include <ostream>
 

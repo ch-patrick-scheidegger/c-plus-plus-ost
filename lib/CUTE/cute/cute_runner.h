@@ -26,10 +26,10 @@
 #ifndef CUTE_RUNNER_H_
 #define CUTE_RUNNER_H_
 
-#include "cute_test.h"
-#include "cute_suite.h"
-#include "cute_listener.h"
 #include "cute_determine_traits.h"
+#include "cute_listener.h"
+#include "cute_suite.h"
+#include "cute_test.h"
 
 #include <algorithm>
 #include <functional>

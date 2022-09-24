@@ -13,7 +13,7 @@ TEST(testSayHelloWritesHelloWorldWithNewlineToTheOutputStream) {
   ASSERT_EQUAL("Hello World!\n", output.str());
 }
 
-auto createHelloSuite() -> cute::suite {
+auto createCarcSuite() -> cute::suite {
   cute::suite helloSuite{};
 
   helloSuite += testSayHelloWritesHelloWorldWithNewlineToTheOutputStream;
@@ -25,7 +25,7 @@ auto main(int argc, char const* argv[]) -> int {
   cute::ide_listener<> listener{};
   auto runner = cute::makeRunner(listener, argc, argv);
 
-  auto helloSuite = createHelloSuite();
+  auto helloSuite = createCarcSuite();
 
   bool suiteResult = runner(helloSuite, "Hello Suite");
 

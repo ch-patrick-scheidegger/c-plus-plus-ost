@@ -11,23 +11,23 @@ target_include_directories("HelloLib" PUBLIC
 
 #[===[ TESTS ]===]
 
-add_executable("HelloTests"
+add_executable("${CPL_TARGET_WEEK_PREFIX}HelloTests"
     "test/HelloTest.cpp"
 )
 
-target_link_libraries("HelloTests" PRIVATE
+target_link_libraries("${CPL_TARGET_WEEK_PREFIX}HelloTests" PRIVATE
     "HelloLib"
     "cpl::cute"
 )
 
-add_test(NAME "HelloTests" COMMAND "HelloTests")
+add_test(NAME "${CPL_TARGET_WEEK_PREFIX}HelloTests" COMMAND "HelloTests")
 
 #[===[ APPLICATION ]===]
 
-add_executable("HelloApp"
+add_executable("${CPL_TARGET_WEEK_PREFIX}HelloApp"
     "app/HelloApp.cpp"
 )
 
-target_link_libraries("HelloApp" PRIVATE
+target_link_libraries("${CPL_TARGET_WEEK_PREFIX}HelloApp" PRIVATE
     "HelloLib"
 )
