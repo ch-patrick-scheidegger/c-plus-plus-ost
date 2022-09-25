@@ -1,9 +1,9 @@
+#include "HelloFunction.hpp"
+
 #include <cute/cute.h>
 #include <cute/cute_runner.h>
 #include <cute/ide_listener.h>
 #include <cute/xml_listener.h>
-
-#include "HelloFunction.hpp"
 
 #include <sstream>
 

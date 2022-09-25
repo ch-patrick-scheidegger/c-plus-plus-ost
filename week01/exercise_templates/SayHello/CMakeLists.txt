@@ -20,7 +20,7 @@ target_link_libraries("${CPL_TARGET_WEEK_PREFIX}HelloTests" PRIVATE
     "cpl::cute"
 )
 
-add_test(NAME "${CPL_TARGET_WEEK_PREFIX}HelloTests" COMMAND "HelloTests")
+add_test(NAME "${CPL_TARGET_WEEK_PREFIX}HelloTests" COMMAND "${CPL_TARGET_WEEK_PREFIX}HelloTests")
 
 #[===[ APPLICATION ]===]
 

@@ -97,7 +97,7 @@ namespace cute {
 	            std::remove_copy_if(argv + 1, argv + argc,back_inserter(args),std::logical_not<char const *>());
 	        }
 		}
-		bool operator()(const test & t) const
+		auto operator()(const test & t) const -> bool
 	    {
 			if (testSummaryRequired()){
 				std::cout << t.name() << '\t' << t.testLocation().fileName() << '\t' << t.testLocation().lineNumber() << '\n';
@@ -109,22 +109,26 @@ namespace cute {
 	        return runit(t);
 	    }
 
-	    bool operator ()(suite const &s, const char *info = "") const
+		auto operator ()(suite const &s) const -> bool {
+			return this->operator()(s, s.SuiteName().c_str());
+		}
+
+	    auto operator ()(suite const &s, const char *info) const -> bool
 	    {
 	    	runner_aux::ArgvTestFilter filter(info,args);
 
 	        bool result = true;
 			if (testSummaryRequired()){
-				for (suite::const_iterator it = s.begin();it != s.end();++it){
-					std::cout << info << '#' << it->name() << '\t' << it->testLocation().fileName() << '\t' << it->testLocation().lineNumber() << '\n';
+				for (auto const& it : s){
+					std::cout << info << '#' << it.name() << '\t' << it.testLocation().fileName() << '\t' << it.testLocation().lineNumber() << '\n';
 				}
 			} else if(helpTextRequired()){
 				provideHelpText(info);
 			} else if(filter.shouldrunsuite){
 	            listener.begin(s, info, (size_t)
 	            		count_if(s.begin(),s.end(),boost_or_tr1::bind(&runner_aux::ArgvTestFilter::shouldRun,filter,boost_or_tr1::bind(&test::name,_1))));
-	            for(suite::const_iterator it = s.begin();it != s.end();++it){
-	                if (filter.shouldRun(it->name())) result = this->runit(*it) && result;
+	            for(auto const& it : s){
+	                if (filter.shouldRun(it.name())) result = this->runit(it) && result;
 	            }
 	            listener.end(s, info);
 	        }
@@ -132,7 +136,7 @@ namespace cute {
 	        return result;
 	    }
 	private:
-		void provideHelpText(const char *info = "") const
+		auto provideHelpText(const char *info = "") const -> void
 		{
 			char const * const text =
 			"This program contains tests written using CUTE. \n"
@@ -146,33 +150,33 @@ namespace cute {
 			std::cout << info << text;
 		}
 
-		bool testSummaryRequired() const
+		[[nodiscard]] auto testSummaryRequired() const -> bool
 		{
-			for (std::vector<std::string>::const_iterator it = args.begin(); it != args.end();++it) {
-				if (*it == "--display-tests") {
+			for (auto const & arg : args) {
+				if (arg == "--display-tests") {
 					return true;
 				}
 			}
 			return false;
 		}
 
-		bool helpTextRequired() const
+		[[nodiscard]] auto helpTextRequired() const -> bool
 		{
-			for (std::vector<std::string>::const_iterator it = args.begin(); it != args.end();++it) {
-				if(*it == "--help") {
+			for (auto  & arg : args) {
+				if(arg == "--help") {
 					return true;
 				}
 			}
 			return false;
 		}
 
-	    bool needsFiltering(int argc, const char *const *argv) const
+	    [[nodiscard]] auto needsFiltering(int argc, const char *const *argv) const -> bool
 	    {
 	        return argc > 1 && argv ;
 	    }
 
 
-	    bool runit(const test & t) const
+	    [[nodiscard]] auto runit(const test & t) const -> bool
 	    {
 	        try {
 	            listener.start(t);
@@ -194,7 +198,7 @@ namespace cute {
 		}
 	};
 	template <typename Listener>
-	runner<Listener> makeRunner(Listener &s, int argc = 0, const char *const *argv = 0){
+	auto makeRunner(Listener &s, int argc = 0, const char *const *argv = 0) -> runner<Listener> {
 		return runner<Listener>(s,argc,argv);
 	}
 }

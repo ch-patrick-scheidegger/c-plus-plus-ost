@@ -30,10 +30,13 @@ TEST(testCharcMultipleLinesInStream) {
 
 auto createCarcSuite() -> cute::suite {
   cute::suite charcSuite{
-    testCharcEmptyStream,
-    testCharcSimpleWordInStream,
-    testCharcHelloWorldInStream,
-    testCharcMultipleLinesInStream,
+    "Charc Suite",
+    {
+      testCharcEmptyStream,
+      testCharcSimpleWordInStream,
+      testCharcHelloWorldInStream,
+      testCharcMultipleLinesInStream,
+    }
   };
   return charcSuite;
 }
@@ -65,11 +68,14 @@ TEST(testAllcharcOnlyWhitespaceInStream) {
 
 auto createAllcharcSuite() -> cute::suite {
   cute::suite allcharcSuite{
-    testAllcharcEmptyStream,
-    testAllcharcSimpleWordInStream,
-    testAllcharcHelloWorldInStream,
-    testAllcharcMultipleLinesInStream,
-    testAllcharcOnlyWhitespaceInStream,
+    "Allcharc Suite",
+    {
+      testAllcharcEmptyStream,
+      testAllcharcSimpleWordInStream,
+      testAllcharcHelloWorldInStream,
+      testAllcharcMultipleLinesInStream,
+      testAllcharcOnlyWhitespaceInStream,
+    }
   };
   return allcharcSuite;
 }
@@ -97,10 +103,13 @@ TEST(testWcMultipleLinesInStream) {
 
 auto createWcSuite() -> cute::suite {
   cute::suite wcSuite{
-    testWcEmptyStream,
-    testWcSimpleWordInStream,
-    testWcHelloWorldInStream,
-    testWcMultipleLinesInStream,
+    "Wc Suite",
+    {
+      testWcEmptyStream,
+      testWcSimpleWordInStream,
+      testWcHelloWorldInStream,
+      testWcMultipleLinesInStream,
+    }
   };
   return wcSuite;
 }
@@ -126,12 +135,15 @@ TEST(testLcFiveEmptyLinesInStream) {
   ASSERT_EQUAL(5, lc(input));
 }
 
-auto createLcSuite() -> cute::suite {
+auto createSumiSuite() -> cute::suite {
   cute::suite lcSuite{
-    testLcEmptyStream,
-    testLcSimpleWordInStream,
-    testLcTrailingLinebreakInStream,
-    testLcFiveEmptyLinesInStream,
+    "Lc Suite",
+    {
+      testLcEmptyStream,
+      testLcSimpleWordInStream,
+      testLcTrailingLinebreakInStream,
+      testLcFiveEmptyLinesInStream,
+    }
   };
   return lcSuite;
 }
@@ -141,14 +153,10 @@ auto main(int argc, char const* argv[]) -> int {
   cute::ide_listener<cute::summary_listener<>> listener{};
   auto runner = cute::makeRunner(listener, argc, argv);
 
-  auto charcSuite = createCarcSuite();
-  bool suiteResult = runner(charcSuite, "Charc Suite");
-  auto allcharcSuite = createAllcharcSuite();
-  suiteResult &= runner(allcharcSuite, "Allcharc Suite");
-  auto wcSuite = createWcSuite();
-  suiteResult &= runner(wcSuite, "Wc Suite");
-  auto lcSuite = createLcSuite();
-  suiteResult &= runner(lcSuite, "Lc Suite");
+  bool suiteResult = runner(createCarcSuite());
+  suiteResult &= runner(createAllcharcSuite());
+  suiteResult &= runner(createWcSuite());
+  suiteResult &= runner(createSumiSuite());
 
   return suiteResult ? EXIT_SUCCESS : EXIT_FAILURE;
 }

@@ -17,7 +17,10 @@ TEST(testCharcEmptyStream) {
 
 auto createCarcSuite() -> cute::suite {
   cute::suite charcSuite{
-    testCharcEmptyStream,
+    "Charc Suite",
+    {
+      testCharcEmptyStream,
+    }
   };
   return charcSuite;
 }
@@ -29,7 +32,10 @@ TEST(testAllcharcEmptyStream) {
 
 auto createAllcharcSuite() -> cute::suite {
   cute::suite allcharcSuite{
-    testAllcharcEmptyStream,
+    "Allcharc Suite",
+    {
+      testAllcharcEmptyStream,
+    }
   };
   return allcharcSuite;
 }
@@ -41,7 +47,10 @@ TEST(testWcEmptyStream) {
 
 auto createWcSuite() -> cute::suite {
   cute::suite wcSuite{
-    testWcEmptyStream,
+    "Wc Suite",
+    {
+      testWcEmptyStream,
+    }
   };
   return wcSuite;
 }
@@ -51,9 +60,12 @@ TEST(testLcEmptyStream) {
   ASSERT_EQUAL(0, lc(input));
 }
 
-auto createLcSuite() -> cute::suite {
+auto createSumiSuite() -> cute::suite {
   cute::suite lcSuite{
-    testLcEmptyStream,
+    "Lc Suite",
+    {
+      testLcEmptyStream,
+    }
   };
   return lcSuite;
 }
@@ -63,14 +75,10 @@ auto main(int argc, char const* argv[]) -> int {
   cute::ide_listener<cute::summary_listener<>> listener{};
   auto runner = cute::makeRunner(listener, argc, argv);
 
-  auto charcSuite = createCarcSuite();
-  bool suiteResult = runner(charcSuite, "Charc Suite");
-  auto allcharcSuite = createAllcharcSuite();
-  suiteResult &= runner(allcharcSuite, "Allcharc Suite");
-  auto wcSuite = createWcSuite();
-  suiteResult &= runner(wcSuite, "Wc Suite");
-  auto lcSuite = createLcSuite();
-  suiteResult &= runner(lcSuite, "Lc Suite");
+  bool suiteResult = runner(createCarcSuite());
+  suiteResult &= runner(createAllcharcSuite());
+  suiteResult &= runner(createWcSuite());
+  suiteResult &= runner(createSumiSuite());
 
   return suiteResult ? EXIT_SUCCESS : EXIT_FAILURE;
 }

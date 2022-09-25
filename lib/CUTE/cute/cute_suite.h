@@ -10,8 +10,8 @@
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in
+ *all copies or substantial portions of the Software.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -28,22 +28,47 @@
 
 #include "cute_test.h"
 
+#include <cstddef>
+#include <initializer_list>
+#include <utility>
 #include <vector>
 
 namespace cute {
-	typedef std::vector<test> suite;
-	// convenience operator for appending to suites, might not be right
-	// deprecated, not supported by plug-in, not needed with Eclipse plug-in
-	inline
-	suite &operator+=(suite &left, suite const &right){
-		left.insert(left.end(),right.begin(),right.end());
-		return left;
-	}
-	inline
-	suite &operator+=(suite &left, test const &right){
-		left.push_back(right);
-		return left;
-	}
+
+struct suite : std::vector<test> {
+  using base = std::vector<test>;
+  
+  explicit suite(std::string suiteName = "Unnamed Suite") : suiteName{std::move(suiteName)}{
+  }
+
+  suite(std::string suiteName, std::initializer_list<test> tests) : base(tests), suiteName{std::move(suiteName)} {
+  }
+
+  template<typename InputIter>
+  suite(std::string suiteName, InputIter begin, InputIter end) : base(std::move(begin), std::move(end)), suiteName{std::move(suiteName)} {
+  }
+
+
+  [[nodiscard]] auto SuiteName() const -> std::string { return suiteName; }
+
+  auto SuiteName() -> std::string& { return suiteName; }
+
+ private:
+  std::string suiteName;
+};
+
+// convenience operator for appending to suites, might not be right
+// deprecated, not supported by plug-in, not needed with Eclipse plug-in
+inline auto operator+=(suite& left, suite const& right) -> suite& {
+  left.insert(left.end(), right.begin(), right.end());
+  return left;
 }
+
+inline auto operator+=(suite& left, test const& right) -> suite& {
+  left.push_back(right);
+  return left;
+}
+
+}  // namespace cute
 
 #endif /*CUTE_SUITE_H_*/

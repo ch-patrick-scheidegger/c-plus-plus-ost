@@ -177,7 +177,7 @@ Write a function `lc()` to count the lines by reading from standard input.
 **Hint:** There are several means to achieve that, for example, count the characters matching the newline character `'\n'`, or, use the `getline()` function and count how often you can call it until you reach the end of the input.
 
 
-
+---
 
 
 # 4. Experiments (see also lecture code)
@@ -227,20 +227,19 @@ Write a program `sumi()` to sum up a sequence of integer numbers given in standa
 
 Example: Input `0 55 222 41 11` should result in `329`
 
-Once you are done, change your program to accept floating point numbers instead ('sumf'). How many places do you need to change?
+Once you are done, change your program to accept floating point numbers instead (`sumf`). How many places do you need to change?
 
 
 ## b) Average numbers
  
-Write a program `averagei()` to calculate the average of a sequence of integer numbers given in standard input. Assume only numbers separated by whitespace are provided. Print the resulting average with the number of elements on standard output.
+Write a program `averagei()` to calculate the average of a sequence of integer numbers given in standard input. Assume only numbers separated by whitespace are provided. Return the resulting average on standard output.
 
-Example: 
+Example, integrated into a console application: 
 
 ```
 > averagei
 0 55 222 41 11<EOF>
 Average: 65.8
-Count: 5
 ```
 
 Once you are done, change your program to accept floating point numbers instead (`averagef()`). How many places do you need to change?
@@ -273,7 +272,7 @@ Example:
 
 ```
 > fractab
-enter limit (max 30):6
+enter limit (max 10):6
         0        1        2        3        4        5        6
         1        1      0.5  0.33333     0.25      0.2  0.16667
         2        2        1  0.66667      0.5      0.4  0.33333
@@ -282,15 +281,6 @@ enter limit (max 30):6
         5        5      2.5   1.6667     1.25        1  0.83333
         6        6        3        2      1.5      1.2        1
 ```
-
-## e) Bartender cheat sheet (loops)
- 
-The VSHSR bartender who sells lots of drinks on the semester party might have a few drinks herself. Multiplication of drink prices can thus become a challenge. 
-
-Create a multiplication sheet for the multiples up to `10` times for the following drinks: *small* Beer 4.65, a *Moaß* Beer 9.15, Schnapps 3.85, Soda 2.95. This sheet will help the bartender with her task of asking for the money when one buys a round.
-
-
-  - Can you make the application configurable, so that there is one place where you can specify a drink and its unit price an generate tables for arbitrary drinks or price changes easily?
 
 ---
 keywords:

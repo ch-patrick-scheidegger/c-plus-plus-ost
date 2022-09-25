@@ -16,6 +16,7 @@ add_subdirectory("lecture_examples/recap_quiz")
 
 add_subdirectory("exercise_solutions/sol01_stream_state")
 add_subdirectory("exercise_solutions/sol03_counting")
+add_subdirectory("exercise_solutions/sol05_miscellaneous")
 
 
 add_subdirectory("exercise_templates/ex02_calculator")
