@@ -54,3 +54,5 @@ target_link_libraries("${CPL_TARGET_WEEK_PREFIX}sol03_tests" PRIVATE
     "${CPL_TARGET_WEEK_PREFIX}sol03_counting"
     "cpl::cute"
 )
+
+add_test(NAME "${CPL_TARGET_WEEK_PREFIX}sol03_tests" COMMAND "${CPL_TARGET_WEEK_PREFIX}sol03_tests")

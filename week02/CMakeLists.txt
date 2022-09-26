@@ -14,11 +14,12 @@ add_subdirectory("lecture_examples/11_formatted_output")
 add_subdirectory("lecture_examples/12_tolower_chars")
 add_subdirectory("lecture_examples/recap_quiz")
 
+add_subdirectory("exercise_templates/ex02_calculator")
+add_subdirectory("exercise_templates/ex03_counting")
+add_subdirectory("exercise_templates/ex04_experiments")
+add_subdirectory("exercise_templates/ex05_miscellaneous")
+
 add_subdirectory("exercise_solutions/sol01_stream_state")
 add_subdirectory("exercise_solutions/sol03_counting")
 add_subdirectory("exercise_solutions/sol05_miscellaneous")
 
-
-add_subdirectory("exercise_templates/ex02_calculator")
-add_subdirectory("exercise_templates/ex03_counting")
-add_subdirectory("exercise_templates/ex04_experiments")

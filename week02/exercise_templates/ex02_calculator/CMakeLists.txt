@@ -29,3 +29,5 @@ target_link_libraries("${CPL_TARGET_WEEK_PREFIX}ex02_calc_tests" PRIVATE
     "${CPL_TARGET_WEEK_PREFIX}ex02_calc_lib"
     "cpl::cute"
 )
+
+add_test(NAME "${CPL_TARGET_WEEK_PREFIX}ex02_calc_tests" COMMAND "${CPL_TARGET_WEEK_PREFIX}ex02_calc_tests")

@@ -38,15 +38,15 @@ namespace cute {
 struct suite : std::vector<test> {
   using base = std::vector<test>;
   
-  explicit suite(std::string suiteName = "Unnamed Suite") : suiteName{std::move(suiteName)}{
+  explicit suite(std::string suiteName = "Unnamed Suite", std::vector<test> tests = {}) : std::vector<test>(std::move(tests)), suiteName{std::move(suiteName)}{
   }
 
-  suite(std::string suiteName, std::initializer_list<test> tests) : base(tests), suiteName{std::move(suiteName)} {
-  }
+  // suite(std::string suiteName, std::initializer_list<test> tests) : base(tests), suiteName{std::move(suiteName)} {
+  // }
 
-  template<typename InputIter>
-  suite(std::string suiteName, InputIter begin, InputIter end) : base(std::move(begin), std::move(end)), suiteName{std::move(suiteName)} {
-  }
+  // template<typename InputIter>
+  // suite(std::string suiteName, InputIter begin, InputIter end) : base(std::move(begin), std::move(end)), suiteName{std::move(suiteName)} {
+  // }
 
 
   [[nodiscard]] auto SuiteName() const -> std::string { return suiteName; }
