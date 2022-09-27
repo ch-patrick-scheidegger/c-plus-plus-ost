@@ -1,3 +1,5 @@
+**Note:** We recognized many symbol resolution issues when working with `clangd` on Windows. We recommend installing and using `clangd` from MSYS instead of the language server downloaded by the `clangd` extension. Alternatively, you could also install MSVC. We extended the [setup instructions page](https://gitlab.ost.ch/cxx/cpl/-/wikis/Setup-Development-Environment-(VSCode)#missing-standard-library-with-clangd) accordingly.
+
 # 1. Questions about the Lecture
 
   - Please figure out, in which standard header file the following elements of `namespace std` are declared. Also point out, if it is a variable, function or type. Please note, in a concrete compiler implementation the exact place might be in another header file than the official standard one. You should provide the latter. Consult provided online references, if in doubt and to check your answers. Maybe your IDE can support this exploration (experiment with CTRL-click). If there is a difference in the position where the element is defined and the standard documentation give both headers and try to explain it!
