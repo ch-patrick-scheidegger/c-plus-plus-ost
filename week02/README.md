@@ -81,7 +81,10 @@ TEST(testOnePlusOne) {
 
 auto createCalcSuite() -> cute::suite {
   cute::suite calcSuite{
-    testOnePlusOne,
+    "Calc Suite",
+    {
+      testOnePlusOne,
+    }
   };
   return calcSuite;
 }
@@ -92,7 +95,7 @@ auto main(int argc, char const* argv[]) -> int {
   auto runner = cute::makeRunner(listener, argc, argv);
 
   auto calcSuite = createCalcSuite();
-  bool suiteResult = runner(calcSuite, "Calc Suite");
+  bool suiteResult = runner(calcSuite);
 
   return suiteResult ? EXIT_SUCCESS : EXIT_FAILURE;
 }
