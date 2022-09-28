@@ -8,4 +8,5 @@ add_subdirectory("lecture_examples/vectordemo")
 # add_subdirectory("exercise_templates/ex02_calculator")
 
 add_subdirectory("exercise_solutions/sol02_counting_algorithms")
+add_subdirectory("exercise_solutions/sol04_miscellaneous")
 
