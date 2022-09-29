@@ -2,7 +2,6 @@ In this week, we will start with an exercise that will be combined into a hand-i
 
 However, to get into the mood of programming you might start with the simpler counting exercises first. But those shouldn't take too long to solve. If you find you are too slow, there is only one remedy: exercise exercise exercise... OTOH, if you are stuck during the exercise lesson, do not just wait until your supervisor shows up at your place, but actively seek support, either by him or by your fellow students.
 
-If your workspace accumulates too many projects and you loose the overview on what you are working on, close the old projects and hide the closed projects from the workspace using the workspace preferences or define working sets in the project view (little triangle button).
 
 # 0. Self-study 
 
@@ -14,7 +13,7 @@ If your workspace accumulates too many projects and you loose the overview on wh
 * Also consult some of the algorithms we encountered:
   * http://en.cppreference.com/w/cpp/algorithm
 
-## b) Videos
+## b) Optional: Videos
 
 * [Iterators and Algorithms](https://skripte.hsr.ch/Informatik/Fachbereich/C++/CPl/Videos/3.%20iterators%20and%20algorithms.mp4) (On Skripte server, only accessible from OST)
 * [105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=bXkWuUe9V2I) - Jonathan Boccara ACCU 2018 on YouTube
@@ -42,7 +41,7 @@ This function should also be able to cope with negative numbers. For example `-1
        - 
 ```
 
-**Note:** Stick with the representation above in order to check your solution against ALF, a tool for preliminary checks of the testat solution.
+**Note:** Stick with the representation above in order to check your solution against ALF (Automated Lesson Feedback), a tool for preliminary checks of the testat solution.
 
 ## First Step `printLargeDigit`
 
@@ -67,7 +66,7 @@ For the "production code" of `printLargeDigit` and `printLargeNumber`, create a 
 *  Show your solution as early as possible to your supervisor for feedback. 
 *  Work in small teams (up to 3) to speed up your programming time and increase your result quality.
 *  Getting this working together with appropriate unit tests is important, since you need the solution for your testat exercise next week.
-*  You won't be able to use `printLargeDigit` to implement `printLargeNumber`.
+*  You won't be able to use `printLargeDigit` to implement `printLargeNumber`. Think about why this does not work.
 
 ## Testing
 
@@ -85,14 +84,12 @@ void testPrintLargeDigitZero() {
 }
 ```
 
+---
+
 # 2. Counting again - without loops
-This week we repeat some of the exercises of last week. However, now you need to solve the task without writing a loop of your own, but by using iterators and algorithms of the standard library. One function you might need to know about is `std::distance()` that takes two iterators forming a range and returns the number of elements in that range. Using distance is convenient for counting all elements in a range.
+This week we repeat some of the exercises of last week. However, now you need to solve the task without writing a loop of your own, but by using iterators and algorithms of the standard library. One function you might need to know about is `std::ranges::distance()` that takes two iterators forming a range and returns the number of elements in that range. Using distance is convenient for counting all elements in a range.
 
 If you are unsure about the correct solution, start out with encapsulating it in a function and write unit tests first using `std::stringstream` objects as input and output substitutes. Create all solutions by using algorithms instead of loops. If you can not achieve that, please ask your supervisor for tips.
-
-**Hints:**
-
-  - Like in the previous exercises start with a CUTE Project and implement the functions and tests directly in the `Test.cpp` file. Afterwards, when you are happy with your code you can separate the tests and the implementation as described above. 
 
 
 ## a) charc: Count non-whitespace char
@@ -100,7 +97,7 @@ If you are unsure about the correct solution, start out with encapsulating it in
 Write a function `charc()` to count non-whitespace char values by reading from an input stream (`std::istream)`). The result should be the number of characters found in the stream.
 
 ```cpp
-unsigned charc(std::istream & input) {
+auto charc(std::istream & input) -> unsigned {
   //Your implementation of charc
 }
 ```
@@ -126,7 +123,7 @@ Write a function `lc()` to count the lines by reading from an istream.
 
 After checking its functionality using some unit tests, use that function in a program **lcount** that counts the number of lines available on standard input. The result should be printed on standard output. Compare your output with the result of the _wc -l_ command on a large text file.
 
-<hr/>
+---
 
 # Extra exercises for self-study (Optional)
 
@@ -143,20 +140,28 @@ Vary your functions from above so that they take an additional parameter: a scal
 ```
 To avoid duplicating code and because we do not have classes yet, you can define the shared data structure with the solution above as a global constant (which is not as poisonous as a global variable).
 
-Note: this exercise allows hand-written loops for the scaling. But you can try to find a solution with as few loops as possible. Maybe, you can experiment to create a solution that relies on algorithms only.
+***Note:*** this exercise allows hand-written loops for the scaling. But you can try to find a solution with as few loops as possible. Maybe, you can experiment to create a solution that relies on algorithms only.
 
-## 4.  Sum numbers
+## 4.  Miscellaneous with Algorithms
 
-Write a function **sumi(std::istream&)** to sum up a sequence of integer numbers given on an input stream. Assume only numbers separated by whitespace are given. Return the resulting sum. Do not use a loop. How much would need to change to sum floating point numbers instead? Do so but in a separate function called **sumd(std::istream&)**
+Now, as you know algorithms you can try to apply them to implement the (optional) loop exercises from the previous week. But this time without loops.
 
-## 5.  Multiplication table
+### a) Summing `int`s and `double`s
 
-Write a program **multab** to print a multiplication table for the integers from 1 to 20. Start by filling a `std::vector<int>` with the numbers 1 to 20. You shouldn't use a loop to create the table, therefore you might need to nest algorithm calls in a lambda expression or function call to get the nested iteration. The output can be generated onto an `std::ostream_iterator` with an algorithm that 'transforms' its input.
+Write a function **sumi(std::istream&)** to sum up a sequence of integer numbers given on an input stream. Assume only numbers separated by whitespace are given. Return the resulting sum. Do not use a loop. How much would need to change to sum floating point numbers instead? Do so but in a separate function called **sumf(std::istream&)**
+
+### b) Averaging `int`s and `double`s
+
+Similar to the summing exercise you can implement the functions `averagei(std::istream&)` and `averagef(std::istream&)` using algorithms. Unfortunately, this exercise requires two variables for tracking the sum and count. Maybe you find a creative solution, otherwise you can fallback on `std::ranges::for_each`.
+
+## b)  Multiplication table
+
+Write a program **multab** to print a multiplication table for the integers from 1 to 30. Start by filling a `std::vector<int>` with the numbers 1 to 30. You shouldn't use a loop to create the table, therefore you might need to nest algorithm calls in a lambda expression.
 
 Note: **use a lambda with capture by reference:**
 ```
 [&](auto x){...}
 ```
 
-## 6. Decimal Fractions
+## c) Decimal Fractions
 Can you vary your program _multab_ to print a table of decimal fractions (**fractab**) for a divided by b, where a and b take the range from 1 to 10? Also without any self-made loops.
