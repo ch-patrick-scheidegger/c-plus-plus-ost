@@ -8,3 +8,5 @@ tasks:
         cmake -B build .
 
 
+image:
+  file: .gitpod.Dockerfile
