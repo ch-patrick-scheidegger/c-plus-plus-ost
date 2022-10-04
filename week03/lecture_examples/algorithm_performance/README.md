@@ -1,0 +1,2 @@
+This program shows that standard algorithms can sometimes even be more efficient than hand-written loops.
+Background: There are specializations for random access iterators, which allow the number of remaining elements to be calculated and thus unroll parts of the loop.

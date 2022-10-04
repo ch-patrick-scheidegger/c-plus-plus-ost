@@ -1,5 +1,6 @@
 set(CPL_TARGET_WEEK_PREFIX "w03_")
 
+add_subdirectory("lecture_examples/algorithm_performance")
 add_subdirectory("lecture_examples/algorithmdemo")
 add_subdirectory("lecture_examples/cat")
 add_subdirectory("lecture_examples/copycat")
