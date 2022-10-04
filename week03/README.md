@@ -154,7 +154,7 @@ Write a function **sumi(std::istream&)** to sum up a sequence of integer numbers
 
 Similar to the summing exercise you can implement the functions `averagei(std::istream&)` and `averagef(std::istream&)` using algorithms. Unfortunately, this exercise requires two variables for tracking the sum and count. Maybe you find a creative solution, otherwise you can fallback on `std::ranges::for_each`.
 
-## b)  Multiplication table
+### c)  Multiplication table
 
 Write a program **multab** to print a multiplication table for the integers from 1 to 30. Start by filling a `std::vector<int>` with the numbers 1 to 30. You shouldn't use a loop to create the table, therefore you might need to nest algorithm calls in a lambda expression.
 
@@ -163,5 +163,5 @@ Note: **use a lambda with capture by reference:**
 [&](auto x){...}
 ```
 
-## c) Decimal Fractions
+### d) Decimal Fractions
 Can you vary your program _multab_ to print a table of decimal fractions (**fractab**) for a divided by b, where a and b take the range from 1 to 10? Also without any self-made loops.
