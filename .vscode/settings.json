@@ -3,4 +3,5 @@
     "C_Cpp.autocomplete": "Disabled",
     "C_Cpp.errorSquiggles": "Disabled",
     "C_Cpp.intelliSenseEngine": "Disabled",
+    "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
 }
