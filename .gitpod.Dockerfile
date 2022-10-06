@@ -7,4 +7,5 @@ RUN pacman -Sy --noconfirm \
           gcc \
           cmake \
           clang \
-          git
+          git \
+          ninja
