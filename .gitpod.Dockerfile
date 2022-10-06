@@ -4,7 +4,7 @@ FROM archlinux:latest
 
 # Install custom tools, runtime, etc.
 RUN pacman -Sy --noconfirm \
-          gcc \
+          base-devel \
           cmake \
           clang \
           git \
