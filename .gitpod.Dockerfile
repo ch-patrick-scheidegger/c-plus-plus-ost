@@ -3,7 +3,7 @@
 FROM archlinux:latest
 
 # Install custom tools, runtime, etc.
-RUN sudo pacman -Sy --noconfirm \
+RUN pacman -Sy --noconfirm \
           gcc \
           cmake \
           clang \
