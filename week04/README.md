@@ -54,6 +54,7 @@ auto main() -> int {
 ---
 
 ## 1 _Testat-Exercise 1_: Calculator with Retro Style Output
+
 **Hand in time is Monday Oct 25 2021, 10:00 (AM)**
 
 Hand in you solution via [ALF](https://alf.sifs0005.infs.ch/project/9/submission/new/) **CPl Testat 1 Pocketcalculator**. In case ALF does not work or is too slow, you can send an email.
@@ -90,7 +91,9 @@ If the format is wrong or the calculation is invalid, display "Error". You can d
  -        -    
 ```
 
-*  If the result of the calculation is wider than eight digits it is considered an overflow, which is an "Error" too. Implement the width check in your new function `pocketcalculator()` **Note:** You cannot determine the width of your console in a portable way.
+*  If the result of the calculation is wider than eight digits it is considered an overflow, which is an "Error" too. Implement the width check in your new function `pocketcalculator()`.
+
+**Note:** You cannot determine the width of your console in a portable way.
 
 
 ### Automated Checking
@@ -186,56 +189,14 @@ In most cases you do not need to care about these details, because the linker wi
 
 ### Experiment: Timing Parameter Passing Variation
 
-The following code frame uses a function that creates a large vector and pass this large vector 100 times by value, effectively copying it to a function. To avoid having an optimizer optimize it away the function itself returns a random element from the given vector.
+The code frame in the exercise template features a function that creates a large vector and passes this large vector 100 times by value, effectively copying it to a function. To avoid having an optimizer optimize it away the function itself returns a random element from the given vector.
 
-```c++
-#include <vector>
-#include <string>
-#include <iostream>
-#include <chrono>
-#include <random>
+Your tasks:
 
-
-constexpr size_t testsize{1000000};
-
-using testdata=std::vector<std::string>;
-size_t random_index(){
-    static std::random_device rd{};  //Will be used to obtain a seed for the random number engine
-    static std::mt19937 gen{rd()}; //Standard mersenne_twister_engine seeded with rd()
-    static std::uniform_int_distribution<size_t> dis{0, testsize-1};
-    return dis(gen);
-}
-
-std::string pass_by_value(testdata v){
-	size_t index = random_index();
-	return v[index];
-}
-void copying_source_outside(){
-	testdata v(testsize," ");
-	for (int i = 0; i < 100; i++)
-	{
-		auto res = pass_by_value(v);
-	}
-}
-
-std::chrono::microseconds time_func(void  (f)()){
-	using namespace std::chrono;
-	high_resolution_clock clock { };
-	auto start=clock.now();
-		f();
-	auto end = clock.now();
-	return duration_cast<microseconds>(end - start);
-}
-int main(){
-	auto elapsed = time_func(copying_source_outside).count();
-	std::cout << "source_outside :" << elapsed << " us\n";
-}
-```
-
-*  Measure the difference of the above test code for a Debug and a Release build in Eclipse.
-*  Modify/Extend the code to allow the following variation:
-  *  pass the testdata by const & (new function pass_by_cref, new looping function ref_source_outside)
-  *  create the testdata within the loop (100 times) new function copying_source_inline
-  *  do not return anything from pass_by_xxxx
-*  Can you explain the differences? Do you get similar results with a much smaller / much larger vector and correspondingly more/fewer loops (instead of 100).
-*  What do you judge to use for your own code in the future?
+-  Measure the difference of the above test code for a Debug and a Release build. You should be able to switch in CMake (Bottom bar in VSCode).
+-  Modify/Extend the code to allow the following variation:
+   - Pass the `TestData` by `const &` (new function `passByCref`, new looping function `refInAndOut`)
+   - Create the `TestData` within the loop (100 times) new function `copyFromLoop`
+   - Do not return anything from `passByValue/Cref`
+-  Can you explain the differences? Do you get similar results with a much smaller / much larger vector and correspondingly more/fewer loops (instead of 100).
+-  What do you judge to use for your own code in the future?
