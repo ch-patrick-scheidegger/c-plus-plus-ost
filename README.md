@@ -9,7 +9,7 @@ Lectures will be available on [Switch Tube](https://tube.switch.ch/channels/889a
 In the course of this module students learn usage and understanding of modern C++.
 
 Code examples in the lecture and exercises target the current C++ standard, also known als C++20.
-A pre-version of the language standard can be found [here](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf).
+A pre-version of the language standard can be found [here](https://isocpp.org/files/papers/N4860.pdf).
 This working draft lacks only minor editorial fixes compared to the official standard.
 
 A much more accessible reference to the standard document exists in [cppreference]( https://en.cppreference.com/w/)
