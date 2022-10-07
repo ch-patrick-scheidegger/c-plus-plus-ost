@@ -1,0 +1,15 @@
+
+tasks:
+  - init: |
+        mkdir build
+        cmake -B build . -G Ninja
+
+
+image:
+  file: .gitpod.Dockerfile
+
+
+vscode:
+  extensions:
+    - llvm-vs-code-extensions.vscode-clangd
+    - ms-vscode.cmake-tools
