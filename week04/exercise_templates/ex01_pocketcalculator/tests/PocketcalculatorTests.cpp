@@ -1,4 +1,4 @@
-#include "Sevensegment.hpp"
+#include "Pocketcalculator.hpp"
 
 #include <cute/cute.h>
 #include <cute/cute_equals.h>
@@ -10,36 +10,24 @@
 
 //TODO: Add more tests
 
-TEST(testLargeDigitZero) {
+TEST(testEmptyStream) {
+  std::istringstream input{};
   std::ostringstream output{};
-  printLargeDigit(0, output);
-  ASSERT_EQUAL(" - \n"
-               "| |\n"
-               "   \n"
-               "| |\n"
-               " - \n", output.str());
+  pocketcalculator(input, output);
+  ASSERT_EQUAL("", output.str());
 }
 
 auto createPocketcalculatorSuite() -> cute::suite {
-  cute::suite largeDigitSuite{
-    "Print Large Digit Suite",
+  cute::suite pocketcalculatorSuite{
+    "Pocketcalculator Suite",
     {
-      testLargeDigitZero,
+      testEmptyStream,
     }
   };
-  return largeDigitSuite;
+  return pocketcalculatorSuite;
 }
 
 
-
-auto createPrintLargeNumberSuite() -> cute::suite {
-  cute::suite largeNumberSuite{
-    "Print Large Number Suite",
-    {
-    }
-  };
-  return largeNumberSuite;
-}
 
 auto main(int argc, char const* argv[]) -> int {
     
@@ -47,7 +35,6 @@ auto main(int argc, char const* argv[]) -> int {
   auto runner = cute::makeRunner(listener, argc, argv);
 
   bool suiteResult = runner(createPocketcalculatorSuite());
-  suiteResult &= runner(createPrintLargeNumberSuite());
 
   return suiteResult ? EXIT_SUCCESS : EXIT_FAILURE;
 }
