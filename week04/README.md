@@ -9,16 +9,16 @@ Read the program and try to figure out what it does. The following topics occur 
 *  Namespaces (Not yet covered)
 *  Lambdas (Week 4)
 
-```c++
-#include <iostream>
+```cpp
 #include <algorithm>
+#include <iostream>
 #include <iterator>
 #include <string>
 
 namespace Games {
 
 struct FizzBuzz {
-  void run(unsigned n, std::ostream & out) {
+  auto run(unsigned n, std::ostream &out) -> void {
     std::ostream_iterator<std::string> outIter{out, "\n"};
     auto gen = [this] {
       value++;
@@ -36,13 +36,14 @@ struct FizzBuzz {
     };
     std::generate_n(outIter, n, gen);
   }
+
 private:
   int value{};
 };
 
-}
+} // namespace Games
 
-int main(int argc, char **argv) {
+auto main() -> int {
   Games::FizzBuzz fb{};
   fb.run(15, std::cout);
 }
@@ -50,12 +51,14 @@ int main(int argc, char **argv) {
 
 **Note:** This example is artificial, some parts of it are not solved in the shortest possible way.
 
+---
+
 ## 1 _Testat-Exercise 1_: Calculator with Retro Style Output
-**Hand in time is Monday Oct 25 2021, 10:00 (AM) (CEST)**
+**Hand in time is Monday Oct 25 2021, 10:00 (AM)**
 
-Hand in you solution via MS Teams using the assignment **Testat 1**.
+Hand in you solution via [ALF](https://alf.sifs0005.infs.ch/project/9/submission/new/) **CPl Testat 1 Pocketcalculator**. In case ALF does not work or is too slow, you can send an email.
 
-Use the functions implemented in the previous weeks to create a simple pocket calculator simulation. Allow the user to enter a calculation using two integers and an infix operator symbol. This input should stand on a single line and the result of the calculation should be displayed in a large way using your seven segment display simulation from last week. In this exercise the display width should be limited to a maximum number of eight digits (<=8) including a large minus sign for negative numbers. This limitation should be implemented in the pocket calculator, not the seven segment functionality itself. For the underlying calculation use your function **`calc()`**. Read the input line by line (`std::getline()`) and interpret each line as a calculation (operand operator operand). Expected signature: `void pocketcalculator(std::istream &, std::ostream&)`
+Use the functions implemented in the previous two weeks to create a simple pocket calculator simulation. Allow the user to enter a calculation using two integers and an infix operator symbol. This input should stand on a single line and the result of the calculation should be displayed in a large way using your seven segment display simulation from last week. In this exercise the display width should be limited to a maximum number of eight digits (<=8) including a large minus sign for negative numbers. This limitation should be implemented in the pocket calculator, not the seven segment functionality itself. For the underlying calculation use your function **`calc()`**. Read the input line by line (`std::getline()`) and interpret each line as a calculation (operand operator operand). Expected signature: `void pocketcalculator(std::istream &, std::ostream&)`
 
 ```
 6*7
@@ -72,7 +75,7 @@ Use the functions implemented in the previous weeks to create a simple pocket ca
  - 
 ```
 
-If the format is wrong or the calculation is invalid, display "Error". You can define additional "digits" in your seven-segment display for the letters "E", "r" and "o" to make the Error message fit your retro-style. Expected signature: `void printLargeError(std::ostream &)`
+If the format is wrong or the calculation is invalid, display "Error". You can define additional "digits" in your seven-segment display for the letters "E", "r" and "o" to make the Error message fit your retro-style. Expected signature: `auto printLargeError(std::ostream &) -> void`
 
 **Hint:** Use your knowledge about exceptions from the lecture to handle error cases properly!
 
@@ -89,122 +92,65 @@ If the format is wrong or the calculation is invalid, display "Error". You can d
 
 *  If the result of the calculation is wider than eight digits it is considered an overflow, which is an "Error" too. Implement the width check in your new function `pocketcalculator()` **Note:** You cannot determine the width of your console in a portable way.
 
-*  Create tests for all your infrastructure (you can combine the tests you created for the calc library and your seven segment digit output). If you want to separate them, create CUTE test suites in your project.
-
-*  Create a separate executable project that uses your library and only consists of a very simple `main()` function passing `std::cin` and `std::cout` to your `pocketcalculator()` function.
 
 ### Automated Checking
 
 Our platform for automated testat checking (ALF) will expect you to provide the following files:
 
-* calc.h
-* calc.cpp
-* sevensegment.h
-* sevensegment.cpp
-* pocketcalculator.h
-* pocketcalculator.cpp
+* Calc.hpp
+* Calc.cpp
+* Sevensegment.hpp
+* Sevensegment.cpp
+* Pocketcalculator.hpp
+* Pocketcalculator.cpp
 
 Which provide functions with the following signatures:
 
 ```c++
-//From calc.h/.cpp
-int calc(int, int, char);
-int calc(std::istream &);
+//From Calc.hpp/.cpp
+auto calc(int, int, char) -> int;
+auto calc(std::istream &) -> int;
 
-//From sevensegment.h/.cpp
-void printLargeDigit(int i, std::ostream &out);
-void printLargeNumber(int i, std::ostream &out);
-void printLargeError(std::ostream &out);
+//From Sevensegment.hpp/.cpp
+auto printLargeDigit(int i, std::ostream &out) -> void;
+auto printLargeNumber(int i, std::ostream &out) -> void;
+auto printLargeError(std::ostream &out) -> void;
 
-//From pocketcalculator.h/.cpp
-void pocketcalculator(std::istream &in, std::ostream &out);
+//From Pocketcalculator.hpp/.cpp
+auto pocketcalculator(std::istream &in, std::ostream &out) -> void;
 ```
 
-The testat verification tool is still experimental. You can upload your testat to https://alf-uploader.sifs0005.infs.ch in order to get a first feedback. Your chances to get positive feedback are very high if all unit tests pass. As we need to know who uploads what you need an account on https://gitlab.ost.ch for this. Your normal OST-account should work. Unfortunately, you cannot submit your solution through ALF yet. A team of students is currently working on that in a term project.
+The testat verification tool ([ALF](https://alf-uploader.sifs0005.infs.ch)) is still experimental. Sorry, for the upload you have to select the files individually, which is a bit tedious right now. You can upload your testat to get a first feedback. We have implemented some tests there which check your solution. Your chances to get positive feedback are very high if all unit tests pass. As we need to know who uploads what you need an account on https://gitlab.ost.ch for this. You should also be able to hand-in through ALF and select the team members who paritipacted in the submission.
 
-**Undefined References:** If you have structured your testat into multiple libraries (`calc`, `sevensegment` and `pocketcalculator`) and you want to use them all in an executable or CUTE test project, you have to be careful with the library dependencies. It might be possible that the libraries themselves can be compiled properly. However, external symbols of static libraries won't be linked until you use them to create an executable. Due to optimizations of the GCC linker the order of the specified libraries is important. The linker will get rid of the symbols contained in a library if there is no further symbol required from that library. Thus you have to specify the libraries with inbound and outbound dependencies first. I.e. `pocketcalculator` will probably be used by `main` and depend on the other two libs. Subsequently, `pocketcalculator` needs to be specified before `calc` and `sevensegment`. Otherwise, you might get `Undefined Reference` errors during the link process. You can reorder the library dependencies in Cevelop: `Project Properties (of the executable or test project) -> C/C++ General -> Paths and Symbols -> "Libraries" tab`. `pocketcalculator` needs to be on top (There are `Move up` and `Move down` buttons to adjust the order).
+---
 
 ## 2 Word List
-Write a program **wlist** that reads all words (as defined by `std::string`'s input operator `>>`) from the standard input and produce a sorted list of all occurring words, where each word only is printed once. What data structure and algorithms are you using? Do not write your own loops nor use `std::for_each`.
 
-*  Can you ignore the case of letters, so that `Hello == hello` ?
+Write a program **wlist** that reads all words (as defined by `std::string`'s input operator `>>`) from the standard input and produce a sorted list of all occurring words, where each word only is printed once. What data structure and algorithms are you using? Do not write your own loops nor use `std::(ranges::)for_each`.
 
-*  Can you ignore non-letter characters from input?
+*  In a second version: Ignore the case of letters, so that `Hello == hello`.
+
+*  Question: How can you ignore non-letter characters in the input stream?
 
 **Hints:**
 *  Have a look at functions defined in `<cctype>` (character-type) and the available algorithms in `<algorithm>` (`std::lexicographical_compare`).
 *  To implement the functionality with an `std::vector` you might need further algorithms: `sort` and `unique`
- 
+
+---
+
 ## 3 Function countingToLower
+
 Implement a function **countingToLower** that makes the following test cases pass.
 
-*  What signature do you need to implement that function?
-  *  Note, it can be auto-generated from the test cases via CTRL-1 quick fix, but first try to make your own guess.
-*  Is the resulting design and interface of the function countingToLower a good design? Why is it not good? If so, how could it be improved?
+* What signature do you need to implement that function? Think about it, before you look at the exercise template.
+* Is the resulting design and interface of the function `countingToLower` a good design? Why is it not good? If so, how could it be improved?
+* The test cases are already provided for you in the exercise template. As we would like to have all tests in the repository pass, most tests are not registered in the corresponding suite. You need to uncomment them.
 
-```c++
-#include "cute.h"
-#include "ide_listener.h"
-#include "xml_listener.h"
-#include "cute_runner.h"
-
-void lowerFirstCharacter() {
-	std::string str("Hello!");
-	ASSERT_EQUAL(1, countingToLower(str));
-	ASSERT_EQUAL("hello!", str);
-}
-
-void lowerSeveralCharacters() {
-	std::string str("Hello World, its ME!");
-	ASSERT_EQUAL(4, countingToLower(str));
-	ASSERT_EQUAL("hello world, its me!", str);
-}
-
-void lowerNone() {
-	std::string str("no uppercase characters here");
-	ASSERT_EQUAL(0, countingToLower(str));
-	ASSERT_EQUAL("no uppercase characters here", str);
-}
-
-void lowerAll() {
-	std::string str("LOL");
-	ASSERT_EQUAL(3, countingToLower(str));
-	ASSERT_EQUAL("lol", str);
-}
-
-void lowerEmpty() {
-	std::string str("");
-	ASSERT_EQUAL(0, countingToLower(str));
-	ASSERT_EQUAL("", str);
-}
-
-void umlautsAreNotChanged() {
-	std::string str("ÄÖÜ");
-	ASSERT_EQUAL(0, countingToLower(str));
-	ASSERT_EQUAL("ÄÖÜ", str);
-}
-void runAllTests(int argc, char const *argv[]){
-	cute::suite s;
-	s.push_back(CUTE(lowerFirstCharacter));
-	s.push_back(CUTE(lowerSeveralCharacters));
-	s.push_back(CUTE(lowerNone));
-	s.push_back(CUTE(lowerAll));
-	s.push_back(CUTE(lowerEmpty));
-	s.push_back(CUTE(umlautsAreNotChanged));
-	cute::xml_file_opener xmlfile(argc,argv);
-	cute::xml_listener<cute::ide_listener<> >  lis(xmlfile.out);
-	cute::makeRunner(lis,argc,argv)(s, "AllTests");
-}
-
-int main(int argc, char const *argv[]){
-    runAllTests(argc,argv);
-}
-```
-
-
+---
 
 ## 4 Function-Value Table
-Create a library with a function **printFunctionTable** that takes an ostream, a beginning and end value of type double, a number of steps, and a function on double as arguments. The function will produce a table of function values as follows by dividing the range given into `n` steps and prints the function results as follows:
+
+Create a function `printFunctionTable` that takes an `std::ostream`, a beginning and end value of type `double`, a number of steps, and a function on double as arguments. The function will produce a table of function values as follows by dividing the range given into `n` steps and prints the function results as follows:
 (start=1.0, end=3.0, steps=3, f(x) = [](double x){return x*x;})
 
 Expected Output:
@@ -234,12 +180,12 @@ Even if you do not understand all details of its output try to find the encoding
 In most cases you do not need to care about these details, because the linker will handle that for you. However, the experiment can improve your understanding of the compilation model and the (limited) meta information that object files carry. Unfortunately, there is no easy access from a program to the meta information the linker needs to know about. But the experiment will help you understand linker error messages better in the future.
 
 
-
-<hr/>
+---
 
 ## Extra exercises
 
-### Experiment: Timing Parameter Passing Variation 
+### Experiment: Timing Parameter Passing Variation
+
 The following code frame uses a function that creates a large vector and pass this large vector 100 times by value, effectively copying it to a function. To avoid having an optimizer optimize it away the function itself returns a random element from the given vector.
 
 ```c++
