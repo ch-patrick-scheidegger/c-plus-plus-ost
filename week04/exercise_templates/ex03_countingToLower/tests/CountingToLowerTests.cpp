@@ -41,7 +41,7 @@ TEST(testUmlautsAreNotChanged) {
 }
 
 
-auto createCountingToLowerSuite() -> cute::suite {
+auto createPrintFunctionTableSuite() -> cute::suite {
   cute::suite countingToLowerSuite{
     "CountingToLower Suite",
     {
@@ -61,7 +61,7 @@ auto main(int argc, char const* argv[]) -> int {
   cute::ide_listener<cute::summary_listener<>> listener{};
   auto runner = cute::makeRunner(listener, argc, argv);
 
-  bool suiteResult = runner(createCountingToLowerSuite());
+  bool suiteResult = runner(createPrintFunctionTableSuite());
 
   return suiteResult ? EXIT_SUCCESS : EXIT_FAILURE;
 }
