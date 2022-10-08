@@ -1,0 +1,1 @@
+This example demonstrates the problems when function call arguments are not exactly matches the called function's parameter types. Then a conversion might need to happen. But such conversions could target different types, which might result in an undecideable decision, as both would be equally viable. This ambiguity caues a compilation error.

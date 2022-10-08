@@ -1,0 +1,1 @@
+When a function cannot perform its supposed task to calculate a value, it might be able to return an error value. This might not be feasible if all values of the return type are valid return values.

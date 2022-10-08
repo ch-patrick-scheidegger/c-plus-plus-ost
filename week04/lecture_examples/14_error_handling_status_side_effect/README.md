@@ -1,0 +1,1 @@
+When a function cannot perform its supposed task to calculate a value it might signal failures by setting a designated global value or parameter to indicate the problem.

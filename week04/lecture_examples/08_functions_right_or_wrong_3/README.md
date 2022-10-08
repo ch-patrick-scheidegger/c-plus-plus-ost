@@ -1,0 +1,1 @@
+Two more cases of "Right or Wrong" focused on function return types. Can you spot the problems? Does the compiler/IDE help you identify the issues?
