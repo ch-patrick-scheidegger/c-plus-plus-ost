@@ -6,6 +6,11 @@ add_library("${CPL_TARGET_WEEK_PREFIX}ex01_pocketcalculator"
 
 target_include_directories("${CPL_TARGET_WEEK_PREFIX}ex01_pocketcalculator" PUBLIC "lib")
 
+target_link_libraries("${CPL_TARGET_WEEK_PREFIX}ex01_pocketcalculator" PUBLIC
+    "w02_ex02_calc_lib"
+    "w03_ex01_seven_segment"
+)
+
 
 #[===[ APPLICATION ]===]
 
