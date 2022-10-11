@@ -1,0 +1,1 @@
+While other languages capture variables references in lambdas implicitly, in C++ the programmer has full control over which and how variables are captures. It is possible to capture a variable by value or by reference. This example demonstrates the various ways to capture variables for lambdas.

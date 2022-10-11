@@ -1,0 +1,1 @@
+When a function cannot perform its supposed task an exception can be thrown to indicate the problem to the call-site.

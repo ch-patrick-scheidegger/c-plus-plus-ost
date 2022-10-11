@@ -1,0 +1,1 @@
+When a function cannot perform its supposed task to calculate a value and it cannot specify a designated error value, it is possible to return an std::optional to indicate that something did not work as expected. This has the drawback that it cannot specify what went wrong.

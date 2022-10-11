@@ -1,0 +1,1 @@
+When a function cannot perform its supposed task to calculate a value, it might be able to return a default value. This might not be feasible if it is necessary for the caller to distinguish the failure from a successful result value.

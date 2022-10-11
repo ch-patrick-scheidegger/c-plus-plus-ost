@@ -1,0 +1,1 @@
+A possible strategy for dealing with errors is ignoring them, if it is reasonable to expect the caller will never invoke the code with values leading to that error case. If the problematic situation happens nevertheless the behavior could be undefined.

@@ -1,1 +1,0 @@
-This directory contains several examples for function syntax.

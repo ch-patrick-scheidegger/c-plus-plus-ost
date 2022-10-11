@@ -1,0 +1,1 @@
+A case of "Right or Wrong" focused on exceptions. Can you spot the problems? Does the compiler/IDE help you identify the issues?

@@ -1,0 +1,1 @@
+There might be cases where a caller does not need/want to specify all argugments when calling a function. Instead of providing multiple overloads with different number of parameters and forwarding to the ultimate function featuring the complete list of parameters to perform the action, C++ allows specifying default arguments.

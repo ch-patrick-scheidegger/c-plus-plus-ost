@@ -1,0 +1,1 @@
+Five cases of "Right or Wrong" focused on function parameters and return types/expressions. Can you spot the problems? Does the compiler/IDE help you identify the issues?
