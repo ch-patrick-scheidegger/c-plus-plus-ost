@@ -123,7 +123,7 @@ auto printLargeError(std::ostream &out) -> void;
 auto pocketcalculator(std::istream &in, std::ostream &out) -> void;
 ```
 
-The testat verification tool ([ALF](https://alf-uploader.sifs0005.infs.ch)) is still experimental. Sorry, for the upload you have to select the files individually, which is a bit tedious right now. You can upload your testat to get a first feedback. We have implemented some tests there which check your solution. Your chances to get positive feedback are very high if all unit tests pass. As we need to know who uploads what you need an account on https://gitlab.ost.ch for this. You should also be able to hand-in through ALF and select the team members who paritipacted in the submission.
+The testat verification tool ([ALF](https://alf.sifs0005.infs.ch)) is still experimental. Sorry, for the upload you have to select the files individually, which is a bit tedious right now. You can upload your testat to get a first feedback. We have implemented some tests there which check your solution. Your chances to get positive feedback are very high if all unit tests pass. As we need to know who uploads what you need an account on https://gitlab.ost.ch for this. You should also be able to hand-in through ALF and select the team members who paritipacted in the submission.
 
 ---
 
