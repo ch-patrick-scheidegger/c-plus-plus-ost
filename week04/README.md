@@ -55,7 +55,7 @@ auto main() -> int {
 
 ## 1 _Testat-Exercise 1_: Calculator with Retro Style Output
 
-**Hand in time is Monday Oct 25 2021, 10:00 (AM)**
+**Hand in time is Monday Oct 24 2022, 10:00 (AM)**
 
 Hand in you solution via [ALF](https://alf.sifs0005.infs.ch/project/9/submission/new/) **CPl Testat 1 Pocketcalculator**. In case ALF does not work or is too slow, you can send an email.
 
