@@ -62,27 +62,27 @@ auto Date::tomorrow() const -> Date {
   int year = this->year;
   int month = this->month;
   int day = this->day + 1;
-  if (day == lastDayOfMonth(year, month) + 2) {
+  if (day == lastDayOfMonth(year, month) + 1) {
     day = 1;
-    if (month == 12) {
+    month++;
+    if (month == 13) {
       month = 1;
       year++;
     }
   }
-  return Date{day, month, year};
+  return Date{year, month, day};
 }
 
 auto Date::print(std::ostream& output) const -> void {
-  output << year << "/" << month << "/" << day;
+  output << day << "/" << month << "/" << year;
 }
 
 auto operator>>(std::istream& input, Date& date) -> std::istream& {
   int year{-1}, month{-1}, day{-1};
   char sep1, sep2;
-  input >> year >> sep1 >> month >> sep2 >> day;
+  input >> day >> sep1 >> month >> sep2 >> year;
   try {
     date = Date{year, month, day};
-    input.clear();	    
   } catch (std::out_of_range const& e) {
     input.setstate(std::ios::failbit); 
   }

@@ -3,7 +3,7 @@
 
 struct SwissGrid {
   SwissGrid() = default;
-  SwissGrid(double y, double x);
+  SwissGrid(double y, double x) {}
   auto read(std::istream& in) -> void {
     double y{}; in >> y;
     double x{}; in >> x;
@@ -23,4 +23,7 @@ auto operator>>(std::istream& in,
                 SwissGrid& coordinate) -> std::istream& {
   coordinate.read(in);
   return in;
+}
+
+auto main() -> int {
 }

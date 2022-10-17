@@ -1,20 +1,13 @@
-No solutions for the `Word` class because it will be aprt of the next testat.
+No solutions for the `Word` class because it will be a part of the next testat.
 
 # `wlist` with `Word`
 
-The solution becomes much simpler, as the `Word` class already takes care of the caseless sorting. This features is used by the `std::set` to only contain unique words in ascending order.
+The solution becomes a little simpler, as the `Word` class already takes care of the caseless sorting. This features is used by the `std::set` to only contain unique words in ascending order.
 
 ```cpp
-#include "Word.h"
-#include <algorithm>
-#include <iostream>
-#include <iterator>
-#include <set>
-#include <string>
-
-int main() {
-	using in = std::istream_iterator<std::string>;
-	std::set<Word> wlist{in{std::cin}, in{}};
-	std::ranges::copy(wlist, std::ostream_iterator<std::string>{std::cout,"\n"});
+auto wlist_caseless(std::istream &input, std::ostream &output) -> void {
+  using in = std::istream_iterator<Word>;
+  std::set<Word> wlist{in{input}, input{}};
+  std::ranges::copy(wlist, std::ostream_iterator<Word>{std::cout,"\n"});
 }
 ```

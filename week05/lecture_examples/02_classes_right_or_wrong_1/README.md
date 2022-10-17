@@ -1,0 +1,1 @@
+Two cases of "Right or Wrong" focused on member functions' constness. Can you spot the problems? Does the compiler/IDE help you identify the issues?

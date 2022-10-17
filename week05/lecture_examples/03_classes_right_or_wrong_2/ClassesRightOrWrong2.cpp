@@ -24,3 +24,7 @@ Chair::Chair(unsigned legs)
     throw std::invalid_argument{"..."};
   }
 }
+
+
+auto main() -> int {
+}

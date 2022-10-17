@@ -1,0 +1,1 @@
+One case of "Right or Wrong" focused on input operator. Can you spot the problems? Does the compiler/IDE help you identify the issues?

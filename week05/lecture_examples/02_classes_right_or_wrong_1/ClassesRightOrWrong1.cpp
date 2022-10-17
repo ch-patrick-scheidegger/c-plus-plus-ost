@@ -25,3 +25,7 @@ private:
 
   std::string content{};
 };
+
+
+auto main() -> int {
+}
