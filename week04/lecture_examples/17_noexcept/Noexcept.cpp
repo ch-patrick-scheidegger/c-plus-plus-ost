@@ -1,11 +1,11 @@
 #include <iostream>
 
 
-void fail() {
+auto fail() -> void {
   throw 1;
 }
 
-void lie() noexcept {
+auto lie() noexcept -> void  {
   fail();
 }
 

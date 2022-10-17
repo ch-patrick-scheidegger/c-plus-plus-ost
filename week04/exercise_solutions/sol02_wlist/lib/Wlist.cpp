@@ -14,9 +14,10 @@ auto wlist(std::istream &input, std::ostream &output) -> void {
 }
 
 auto caselessLess(std::string const &left, std::string const &right) -> bool {
+  auto caselessCharComparison = [](char leftChar, char rightChar) { return std::tolower(leftChar) < std::tolower(rightChar); };
   return lexicographical_compare(
-      begin(left), end(left), begin(right), end(right),
-      [](char leftChar, char rightChar) { return std::tolower(leftChar) < std::tolower(rightChar); });
+      begin(left), end(left), begin(right), end(right), caselessCharComparison);
+  // return std::ranges::lexicographical_compare(left, right, caselessCharComparison);
 };
 
 auto wlist_caseless(std::istream &input, std::ostream &output) -> void {
