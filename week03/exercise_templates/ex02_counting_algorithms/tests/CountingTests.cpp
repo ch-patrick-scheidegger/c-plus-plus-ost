@@ -13,7 +13,7 @@ TEST(testCharcEmptyStream) {
   ASSERT_EQUAL(0, charc(input));
 }
 
-auto createCarcSuite() -> cute::suite {
+auto createCharcSuite() -> cute::suite {
   cute::suite charcSuite{
     "Charc Suite",
     {
@@ -77,7 +77,7 @@ auto main(int argc, char const* argv[]) -> int {
   cute::ide_listener<cute::summary_listener<>> listener{};
   auto runner = cute::makeRunner(listener, argc, argv);
 
-  bool suiteResult = runner(createCarcSuite());
+  bool suiteResult = runner(createCharcSuite());
   suiteResult &= runner(createAllcharcSuite());
   suiteResult &= runner(createWcSuite());
   suiteResult &= runner(createSumiSuite());

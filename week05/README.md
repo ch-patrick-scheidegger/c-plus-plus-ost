@@ -38,7 +38,7 @@ input >> w;
 
 *  You can also construct words from `std::string` but guarantee the invariant that it only consists of alphabetical characters. Subsequently, if that constructor is called with an `std::string` containing invalid characters, prevent the Word object from being constructed.
 
-*  Words might be used as entries in a dictionary, so they compare with each other IGNORING letter case. Provide the corresponding infrastructure for ALL relational operators WITHOUT using `boost::operators` library. The order has to be lexicographical (if the lecture has not reached that topic, postpone this part until next week).
+*  Words might be used as entries in a dictionary, so they compare with each other IGNORING letter case. Provide the corresponding infrastructure for ALL relational operators.
 
 Write CUTE unit tests for all behavior your word class shows!
 
@@ -46,22 +46,17 @@ Write a test that checks what happens at the end of the input with the input str
 
 **Hints:** 
 
-*   [Here](https://gitlab.ost.ch/cxx/cpl/blob/master/week05/exercise_templates/README.md) are some ideas for tests (not necessarily complete).
+*  The exercise template some ideas for tests (not necessarily complete).
 *  Constructors callable with a single argument should be `explicit`
-*  Implementing `operator==` using `operator<` is inefficient for word. Use an appropriate algorithm that does the job in a single pass each.
 *  Avoid creating a case-less intermediate string representation of the word content for comparison.
 *  You will need some means to avoid reading over the end of the word on a stream (check the `peek()` member function of `std::istream`).
 *  Implement all non-operator member functions in the source-file.
-*  Do **NOT ** create a `getter` or `setter` member function, keep the encapsulation.
+*  Do **NOT** create a `getter` or `setter` member function, keep the encapsulation.
 
 
 ## 1.2 `wlist` revisited using `Word` (Will not be part of the testat)
 
 Based on this class Word, implement the exercise **wlist** from last week ExW4 with this class. How does the program become simpler with your library class instead of using `std::string` (it should)?
 
-
-# self study video
-
-Classes and Operators: https://skripte.hsr.ch/Informatik/Fachbereich/C++/CPl/Videos/5.%20classes%20and%20operators.mp4
 
 

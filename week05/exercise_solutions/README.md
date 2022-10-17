@@ -15,6 +15,6 @@ The solution becomes much simpler, as the `Word` class already takes care of the
 int main() {
 	using in = std::istream_iterator<std::string>;
 	std::set<Word> wlist{in{std::cin}, in{}};
-	copy(begin(wlist), end(wlist), std::ostream_iterator<std::string>{std::cout,"\n"});
+	std::ranges::copy(wlist, std::ostream_iterator<std::string>{std::cout,"\n"});
 }
 ```
