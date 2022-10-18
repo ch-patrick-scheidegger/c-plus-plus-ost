@@ -4,13 +4,11 @@ Chances are high that you haven't been able to solve all exercises from last wee
 
 # 1  A value class for Words (This will be required for next Testat!)
 
-## 1.1 `Word` value class
-
 Create a class **Word** that represents a **single** word. 
 
 *  It can be input with `>>` and output with `<<` (from `std::istream` and to `std::ostream`). 
 *  When input, a word will only consist of letters (`std::isalpha(c)`). Any other character terminates the word. You have to ignore all leading non-alpha characters, like white-space, digit or punctuation. 
-*  You either need to implement the input `>>` and output `<<` operators as `friend` functions in the `word` class or you have to add `read(std::istream &)` and `write(std::ostrem&)` as member functions of your class `Word`. Then the I/O operator functions can be implemented delegating to these member functions in `Word.h`.
+*  You either need to implement the input `>>` and output `<<` operators as `friend` functions in the `word` class or you have to add `read(std::istream &)` and `write(std::ostrem&)` as member functions of your class `Word`. Then the I/O operator functions can be implemented delegating to these member functions in `Word.hpp`.
 
 **Example:** 
 An `std::istream` containing the sequence `"compl33tely ~ weird !!?!! 4matted in_put"` would result in six Words ("compl", "tely", "weird", "matted", "in", "put"). Each call of the input operator reads one word.
@@ -54,7 +52,7 @@ Write a test that checks what happens at the end of the input with the input str
 *  Do **NOT** create a `getter` or `setter` member function, keep the encapsulation.
 
 
-## 1.2 `wlist` revisited using `Word` (Will not be part of the testat)
+## 2 `wlist` revisited using `Word` (Will not be part of the testat)
 
 Based on this class Word, implement the exercise **wlist** from last week ExW4 with this class. How does the program become simpler with your library class instead of using `std::string` (it should)?
 
