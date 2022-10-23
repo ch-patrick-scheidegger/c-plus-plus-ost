@@ -1,120 +1,119 @@
 #include "Ring5.hpp"
+
 #include <cute/cute.h>
-#include <cute/ide_listener.h>
-#include <cute/xml_listener.h>
 #include <cute/cute_runner.h>
+#include <cute/cute_suite.h>
+#include <cute/ide_listener.h>
+#include <cute/summary_listener.h>
+#include <cute/xml_listener.h>
 
-void testDefaultCtor() {
-    Ring5 v{};
-    ASSERT_EQUAL(0,v.value());
+
+TEST(testDefaultCtor) {
+  Ring5 v{};
+  ASSERT_EQUAL(0, v.value());
 }
-void testValueCtor(){
-    Ring5 four{4};
-    ASSERT_EQUAL(4,four.value());
+
+TEST(testValueCtor) {
+  Ring5 four{4};
+  ASSERT_EQUAL(4, four.value());
 }
+
 // operator==, operator<< for failures
-void testValueCtorWithLargeInput(){
-    Ring5 four{19};
-    ASSERT_EQUAL(Ring5{4},four);
+TEST(testValueCtorWithLargeInput) {
+  Ring5 four{19};
+  ASSERT_EQUAL(Ring5{4}, four);
 }
+
 // define operator<< format
-void testOutputOperator(){
-    std::ostringstream out;
-    out << Ring5{4};
-    ASSERT_EQUAL("Ring5{4}",out.str());
+TEST(testOutputOperator) {
+  std::ostringstream out;
+  out << Ring5{4};
+  ASSERT_EQUAL("Ring5{4}", out.str());
 }
 
-void testAddition() {
-    Ring5 two{2};
-    Ring5 four = two+two;
-    ASSERT_EQUAL(4,four.value());
-}
-void testAdditionWrap(){
-    Ring5 four{4};
-    Ring5 three = four + four;
-    ASSERT_EQUAL(3,three.value());
+TEST(testAddition) {
+  Ring5 two{2};
+  Ring5 four = two + two;
+  ASSERT_EQUAL(4, four.value());
 }
 
-void testMultiplication(){
-    Ring5 four{4};
-    Ring5 three{3};
-    Ring5 two = four * three;
-    ASSERT_EQUAL(Ring5{2},two);
-}
-void testAddAssignWithInteger(){
-    Ring5 x{6};
-    x += 8;
-    ASSERT_EQUAL(Ring5{4},x);
-}
-void testAddWithInteger(){
-    Ring5 x{6};
-    x = x + 8;
-    ASSERT_EQUAL(Ring5{4},x);
-    x = 8 + x;
-    ASSERT_EQUAL(Ring5{2},x);
+TEST(testAdditionWrap) {
+  Ring5 four{4};
+  Ring5 three = four + four;
+  ASSERT_EQUAL(3, three.value());
 }
 
-
-
-
-
-
-
-void testAdditionWithInt(){
-//*
-    Ring5 two{2};
-    auto four=two+2u;
-    ASSERT_EQUAL(Ring5{4},four);
-    ASSERT_EQUAL(typeid(Ring5).name(),
-                 typeid(decltype(four)).name());
-//*/
+TEST(testMultiplication) {
+  Ring5 four{4};
+  Ring5 three{3};
+  Ring5 two = four * three;
+  ASSERT_EQUAL(Ring5{2}, two);
 }
 
-void testAssignmentBackToInt(){
-    Ring5 three{8};
-    unsigned u3=static_cast<unsigned>(three);
-//*
-    unsigned eight( u3+5u );
-    ASSERT_EQUAL(8u,eight);
-//*/
-    ASSERT_EQUAL(Ring5{3},three);
-    ASSERT_EQUAL(3u,u3);
+TEST(testAddAssignWithInteger) {
+  Ring5 x{6};
+  x += 8;
+  ASSERT_EQUAL(Ring5{4}, x);
 }
 
-void testAdditionWithIntExplicitCtor(){
-    Ring5 two{2};
-    auto four=two+Ring5{2u};
-    ASSERT_EQUAL(Ring5{4},four);
-    ASSERT_EQUAL(typeid(Ring5).name(),
-                 typeid(decltype(four)).name());
+TEST(testAddWithInteger) {
+  Ring5 x{6};
+  x = x + 8;
+  ASSERT_EQUAL(Ring5{4}, x);
+  x = 8 + x;
+  ASSERT_EQUAL(Ring5{2}, x);
 }
 
-
-
-
-
-
-void runAllTests(int argc, char const *argv[]){
-	cute::suite s;
-	//TODO add your test here
-    s.push_back(CUTE(testDefaultCtor));
-    s.push_back(CUTE(testValueCtor));
-    s.push_back(CUTE(testValueCtorWithLargeInput));
-    s.push_back(CUTE(testAddition));
-    s.push_back(CUTE(testAdditionWrap));
-    s.push_back(CUTE(testOutputOperator));
-    s.push_back(CUTE(testMultiplication));
-    s.push_back(CUTE(testAdditionWithInt));
-    s.push_back(CUTE(testAssignmentBackToInt));
-    s.push_back(CUTE(testAdditionWithIntExplicitCtor));
-	s.push_back(CUTE(testAddAssignWithInteger));
-	s.push_back(CUTE(testAddWithInteger));
-	cute::xml_file_opener xmlfile(argc,argv);
-	cute::xml_listener<cute::ide_listener<> >  lis(xmlfile.out);
-	cute::makeRunner(lis,argc,argv)(s, "AllTests");
+TEST(testAdditionWithInt) {
+  //*
+  Ring5 two{2};
+  auto four = two + 2u;
+  ASSERT_EQUAL(Ring5{4}, four);
+  ASSERT_EQUAL(typeid(Ring5).name(), typeid(decltype(four)).name());
+  //*/
 }
 
-int main(int argc, char const *argv[]){
-    runAllTests(argc,argv);
-    return 0;
+TEST(testAssignmentBackToInt) {
+  Ring5 three{8};
+  auto u3 = static_cast<unsigned>(three);
+  //*
+  unsigned eight(u3 + 5u);
+  ASSERT_EQUAL(8u, eight);
+  //*/
+  ASSERT_EQUAL(Ring5{3}, three);
+  ASSERT_EQUAL(3u, u3);
+}
+
+TEST(testAdditionWithIntExplicitCtor) {
+  Ring5 two{2};
+  auto four = two + Ring5{2u};
+  ASSERT_EQUAL(Ring5{4}, four);
+  ASSERT_EQUAL(typeid(Ring5).name(), typeid(decltype(four)).name());
+}
+
+auto createRing5Suite() -> cute::suite {
+  return cute::suite{"Ring5 Suite",
+                     {
+                         testDefaultCtor,
+                         testValueCtor,
+                         testValueCtorWithLargeInput,
+                         testAddition,
+                         testAdditionWrap,
+                         testOutputOperator,
+                         testMultiplication,
+                         testAdditionWithInt,
+                         testAssignmentBackToInt,
+                         testAdditionWithIntExplicitCtor,
+                         testAddAssignWithInteger,
+                         testAddWithInteger,
+                     }};
+}
+
+auto main(int argc, char const* argv[]) -> int {
+  cute::ide_listener<cute::summary_listener<>> listener{};
+  auto runner = cute::makeRunner(listener, argc, argv);
+
+  bool suiteResult = runner(createRing5Suite());
+
+  return suiteResult ? EXIT_SUCCESS : EXIT_FAILURE;
 }
