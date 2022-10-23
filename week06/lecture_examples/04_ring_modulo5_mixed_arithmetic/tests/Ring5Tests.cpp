@@ -1,8 +1,9 @@
-#include "Ring5.h"
-#include "cute.h"
-#include "ide_listener.h"
-#include "xml_listener.h"
-#include "cute_runner.h"
+#include "Ring5.hpp"
+#include <cute/cute.h>
+#include <cute/ide_listener.h>
+#include <cute/xml_listener.h>
+#include <cute/cute_runner.h>
+
 void testDefaultCtor() {
     Ring5 v{};
     ASSERT_EQUAL(0,v.value());

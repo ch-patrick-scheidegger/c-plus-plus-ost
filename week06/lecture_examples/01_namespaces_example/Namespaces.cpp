@@ -1,9 +1,9 @@
 namespace demo {
-void foo(); //1
+auto foo() -> void; //1
 namespace subdemo {
-void foo() {/*2*/}
-} // subdemo
-} // demo
+auto foo() -> void {/*2*/}
+} // namespace subdemo
+} // namespace demo
 
 namespace demo {
 void bar() {
@@ -14,7 +14,7 @@ void bar() {
 
 void demo::foo() { /*1*/ } // definition
 
-int main() {
+auto main() -> int {
   using demo::subdemo::foo;
   foo(); //2
   demo::foo(); //1

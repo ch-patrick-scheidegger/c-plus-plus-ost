@@ -1,13 +1,13 @@
 #include <iostream>
 
 namespace {   // anonymous
-void doit() { // can not be called
+auto doit() -> void { // can not be called
               // outside this file
   std::cout << "doit called\n";
 }
-} // anonymous namespace ends
+} // namespace
 
-void print() { // callablefrom other
+auto print() -> void { // callablefrom other
                // parts if declared
   doit();
   std::cout << "print called\n";
