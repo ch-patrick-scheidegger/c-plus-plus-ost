@@ -34,56 +34,36 @@ In this exercise you have to implement a finite field (galois field/endlicher Ko
   * First figure out for each `x` (excluding `0`), what `y` provides `1 / x = y -> 1 = x * y`
   * Does it make sense to provide relational operators for `Field5`?
 
-## Simplification with Boost
+## (Optional) Simplification with Boost
 
 Remove all operator implementations you can replace with Boost operators.
 
-* If you don't already have it, install it first on your system:
-  * This usually works with your package manger
-  * E.g. under Windows if you have installed MinGW using Msys2: `$ pacman -S mingw-w64-x86_64-boost` (maybe you need to run the msys2 mingw64 shell with admin rights)
-  * Otherwise, you can download Boost from [boost.org](https://www.boost.org/users/download/) and extract it on your local drive. You then need to configure the project (in cevelop) to use that directory as include path (for C++)
-* Have a look at the documentation for [Boost operators](https://www.boost.org/doc/libs/1_77_0/libs/utility/operators.htm)
-* Apply Boost operators to your `Field5`
  
-# 5 (Optional) Ring Modulo 6
-
-Implement a class `Ring6` that implements modulo arithmetic for unsigned integers modulo `6`.
-
-* Start out with corresponding test cases, before you implement an operation.
-* Provide addition and multiplication operators.
-* Provide output operator to a stream.
-* Provide inward and outward conversion from unsigned integers.
-  * When is it useful to make these conversions explicit? 
-* Is it useful to implement subtraction for `Ring6`?
-* Is it useful/possible to implement division for `Ring6`? 
- 
-# 6 (Optional) Refresher on Stream States
+# 4 (Optional) Refresher on Stream States
 
 As a little help to guide you through reading the Word(s) from an input stream you can follow the rule of thumb: "do as the ints do". Below you see a piece of code you can copy into a Cevelop project and run directly.
 
 ```cpp
+#include <ios>
 #include <iostream>
-#include <sstream>
 #include <iterator>
+#include <sstream>
 #include <vector>
 
-std::string bool_value(bool b) {
-  return (b ? "true" : "false");
+auto printStreamState(std::stringstream const& s) -> void {
+  std::cout << std::boolalpha;
+  std::cout << "s.eof():  " << static_cast<bool>(s.eof()) << "\n";
+  std::cout << "s.fail():  " << static_cast<bool>(s.fail()) << "\n";
+  std::cout << "s.bad():  " << static_cast<bool>(s.bad()) << "\n";
+  std::cout << "s.good():  " << static_cast<bool>(s.good()) << "\n";
+  std::cout << "bool(s):  " << bool(s) << "\n";
+  std::cout << "-----------------------------------------\n";
 }
 
-void printStreamState(std::stringstream const &s) {
-  std::cout << "s.eof():  " << bool_value(s.eof()) << "\n";
-  std::cout << "s.fail():  " << bool_value(s.fail()) << "\n";
-  std::cout << "s.bad():  " << bool_value(s.bad()) << "\n";
-  std::cout << "s.good():  " << bool_value(s.good()) << "\n";
-  std::cout << "bool(s):  " << bool_value(bool(s)) << "\n";
-  std::cout << "-----------------------------------------" << "\n";
-}
-
-int main(int argc, char **argv) {
-  std::stringstream s { "23 5" };
+auto main(int argc, char** argv) -> int {
+  std::stringstream s{"23 5"};
   printStreamState(s);
-  int i { };
+  int i{};
 
   s >> i;
   std::cout << "value after first read: " << i << "\n";
@@ -133,11 +113,8 @@ bool(s):  false
 
 Details about the stream flags can be found [here](http://en.cppreference.com/w/cpp/io/ios_base/iostate) (with a nicely colored table at the bottom). 
 
-# Self Study Video
 
-Namespaces and ADL: https://skripte.hsr.ch/Informatik/Fachbereich/C++/CPl/Videos/6.%20namespaces%20and%20adl.mp4
-
-# Code Reading Exercise from "cvu - Code Critique 106"
+# 5 (Optional) Code Reading Exercise from "cvu - Code Critique 106"
 
 This is a code reading exercise that contains various C++ features you should be familiar with:
 
