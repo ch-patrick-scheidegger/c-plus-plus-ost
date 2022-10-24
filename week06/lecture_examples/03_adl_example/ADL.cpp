@@ -6,7 +6,7 @@ auto main() -> int {
   two::type_two t2{};
   f(t2);
   // h(t1);
-  // two::g(t1);
+  two::g(t1);
   // g(t1);
-  // g(t2);
+  g(t2);
 }

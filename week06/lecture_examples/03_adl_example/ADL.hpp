@@ -9,7 +9,7 @@ namespace one {
 namespace two {
   struct type_two{};
   auto f(type_two) -> void {/*...*/}
-  auto g(two::type_two) -> void {/*...*/}
+  auto g(one::type_one) -> void {/*...*/}
   auto h(one::type_one) -> void  {/*...*/}
 } // namespace two
 
