@@ -1,7 +1,7 @@
-#include <set>
 #include <iostream>
+#include <set>
 
-void filterVowels(std::istream & in, std::ostream & out) {
+auto filterVowels(std::istream& in, std::ostream& out) -> void {
   std::set const vowels{'a', 'e', 'o', 'u', 'i', 'y'};
   char c{};
   while (in >> c) {
@@ -10,6 +10,6 @@ void filterVowels(std::istream & in, std::ostream & out) {
     }
   }
 }
-int main() {
+auto main() -> int {
   filterVowels(std::cin, std::cout);
 }
