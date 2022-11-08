@@ -9,8 +9,7 @@ auto countVowels(std::istream& in, std::ostream& out) -> void {
                                 {'o', 0}, {'u', 0}, {'y', 0}};
   char c{};
   while (in >> c) {
-    if (vowels.count(
-            c)) {  // only count those chars that are already in the map
+    if (vowels.contains(c)) {  // only count those chars that are already in the map
       ++vowels[c];
       std::ranges::for_each(vowels, [&out](auto const& entry) {
         // entry is a pair<char, size_t>

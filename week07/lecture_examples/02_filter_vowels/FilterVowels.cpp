@@ -5,7 +5,7 @@ auto filterVowels(std::istream& in, std::ostream& out) -> void {
   std::set const vowels{'a', 'e', 'o', 'u', 'i', 'y'};
   char c{};
   while (in >> c) {
-    if (!vowels.count(c)) {
+    if (!vowels.contains(c)) {
       out << c;
     }
   }
