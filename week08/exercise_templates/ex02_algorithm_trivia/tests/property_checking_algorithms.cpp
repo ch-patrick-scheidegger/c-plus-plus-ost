@@ -19,7 +19,7 @@
 namespace {
 
 TEST(test_algorithm_1) {
-	std::vector<unsigned> in1{2, 3, 5, 6, 7};
+	auto in1 = std::vector{2u, 3u, 5u, 6u, 7u};
 
 	bool res = std::xxxxx(
 			std::begin(in1),
@@ -31,8 +31,8 @@ TEST(test_algorithm_1) {
 
 
 TEST(test_algorithm_2) {
-	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8};
-	std::vector<int> in2{1, 5, 7, 4, 2, 6, 3, 8};
+	auto in1 = std::vector{1, 2, 3, 4, 5, 6, 7, 8};
+	auto in2 = std::vector{1, 5, 7, 4, 2, 6, 3, 8};
 	auto expected = true;
 
 	auto res = std::xxxxx(
@@ -45,8 +45,8 @@ TEST(test_algorithm_2) {
 
 
 TEST(test_algorithm_3) {
-	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8};
-	std::vector<int> in2{1, 2, 3, 4, 0, 6, 7, 8};
+	auto in1 = std::vector{1, 2, 3, 4, 5, 6, 7, 8};
+	auto in2 = std::vector{1, 2, 3, 4, 0, 6, 7, 8};
 	auto expected = std::make_pair(std::begin(in1) + 4, std::begin(in2) + 4);
 
 	auto res = std::xxxxxx(
@@ -59,7 +59,7 @@ TEST(test_algorithm_3) {
 
 
 TEST(test_algorithm_4) {
-	std::vector<unsigned> in1{2, 3, 5, 6, 7};
+	auto in1 = std::vector{2u, 3u, 5u, 6u, 7u};
 
 	bool res = std::xxxxx(
 			std::begin(in1),
@@ -70,8 +70,8 @@ TEST(test_algorithm_4) {
 }
 
 TEST(test_algorithm_5) {
-	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8};
-	std::vector<int> in2{1, 2, 3, 4, 0, 6, 7, 8};
+	auto in1 = std::vector{1, 2, 3, 4, 5, 6, 7, 8};
+	auto in2 = std::vector{1, 2, 3, 4, 0, 6, 7, 8};
 	auto expected = false;
 
 	auto res = std::xxxxx(
@@ -84,7 +84,7 @@ TEST(test_algorithm_5) {
 
 
 TEST(test_algorithm_6) {
-	std::vector<unsigned> in1{1, 4, 6, 8, 9};
+	auto in1 = std::vector{1u, 4u, 6u, 8u, 9u};
 
 	bool res = std::xxxxx(
 			std::begin(in1),

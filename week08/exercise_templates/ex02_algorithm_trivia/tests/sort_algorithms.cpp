@@ -19,8 +19,8 @@
 namespace {
 
 TEST(test_algorithm_1) {
-	std::vector<int> in_out1{2, 3, 5, 7, 1, 4, 6, 8, 9};
-	std::vector<int> expected{1, 2, 3, 4, 5, 6, 7, 8, 9};
+	auto in_out1 = std::vector{2, 3, 5, 7, 1, 4, 6, 8, 9};
+	auto expected = std::vector{1, 2, 3, 4, 5, 6, 7, 8, 9};
 
 	std::xxxxx(
 			std::begin(in_out1),
@@ -30,9 +30,9 @@ TEST(test_algorithm_1) {
 }
 
 TEST(test_algorithm_2) {
-	std::vector<int> in1{2, 5, 3, 7, 1, 4, 6, 8, 9};
-	std::vector<int> out1{0, 0, 0, 0, 0};
-	std::vector<int> expected{1, 2, 3, 4, 5};
+	auto in1 = std::vector{2, 5, 3, 7, 1, 4, 6, 8, 9};
+	auto out1 = std::vector{0, 0, 0, 0, 0};
+	auto expected = std::vector{1, 2, 3, 4, 5};
 
 	std::xxxxx(
 			std::begin(in1),
@@ -45,7 +45,7 @@ TEST(test_algorithm_2) {
 
 
 TEST(test_algorithm_3) {
-	std::vector<unsigned> in1{2, 3, 5, 6, 7};
+	auto in1 = std::vector{2u, 3u, 5u, 6u, 7u};
 
 	bool res = std::xxxxx(
 			std::begin(in1),
@@ -56,8 +56,8 @@ TEST(test_algorithm_3) {
 
 
 TEST(test_algorithm_4) {
-	std::vector<int> in_out1{2, 5, 3, 7, 1, 4, 6, 8, 9};
-	std::vector<int> expected{1, 2, 3, 4};
+	auto in_out1 = std::vector{2, 5, 3, 7, 1, 4, 6, 8, 9};
+	auto expected = std::vector{1, 2, 3, 4};
 
 	std::xxxxx(
 			std::begin(in_out1),
@@ -69,8 +69,8 @@ TEST(test_algorithm_4) {
 
 
 TEST(test_algorithm_5) {
-	std::vector<std::pair<int, int>> in_out1{{2, 1}, {1, 0}, {1, 2}, {1, 4}, {2, 3}};
-	std::vector<std::pair<int, int>> expected{{1, 0}, {1, 2}, {1, 4}, {2, 1}, {2, 3}};
+	auto in_out1 = std::vector<std::pair<int, int>>{{2, 1}, {1, 0}, {1, 2}, {1, 4}, {2, 3}};
+	auto expected = std::vector<std::pair<int, int>>{{1, 0}, {1, 2}, {1, 4}, {2, 1}, {2, 3}};
 
 	std::xxxxx(
 			std::begin(in_out1),
@@ -82,7 +82,7 @@ TEST(test_algorithm_5) {
 
 
 TEST(test_algorithm_6) {
-	std::vector<unsigned> in_out1{45, 27, 73, 15, 95, 64, 44, 0, 99};
+	auto in_out1 = std::vector{45u, 27u, 73u, 15u, 95u, 64u, 44u, 0u, 99u};
 
 	std::xxxxx(
 			std::begin(in_out1),

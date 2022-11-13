@@ -23,9 +23,9 @@
 namespace {
 
 TEST(test_algorithm_1) {
-	std::vector<int> in1{5, 6, 7, 8, 0, 10};
-	std::vector<int> out1{};
-	std::vector<int> expected{32, 64, 128, 256, 1, 1024};
+	auto in1 = std::vector{5, 6, 7, 8, 0, 10};
+	auto out1 = std::vector<int>{};
+	auto expected = std::vector{32, 64, 128, 256, 1, 1024};
 
 	std::xxxxx(
 			std::begin(in1),
@@ -38,8 +38,8 @@ TEST(test_algorithm_1) {
 
 
 TEST(test_algorithm_2) {
-	std::vector<int> in_out1{1, 2, 3, 2, 1, 2, 3, 2};
-	std::vector<int> expected{1, 4, 3, 4, 1, 4, 3, 4};
+	auto in_out1 = std::vector{1, 2, 3, 2, 1, 2, 3, 2};
+	auto expected = std::vector{1, 4, 3, 4, 1, 4, 3, 4};
 
 	std::xxxxx(
 			std::begin(in_out1),
@@ -51,9 +51,9 @@ TEST(test_algorithm_2) {
 }
 
 TEST(test_algorithm_3) {
-	std::vector<int> in1{1, 2, 3, 2, 1, 2, 3, 2};
-	std::vector<int> out1{};
-	std::vector<int> expected{1, 4, 3, 4, 1, 4, 3, 4};
+	auto in1 = std::vector{1, 2, 3, 2, 1, 2, 3, 2};
+	auto out1 = std::vector<int>{};
+	auto expected = std::vector{1, 4, 3, 4, 1, 4, 3, 4};
 
 	std::xxxxx(
 			std::begin(in1),
@@ -67,10 +67,10 @@ TEST(test_algorithm_3) {
 
 
 TEST(test_algorithm_4) {
-	std::vector<int> in_out1{1, 2, 3, 4};
-	std::vector<int> in_out2{5, 6, 7, 8};
-	std::vector<int> expected1{5, 6, 7, 8};
-	std::vector<int> expected2{1, 2, 3, 4};
+	auto in_out1 = std::vector{1, 2, 3, 4};
+	auto in_out2 = std::vector{5, 6, 7, 8};
+	auto expected1 = std::vector{5, 6, 7, 8};
+	auto expected2 = std::vector{1, 2, 3, 4};
 
 	std::xxxxx(
 			std::begin(in_out1),
@@ -82,8 +82,8 @@ TEST(test_algorithm_4) {
 
 
 TEST(test_algorithm_5) {
-	std::vector<int> in_out1{1, 2, 3, 4, 5, 6, 7, 8};
-	std::vector<int> expected{1, 0, 0, 4, 0, 6, 0, 8};
+	auto in_out1 = std::vector{1, 2, 3, 4, 5, 6, 7, 8};
+	auto expected = std::vector{1, 0, 0, 4, 0, 6, 0, 8};
 
 	std::xxxxx(
 			std::begin(in_out1),
@@ -95,8 +95,8 @@ TEST(test_algorithm_5) {
 }
 
 TEST(test_algorithm_6) {
-	std::vector<int> in_out1{5, 6, 3, 7, 4, 0, 0, 0};
-	std::vector<int> expected{5, 6, 3, 5, 6, 3, 7, 4};
+	auto in_out1 = std::vector{5, 6, 3, 7, 4, 0, 0, 0};
+	auto expected = std::vector{5, 6, 3, 5, 6, 3, 7, 4};
 
 	std::xxxxx(
 			std::begin(in_out1),
@@ -107,9 +107,9 @@ TEST(test_algorithm_6) {
 }
 
 TEST(test_algorithm_7) {
-	std::vector<int> in1{5, 6, 3, 7, 9, 1, 5};
-	std::vector<int> out1{};
-	std::vector<int> expected{5, 6, 3, 7, 9, 1, 5};
+	auto in1 = std::vector{5, 6, 3, 7, 9, 1, 5};
+	auto out1 = std::vector<int>{};
+	auto expected = std::vector{5, 6, 3, 7, 9, 1, 5};
 
 	std::xxxxx(
 			std::begin(in1),
@@ -120,9 +120,9 @@ TEST(test_algorithm_7) {
 }
 
 TEST(test_algorithm_8) {
-	std::vector<int> in1{5, 6, 3, 7, 10, 10, 5};
-	std::vector<int> out1{};
-	std::vector<int> expected{5, 3, 7, 5};
+	auto in1 = std::vector{5, 6, 3, 7, 10, 10, 5};
+	auto out1 = std::vector<int>{};
+	auto expected = std::vector{5, 3, 7, 5};
 
 	std::xxxxx(
 			std::begin(in1),
@@ -134,9 +134,9 @@ TEST(test_algorithm_8) {
 }
 
 TEST(test_algorithm_9) {
-	std::vector<int> in1{5, 6, 3, 7, 9, 1, 5};
-	std::vector<int> out1{};
-	std::vector<int> expected{5, 6, 3, 7, 9, 1};
+	auto in1 = std::vector{5, 6, 3, 7, 9, 1, 5};
+	auto out1 = std::vector<int>{};
+	auto expected = std::vector{5, 6, 3, 7, 9, 1};
 
 	std::xxxxx(
 			std::begin(in1),
@@ -147,9 +147,9 @@ TEST(test_algorithm_9) {
 }
 
 TEST(test_algorithm_10) {
-	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8};
-	std::vector<int> out1{};
-	std::vector<int> expected{1, 0, 0, 4, 0, 6, 0, 8};
+	auto in1 = std::vector{1, 2, 3, 4, 5, 6, 7, 8};
+	auto out1 = std::vector<int>{};
+	auto expected = std::vector{1, 0, 0, 4, 0, 6, 0, 8};
 
 	std::xxxxx(
 			std::begin(in1),

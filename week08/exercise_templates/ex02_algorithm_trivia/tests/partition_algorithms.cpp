@@ -17,7 +17,7 @@
 namespace {
 
 TEST(test_algorithm_1) {
-	std::vector<int> in1{2, 3, 5, 7, 1, 4, 6, 8, 9};
+	auto in1 = std::vector{2, 3, 5, 7, 1, 4, 6, 8, 9};
 	auto expected = std::begin(in1) + 4;
 
 	auto res = std::xxx(
@@ -29,8 +29,8 @@ TEST(test_algorithm_1) {
 }
 
 TEST(test_algorithm_2) {
-	std::vector<int> in_out1{1, 2, 3, 4, 5, 6, 7, 8, 9};
-	std::vector<int> expected{2, 3, 5, 7, 1, 4, 6, 8, 9};
+	auto in_out1 = std::vector{1, 2, 3, 4, 5, 6, 7, 8, 9};
+	auto expected = std::vector{2, 3, 5, 7, 1, 4, 6, 8, 9};
 
 	std::xxxxx(
 			std::begin(in_out1),
@@ -41,7 +41,7 @@ TEST(test_algorithm_2) {
 }
 
 TEST(test_algorithm_3) {
-	std::vector<int> in1{2, 3, 5, 7, 1, 4, 6, 8, 9};
+	auto in1 = std::vector{2, 3, 5, 7, 1, 4, 6, 8, 9};
 
 	bool res = std::xxxxx(
 			std::begin(in1),
@@ -53,11 +53,11 @@ TEST(test_algorithm_3) {
 
 
 TEST(test_algorithm_4) {
-	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8, 9};
-	std::vector<int> out1{};
-	std::vector<int> out2{};
-	std::vector<int> expected1{2, 3, 5, 7};
-	std::vector<int> expected2{1, 4, 6, 8, 9};
+	auto in1 = std::vector{1, 2, 3, 4, 5, 6, 7, 8, 9};
+	auto out1 = std::vector<int>{};
+	auto out2 = std::vector<int>{};
+	auto expected1 = std::vector{2, 3, 5, 7};
+	auto expected2 = std::vector{1, 4, 6, 8, 9};
 
 	std::xxxxx(
 			std::begin(in1),
@@ -70,8 +70,8 @@ TEST(test_algorithm_4) {
 }
 
 TEST(test_algorithm_5) {
-	std::vector<int> in_out1{1, 2, 3, 4, 5, 6, 7, 8, 9};
-	std::vector<int> expected{7, 2,	3, 5, 4, 6, 1, 8, 9};
+	auto in_out1 = std::vector{1, 2, 3, 4, 5, 6, 7, 8, 9};
+	auto expected = std::vector{7, 2,	3, 5, 4, 6, 1, 8, 9};
 
 	std::xxxxx(
 			std::begin(in_out1),

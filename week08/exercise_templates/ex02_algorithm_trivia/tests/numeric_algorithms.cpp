@@ -18,8 +18,8 @@
 namespace {
 
 TEST(test_algorithm_1) {
-	std::vector<int> out1(8);
-	std::vector<int> expected{0, 1, 2, 3, 4, 5, 6, 7};
+	auto out1 = std::vector<int>(8);
+	auto expected = std::vector{0, 1, 2, 3, 4, 5, 6, 7};
 
 	std::xxxxx(
 			std::begin(out1),
@@ -30,9 +30,9 @@ TEST(test_algorithm_1) {
 }
 
 TEST(test_algorithm_2) {
-	std::vector<int> in1{1, 2, 4, 3, 9, 5, 7};
-	std::vector<int> out1(in1.size());
-	std::vector<int> expected{1, 1, 2, -1, 6, -4, 2};
+	auto in1 = std::vector{1, 2, 4, 3, 9, 5, 7};
+	auto out1 = std::vector<int>(in1.size());
+	auto expected = std::vector{1, 1, 2, -1, 6, -4, 2};
 
 	std::xxxxx(
 			std::begin(in1),
@@ -43,10 +43,10 @@ TEST(test_algorithm_2) {
 }
 
 TEST(test_algorithm_3) {
-	std::vector<int> in1{1, 2, 3, 4, 5, 6};
-	int expected = 121;
+	auto in1 = std::vector{1, 2, 3, 4, 5, 6};
+	auto expected = 121;
 
-	int res = std::xxxxx(
+	auto res = std::xxxxx(
 			std::begin(in1),
 			std::end(in1),
 			100);
@@ -55,9 +55,9 @@ TEST(test_algorithm_3) {
 }
 
 TEST(test_algorithm_4) {
-	std::vector<int> in1{1, 20, 300, 4000, 50000};
-	std::vector<int> out1(in1.size());
-	std::vector<int> expected{1, 21,321,4321, 54321};
+	auto in1 = std::vector{1, 20, 300, 4000, 50000};
+	auto out1 = std::vector<int>(in1.size());
+	auto expected = std::vector{1, 21,321,4321, 54321};
 
 	std::xxxxxx(std::begin(in1), std::end(in1), std::begin(out1));
 
@@ -65,11 +65,11 @@ TEST(test_algorithm_4) {
 }
 
 TEST(test_algorithm_5) {
-	std::vector<int> in1{1, 2, 3, 2, 1};
-	std::vector<char> in2{'a', 'b', 'c', 'd', 'e'};
-	std::string expected{"begin, 1a, 2b, 3c, 2d, 1e"};
+	auto in1 = std::vector{1, 2, 3, 2, 1};
+	auto in2 = std::vector{'a', 'b', 'c', 'd', 'e'};
+	auto expected = std::string{"begin, 1a, 2b, 3c, 2d, 1e"};
 
-	std::string res = std::xxxx(
+	auto res = std::xxxx(
 			std::begin(in1),
 			std::end(in1),
 			std::begin(in2),

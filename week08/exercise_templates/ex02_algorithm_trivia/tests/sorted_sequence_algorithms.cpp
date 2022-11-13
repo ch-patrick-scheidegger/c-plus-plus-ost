@@ -18,8 +18,8 @@
 namespace {
 
 TEST(test_algorithm_1) {
-	std::vector<int> in_out1{2, 3, 8, 9, 10, 16, 1, 3, 7, 13, 15};
-	std::vector<int> expected{1, 2, 3, 3, 7, 8, 9, 10, 13, 15, 16};
+	auto in_out1 = std::vector{2, 3, 8, 9, 10, 16, 1, 3, 7, 13, 15};
+	auto expected = std::vector{1, 2, 3, 3, 7, 8, 9, 10, 13, 15, 16};
 
 	std::xxxxx(
 			std::begin(in_out1),
@@ -30,7 +30,7 @@ TEST(test_algorithm_1) {
 }
 
 TEST(test_algorithm_2) {
-	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8, 9};
+	auto in1 = std::vector{1, 2, 3, 4, 5, 6, 7, 8, 9};
 
 	auto res = std::xxxxx(
 			std::begin(in1),
@@ -41,10 +41,10 @@ TEST(test_algorithm_2) {
 }
 
 TEST(test_algorithm_3) {
-	std::vector<int> in1{1, 3, 7, 13, 15};
-	std::vector<int> in2{2, 3, 8, 9, 10, 16};
-	std::vector<int> out{};
-	std::vector<int> expected{1, 2, 3, 3, 7, 8, 9, 10, 13, 15, 16};
+	auto in1 = std::vector{1, 3, 7, 13, 15};
+	auto in2 = std::vector{2, 3, 8, 9, 10, 16};
+	auto out = std::vector<int>{};
+	auto expected = std::vector{1, 2, 3, 3, 7, 8, 9, 10, 13, 15, 16};
 
 	std::xxxxx(
 			std::begin(in1),
@@ -57,7 +57,7 @@ TEST(test_algorithm_3) {
 }
 
 TEST(test_algorithm_5) {
-	std::vector<unsigned> in1{1, 1, 1, 2, 2, 2, 3, 4, 4};
+	auto in1 = std::vector{1u, 1u, 1u, 2u, 2u, 2u, 3u, 4u, 4u};
 	auto expected = std::make_pair(std::begin(in1) + 3, std::begin(in1) + 6);
 
 	auto res = std::xxxxxx(
@@ -69,7 +69,7 @@ TEST(test_algorithm_5) {
 }
 
 TEST(test_algorithm_4) {
-	std::vector<unsigned> in1{1, 1, 1, 2, 2, 2, 3, 4, 4};
+	auto in1 = std::vector{1u, 1u, 1u, 2u, 2u, 2u, 3u, 4u, 4u};
 	auto expected = std::begin(in1) + 3;
 
 	auto res = std::xxx(
@@ -81,7 +81,7 @@ TEST(test_algorithm_4) {
 }
 
 TEST(test_algorithm_6) {
-	std::vector<unsigned> in1{1, 1, 1, 2, 2, 2, 3, 4, 4};
+	auto in1 = std::vector{1u, 1u, 1u, 2u, 2u, 2u, 3u, 4u, 4u};
 	auto expected = std::begin(in1) + 6;
 
 	auto res = std::xxx(

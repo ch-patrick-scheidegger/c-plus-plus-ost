@@ -28,7 +28,7 @@ TEST(test_algorithm_1) {
 }
 
 TEST(test_algorithm_2) {
-	std::vector<int> in1{9, 6, 5, 1, 2, 10, 3, 8};
+	auto in1 = std::vector{9, 6, 5, 1, 2, 10, 3, 8};
 	auto expected = std::begin(in1) + 3;
 
 	auto res = std::xxx(std::begin(in1), std::end(in1));
@@ -37,7 +37,7 @@ TEST(test_algorithm_2) {
 }
 
 TEST(test_algorithm_3) {
-	std::vector<int> in1{9, 6, 5, 1, 2, 10, 3, 8};
+	auto in1 = std::vector{9, 6, 5, 1, 2, 10, 3, 8};
 	auto expected = std::make_pair(std::begin(in1) + 3, std::begin(in1) + 5);
 
 	auto res = std::xxxxxx(std::begin(in1), std::end(in1));
@@ -62,7 +62,7 @@ TEST(test_algorithm_5) {
 }
 
 TEST(test_algorithm_6) {
-	std::vector<int> in1{9, 6, 5, 1, 2, 10, 3, 8};
+	auto in1 = std::vector{9, 6, 5, 1, 2, 10, 3, 8};
 	auto expected = std::begin(in1) + 5;
 
 	auto res = std::xxx(std::begin(in1), std::end(in1));
