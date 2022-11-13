@@ -1,6 +1,6 @@
-#include "property_checking_algorithms.h"
-#include "cute.h"
 #include "algorithm_replacements.h"
+
+#include <cute/cute.h>
 
 #include <vector>
 #include <algorithm>
@@ -18,7 +18,7 @@
 
 namespace {
 
-void test_algorithm_1() {
+TEST(test_algorithm_1) {
 	std::vector<unsigned> in1{2, 3, 5, 6, 7};
 
 	bool res = std::xxxxx(
@@ -30,7 +30,7 @@ void test_algorithm_1() {
 }
 
 
-void test_algorithm_2() {
+TEST(test_algorithm_2) {
 	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8};
 	std::vector<int> in2{1, 5, 7, 4, 2, 6, 3, 8};
 	auto expected = true;
@@ -44,7 +44,7 @@ void test_algorithm_2() {
 }
 
 
-void test_algorithm_3() {
+TEST(test_algorithm_3) {
 	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8};
 	std::vector<int> in2{1, 2, 3, 4, 0, 6, 7, 8};
 	auto expected = std::make_pair(std::begin(in1) + 4, std::begin(in2) + 4);
@@ -58,7 +58,7 @@ void test_algorithm_3() {
 }
 
 
-void test_algorithm_4() {
+TEST(test_algorithm_4) {
 	std::vector<unsigned> in1{2, 3, 5, 6, 7};
 
 	bool res = std::xxxxx(
@@ -69,7 +69,7 @@ void test_algorithm_4() {
 	ASSERT(!res);
 }
 
-void test_algorithm_5() {
+TEST(test_algorithm_5) {
 	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8};
 	std::vector<int> in2{1, 2, 3, 4, 0, 6, 7, 8};
 	auto expected = false;
@@ -83,7 +83,7 @@ void test_algorithm_5() {
 }
 
 
-void test_algorithm_6() {
+TEST(test_algorithm_6) {
 	std::vector<unsigned> in1{1, 4, 6, 8, 9};
 
 	bool res = std::xxxxx(
@@ -96,13 +96,16 @@ void test_algorithm_6() {
 
 }
 
-cute::suite make_suite_property_checking_algorithms() {
-	cute::suite s { };
-	s.push_back(CUTE(test_algorithm_1));
-	s.push_back(CUTE(test_algorithm_2));
-	s.push_back(CUTE(test_algorithm_3));
-	s.push_back(CUTE(test_algorithm_4));
-	s.push_back(CUTE(test_algorithm_5));
-	s.push_back(CUTE(test_algorithm_6));
-	return s;
+auto createPropertyCheckingSuite() -> cute::suite {
+	return cute::suite {
+		"Property Checking Algorithms Suite",
+		{
+			test_algorithm_1,
+			test_algorithm_2,
+			test_algorithm_3,
+			test_algorithm_4,
+			test_algorithm_5,
+			test_algorithm_6,
+		}
+	};
 }

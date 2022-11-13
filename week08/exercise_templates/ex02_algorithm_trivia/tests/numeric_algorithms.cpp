@@ -1,6 +1,6 @@
-#include "numeric_algorithms.h"
-#include "cute.h"
 #include "algorithm_replacements.h"
+
+#include <cute/cute.h>
 
 #include <vector>
 #include <numeric>
@@ -17,7 +17,7 @@
 
 namespace {
 
-void test_algorithm_1() {
+TEST(test_algorithm_1) {
 	std::vector<int> out1(8);
 	std::vector<int> expected{0, 1, 2, 3, 4, 5, 6, 7};
 
@@ -29,7 +29,7 @@ void test_algorithm_1() {
 	ASSERT_EQUAL(expected, out1);
 }
 
-void test_algorithm_2() {
+TEST(test_algorithm_2) {
 	std::vector<int> in1{1, 2, 4, 3, 9, 5, 7};
 	std::vector<int> out1(in1.size());
 	std::vector<int> expected{1, 1, 2, -1, 6, -4, 2};
@@ -42,7 +42,7 @@ void test_algorithm_2() {
 	ASSERT_EQUAL(expected, out1);
 }
 
-void test_algorithm_3() {
+TEST(test_algorithm_3) {
 	std::vector<int> in1{1, 2, 3, 4, 5, 6};
 	int expected = 121;
 
@@ -54,7 +54,7 @@ void test_algorithm_3() {
 	ASSERT_EQUAL(expected, res);
 }
 
-void test_algorithm_4() {
+TEST(test_algorithm_4) {
 	std::vector<int> in1{1, 20, 300, 4000, 50000};
 	std::vector<int> out1(in1.size());
 	std::vector<int> expected{1, 21,321,4321, 54321};
@@ -64,7 +64,7 @@ void test_algorithm_4() {
 	ASSERT_EQUAL(expected, out1);
 }
 
-void test_algorithm_5() {
+TEST(test_algorithm_5) {
 	std::vector<int> in1{1, 2, 3, 2, 1};
 	std::vector<char> in2{'a', 'b', 'c', 'd', 'e'};
 	std::string expected{"begin, 1a, 2b, 3c, 2d, 1e"};
@@ -82,12 +82,15 @@ void test_algorithm_5() {
 
 }
 
-cute::suite make_suite_numeric_algorithms() {
-	cute::suite s { };
-	s.push_back(CUTE(test_algorithm_1));
-	s.push_back(CUTE(test_algorithm_2));
-	s.push_back(CUTE(test_algorithm_3));
-	s.push_back(CUTE(test_algorithm_4));
-	s.push_back(CUTE(test_algorithm_5));
-	return s;
+auto createNumericSuite() -> cute::suite {
+	return cute::suite{
+		"Numeric Algorithms Suite",
+		{
+			test_algorithm_1,
+			test_algorithm_2,
+			test_algorithm_3,
+			test_algorithm_4,
+			test_algorithm_5,
+		}
+	};
 }

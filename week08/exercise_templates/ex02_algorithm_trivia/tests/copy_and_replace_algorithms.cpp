@@ -1,6 +1,6 @@
-#include "copy_and_replace_algorithms.h"
-#include "cute.h"
 #include "algorithm_replacements.h"
+
+#include <cute/cute.h>
 
 #include <vector>
 #include <cmath>
@@ -22,7 +22,7 @@
 
 namespace {
 
-void test_algorithm_1() {
+TEST(test_algorithm_1) {
 	std::vector<int> in1{5, 6, 7, 8, 0, 10};
 	std::vector<int> out1{};
 	std::vector<int> expected{32, 64, 128, 256, 1, 1024};
@@ -37,7 +37,7 @@ void test_algorithm_1() {
 }
 
 
-void test_algorithm_2() {
+TEST(test_algorithm_2) {
 	std::vector<int> in_out1{1, 2, 3, 2, 1, 2, 3, 2};
 	std::vector<int> expected{1, 4, 3, 4, 1, 4, 3, 4};
 
@@ -50,7 +50,7 @@ void test_algorithm_2() {
 	ASSERT_EQUAL(expected, in_out1);
 }
 
-void test_algorithm_3() {
+TEST(test_algorithm_3) {
 	std::vector<int> in1{1, 2, 3, 2, 1, 2, 3, 2};
 	std::vector<int> out1{};
 	std::vector<int> expected{1, 4, 3, 4, 1, 4, 3, 4};
@@ -66,7 +66,7 @@ void test_algorithm_3() {
 }
 
 
-void test_algorithm_4() {
+TEST(test_algorithm_4) {
 	std::vector<int> in_out1{1, 2, 3, 4};
 	std::vector<int> in_out2{5, 6, 7, 8};
 	std::vector<int> expected1{5, 6, 7, 8};
@@ -81,7 +81,7 @@ void test_algorithm_4() {
 }
 
 
-void test_algorithm_5() {
+TEST(test_algorithm_5) {
 	std::vector<int> in_out1{1, 2, 3, 4, 5, 6, 7, 8};
 	std::vector<int> expected{1, 0, 0, 4, 0, 6, 0, 8};
 
@@ -94,7 +94,7 @@ void test_algorithm_5() {
 	ASSERT_EQUAL(expected, in_out1);
 }
 
-void test_algorithm_6() {
+TEST(test_algorithm_6) {
 	std::vector<int> in_out1{5, 6, 3, 7, 4, 0, 0, 0};
 	std::vector<int> expected{5, 6, 3, 5, 6, 3, 7, 4};
 
@@ -106,7 +106,7 @@ void test_algorithm_6() {
 	ASSERT_EQUAL(expected, in_out1);
 }
 
-void test_algorithm_7() {
+TEST(test_algorithm_7) {
 	std::vector<int> in1{5, 6, 3, 7, 9, 1, 5};
 	std::vector<int> out1{};
 	std::vector<int> expected{5, 6, 3, 7, 9, 1, 5};
@@ -119,7 +119,7 @@ void test_algorithm_7() {
 	ASSERT_EQUAL(expected, out1);
 }
 
-void test_algorithm_8() {
+TEST(test_algorithm_8) {
 	std::vector<int> in1{5, 6, 3, 7, 10, 10, 5};
 	std::vector<int> out1{};
 	std::vector<int> expected{5, 3, 7, 5};
@@ -133,7 +133,7 @@ void test_algorithm_8() {
 	ASSERT_EQUAL(expected, out1);
 }
 
-void test_algorithm_9() {
+TEST(test_algorithm_9) {
 	std::vector<int> in1{5, 6, 3, 7, 9, 1, 5};
 	std::vector<int> out1{};
 	std::vector<int> expected{5, 6, 3, 7, 9, 1};
@@ -146,7 +146,7 @@ void test_algorithm_9() {
 	ASSERT_EQUAL(expected, out1);
 }
 
-void test_algorithm_10() {
+TEST(test_algorithm_10) {
 	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8};
 	std::vector<int> out1{};
 	std::vector<int> expected{1, 0, 0, 4, 0, 6, 0, 8};
@@ -163,17 +163,20 @@ void test_algorithm_10() {
 
 }
 
-cute::suite make_suite_copy_and_replace_algorithms() {
-	cute::suite s { };
-	s.push_back(CUTE(test_algorithm_1));
-	s.push_back(CUTE(test_algorithm_2));
-	s.push_back(CUTE(test_algorithm_3));
-	s.push_back(CUTE(test_algorithm_4));
-	s.push_back(CUTE(test_algorithm_5));
-	s.push_back(CUTE(test_algorithm_6));
-	s.push_back(CUTE(test_algorithm_7));
-	s.push_back(CUTE(test_algorithm_8));
-	s.push_back(CUTE(test_algorithm_9));
-	s.push_back(CUTE(test_algorithm_10));
-	return s;
+auto createCopyAndReplaceSuite() -> cute::suite {
+	return cute::suite {
+		"Copy and Replace Algorithms Suite",
+		{
+			test_algorithm_1,
+			test_algorithm_2,
+			test_algorithm_3,
+			test_algorithm_4,
+			test_algorithm_5,
+			test_algorithm_6,
+			test_algorithm_7,
+			test_algorithm_8,
+			test_algorithm_9,
+			test_algorithm_10,
+		}
+	};
 }

@@ -1,6 +1,6 @@
-#include "remove_unique_rotate_algorithms.h"
-#include "cute.h"
 #include "algorithm_replacements.h"
+
+#include <cute/cute.h>
 
 #include <vector>
 #include <algorithm>
@@ -23,7 +23,7 @@
 
 namespace {
 
-void test_algorithm_1() {
+TEST(test_algorithm_1) {
 	std::vector<int> in1{5, 6, 7, 8, 0, 10};
 	std::vector<int> out1{};
 	std::vector<int> expected{10, 0, 8, 7, 6, 5};
@@ -36,7 +36,7 @@ void test_algorithm_1() {
 	ASSERT_EQUAL(expected, out1);
 }
 
-void test_algorithm_2() {
+TEST(test_algorithm_2) {
 	std::vector<int> in_out1{4, 1, 2, 3};
 	std::vector<int> expected{3, 4, 2, 1};
 
@@ -47,7 +47,7 @@ void test_algorithm_2() {
 	ASSERT_EQUAL(expected, in_out1);
 }
 
-void test_algorithm_3() {
+TEST(test_algorithm_3) {
 	std::vector<int> in_out1{1, 1, 3, 3, 4, 2, 2, 2};
 	std::vector<int> expected{1, 3, 4, 2};
 
@@ -58,7 +58,7 @@ void test_algorithm_3() {
 	ASSERT_EQUAL_RANGES(std::begin(expected), std::end(expected), std::begin(in_out1), new_end);
 }
 
-void test_algorithm_4() {
+TEST(test_algorithm_4) {
 	std::vector<int> in_out1{1, 2, 3, 2, 1, 2, 3, 2};
 	std::vector<int> expected{1, 3, 1, 3};
 
@@ -70,7 +70,7 @@ void test_algorithm_4() {
 	ASSERT_EQUAL_RANGES(std::begin(expected), std::end(expected), std::begin(in_out1), new_end);
 }
 
-void test_algorithm_5() {
+TEST(test_algorithm_5) {
 	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8, 9};
 	std::vector<int> out1{};
 	std::vector<int> expected{5, 6, 7, 8, 9, 1, 2, 3, 4};
@@ -84,7 +84,7 @@ void test_algorithm_5() {
 	ASSERT_EQUAL(expected, out1);
 }
 
-void test_algorithm_6() {
+TEST(test_algorithm_6) {
 	std::vector<int> in_out1{5, 6, 7, 8, 0, 10};
 	std::vector<int> expected{10, 0, 8, 7, 6, 5};
 
@@ -95,7 +95,7 @@ void test_algorithm_6() {
 	ASSERT_EQUAL(expected, in_out1);
 }
 
-void test_algorithm_7() {
+TEST(test_algorithm_7) {
 	std::vector<int> in_out1{4, 1, 2, 3};
 	std::vector<int> expected{4, 1, 3, 2};
 
@@ -106,7 +106,7 @@ void test_algorithm_7() {
 	ASSERT_EQUAL(expected, in_out1);
 }
 
-void test_algorithm_8() {
+TEST(test_algorithm_8) {
 	std::vector<int> in_out1{1, 2, 3, 4, 5, 6, 7, 8, 9};
 	std::vector<int> expected{5, 6, 7, 8, 9, 1, 2, 3, 4};
 
@@ -119,7 +119,7 @@ void test_algorithm_8() {
 }
 
 
-void test_algorithm_9() {
+TEST(test_algorithm_9) {
 	std::vector<int> in_out1{1, 2, 3, 4, 5, 6, 7, 8};
 	std::vector<int> expected{1, 4, 6, 8};
 
@@ -131,7 +131,7 @@ void test_algorithm_9() {
 	ASSERT_EQUAL_RANGES(std::begin(expected), std::end(expected), std::begin(in_out1), new_end);
 }
 
-void test_algorithm_10() {
+TEST(test_algorithm_10) {
 	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8};
 	std::vector<int> out1{};
 	std::vector<int> expected{1, 4, 6, 8};
@@ -146,7 +146,7 @@ void test_algorithm_10() {
 }
 
 
-void test_algorithm_11() {
+TEST(test_algorithm_11) {
 	std::vector<int> in1{1, 2, 3, 2, 1, 2, 3, 2};
 	std::vector<int> out1{};
 	std::vector<int> expected{1, 3, 1, 3};
@@ -160,7 +160,7 @@ void test_algorithm_11() {
 	ASSERT_EQUAL(expected, out1);
 }
 
-void test_algorithm_12() {
+TEST(test_algorithm_12) {
 	std::vector<int> in1{1, 1, 3, 3, 4, 2, 2, 2};
 	std::vector<int> out1{};
 	std::vector<int> expected{1, 3, 4, 2};
@@ -175,19 +175,22 @@ void test_algorithm_12() {
 
 }
 
-cute::suite make_suite_remove_unique_rotate_algorithms() {
-	cute::suite s { };
-	s.push_back(CUTE(test_algorithm_1));
-	s.push_back(CUTE(test_algorithm_2));
-	s.push_back(CUTE(test_algorithm_3));
-	s.push_back(CUTE(test_algorithm_4));
-	s.push_back(CUTE(test_algorithm_5));
-	s.push_back(CUTE(test_algorithm_6));
-	s.push_back(CUTE(test_algorithm_7));
-	s.push_back(CUTE(test_algorithm_8));
-	s.push_back(CUTE(test_algorithm_9));
-	s.push_back(CUTE(test_algorithm_10));
-	s.push_back(CUTE(test_algorithm_11));
-	s.push_back(CUTE(test_algorithm_12));
-	return s;
+auto createRemoveUniqueRotateSuite() -> cute::suite {
+	return cute::suite{
+		"Remove, Unique, Rotate Algorithms Suite",
+		{
+			test_algorithm_1,
+			test_algorithm_2,
+			test_algorithm_3,
+			test_algorithm_4,
+			test_algorithm_5,
+			test_algorithm_6,
+			test_algorithm_7,
+			test_algorithm_8,
+			test_algorithm_9,
+			test_algorithm_10,
+			test_algorithm_11,
+			test_algorithm_12,
+		}
+	};
 }

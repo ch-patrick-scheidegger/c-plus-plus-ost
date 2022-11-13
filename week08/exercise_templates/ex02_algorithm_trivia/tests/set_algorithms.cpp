@@ -1,6 +1,6 @@
-#include "set_algorithms.h"
-#include "cute.h"
 #include "algorithm_replacements.h"
+
+#include <cute/cute.h>
 
 #include <vector>
 #include <algorithm>
@@ -16,7 +16,7 @@
 
 namespace {
 
-void test_algorithm_1() {
+TEST(test_algorithm_1) {
 	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8, 9};
 	std::vector<int> in2{4, 5, 6, 9, 10, 11, 12};
 	std::vector<int> out{};
@@ -32,7 +32,7 @@ void test_algorithm_1() {
 	ASSERT_EQUAL(expected, out);
 }
 
-void test_algorithm_2() {
+TEST(test_algorithm_2) {
 	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8, 9};
 	std::vector<int> in2{4, 5, 6, 9, 10, 11, 12};
 	std::vector<int> out{};
@@ -48,7 +48,7 @@ void test_algorithm_2() {
 	ASSERT_EQUAL(expected, out);
 }
 
-void test_algorithm_3() {
+TEST(test_algorithm_3) {
 	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8, 9};
 	std::vector<int> in2{4, 5, 6, 9, 10, 11, 12};
 	std::vector<int> out{};
@@ -65,7 +65,7 @@ void test_algorithm_3() {
 }
 
 
-void test_algorithm_4() {
+TEST(test_algorithm_4) {
 	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8, 9};
 	std::vector<int> in2{4, 5, 6, 9, 10, 11, 12};
 	std::vector<int> out{};
@@ -82,7 +82,7 @@ void test_algorithm_4() {
 }
 
 
-void test_algorithm_5() {
+TEST(test_algorithm_5) {
 	std::vector<int> in1{1, 2, 3, 4, 5, 6, 7, 8, 9};
 	std::vector<int> in2{2, 3, 4, 7, 8, 9};
 
@@ -97,12 +97,15 @@ void test_algorithm_5() {
 
 }
 
-cute::suite make_suite_set_algorithms() {
-	cute::suite s { };
-	s.push_back(CUTE(test_algorithm_1));
-	s.push_back(CUTE(test_algorithm_2));
-	s.push_back(CUTE(test_algorithm_3));
-	s.push_back(CUTE(test_algorithm_4));
-	s.push_back(CUTE(test_algorithm_5));
-	return s;
+auto createSetSuite() -> cute::suite {
+	return cute::suite{
+		"Set Algorithms Suite",
+		{
+			test_algorithm_1,
+			test_algorithm_2,
+			test_algorithm_3,
+			test_algorithm_4,
+			test_algorithm_5,
+		}
+	};
 }

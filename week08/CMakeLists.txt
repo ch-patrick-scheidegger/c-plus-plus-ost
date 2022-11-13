@@ -13,3 +13,6 @@ add_subdirectory("lecture_examples/09_accumulate")
 add_subdirectory("lecture_examples/quiz_01_merge")
 add_subdirectory("lecture_examples/quiz_02_splitDigits")
 add_subdirectory("lecture_examples/quiz_03_primes")
+
+
+add_subdirectory("exercise_templates/ex02_algorithm_trivia")
