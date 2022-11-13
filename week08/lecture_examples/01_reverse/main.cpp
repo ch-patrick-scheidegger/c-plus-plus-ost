@@ -4,7 +4,7 @@
 #include <iostream>
 #include <ranges>
 
-void reverse(std::vector<int> & values) {
+auto reverse(std::vector<int> & values) -> void {
   for (auto i = 0u; i <= values.size(); i++) {
     auto otherIndex{values.size() - i};
     auto tmp = values[0];
@@ -13,12 +13,12 @@ void reverse(std::vector<int> & values) {
   }
 }
 
-// void reverse(std::vector<int> & values) {
+// auto reverse(std::vector<int> & values) -> void {
 //   reverse(begin(values), end(values));
 // }
 
-int main(int argc, char **argv) {
-  std::vector<int> values{1, 2, 3, 4, 5, 6};
+auto main(int argc, char **argv) -> int {
+  auto values = std::vector{1, 2, 3, 4, 5, 6};
   reverse(values);
   // std::ranges::reverse(values);
   std::copy(begin(values), end(values), std::ostream_iterator<int>{std::cout, ", "});

@@ -5,8 +5,8 @@
 
 #include <iterator>
 
-int maximum(std::vector<int> values) {
-  int var = std::numeric_limits<int>::min();
+auto maximum(std::vector<int> values) -> int {
+  auto var = std::numeric_limits<int>::min();
   for (auto v : values) {
     if (v > var) {
       var = v;
@@ -15,14 +15,14 @@ int maximum(std::vector<int> values) {
   return var;
 }
 
-//int maximum(std::vector<int> values) {
+//auto maximum(std::vector<int> values) -> int {
 //	if (values.empty()) {
 //		return std::numeric_limits<int>::min();
 //	}
 //	return *std::max_element(begin(values), end(values));
 //}
 
-int main(int argc, char **argv) {
-	std::vector<int> values { 1, 2, 6, 4, 5, 3 };
+auto main(int argc, char **argv) -> int {
+	auto values = std::vector{ 1, 2, 6, 4, 5, 3 };
 	std::cout << maximum(values);
 }

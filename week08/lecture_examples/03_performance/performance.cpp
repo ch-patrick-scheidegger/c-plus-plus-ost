@@ -6,7 +6,7 @@
 #include <iterator>
 #include <algorithm>
 
-bool contains_with_loop(std::vector<int> const & values, int const v) {
+auto contains_with_loop(std::vector<int> const & values, int const v) -> bool {
 	auto const end = std::end(values);
 	for(auto it = std::begin(values); it != end; ++it) {
 		if (*it == v) {
@@ -16,12 +16,12 @@ bool contains_with_loop(std::vector<int> const & values, int const v) {
 	return false;
 }
 
-bool contains_with_algorithm(std::vector<int> const & values, int const v) {
+auto contains_with_algorithm(std::vector<int> const & values, int const v) -> bool {
 	auto const pos = std::find(std::begin(values), std::end(values), v);
 	return pos != std::end(values);
 }
 
-void execute_measurement(std::vector<int> const & values, std::ostream & out) {
+auto execute_measurement(std::vector<int> const & values, std::ostream & out) -> void {
 	out << std::boolalpha;
 
 	auto const loop_start = std::chrono::high_resolution_clock::now();
@@ -37,11 +37,9 @@ void execute_measurement(std::vector<int> const & values, std::ostream & out) {
 	out << "found with an algorithm: " << algorithm_result << " in " << algorithm_duration.count() << "ms" << std::endl;
 }
 
-int main() {
-	std::vector<int> const values(100000000, 1);
+auto main() -> int {
+	auto const values = std::vector(100000000, 1);
 	for (auto i = 0; i < 10; i++) {
 		execute_measurement(values, std::cout);
 	}
 }
-
-

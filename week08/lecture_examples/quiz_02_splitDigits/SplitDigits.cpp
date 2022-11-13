@@ -4,12 +4,11 @@
 #include <string>
 #include <vector>
 
-
-int const minusIndex = 10;
+auto const minusIndex = 10;
 
 auto splitDigits(int number) {
-  std::string digits = std::to_string(number);
-  std::vector<unsigned> indices(digits.size());
+  auto digits = std::to_string(number);
+  auto indices = std::vector<unsigned>(digits.size());
   transform(begin(digits), end(digits),
             begin(indices),
             [](char c) {
@@ -19,7 +18,7 @@ auto splitDigits(int number) {
 }
 
 
-int main() {
+auto main() -> int {
 	auto digits = splitDigits(-1234);
 	copy(cbegin(digits), cend(digits), std::ostream_iterator<unsigned>{std::cout, "\n"});
 }
