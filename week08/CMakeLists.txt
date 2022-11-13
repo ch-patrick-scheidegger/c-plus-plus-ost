@@ -14,5 +14,12 @@ add_subdirectory("lecture_examples/quiz_01_merge")
 add_subdirectory("lecture_examples/quiz_02_splitDigits")
 add_subdirectory("lecture_examples/quiz_03_primes")
 
-
 add_subdirectory("exercise_templates/ex02_algorithm_trivia")
+
+file(COPY "exercise_solutions/sol03_palindromes/linuxwords.txt"
+    DESTINATION "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}"
+)
+add_subdirectory("exercise_solutions/sol03_palindromes")
+add_subdirectory("exercise_solutions/sol04_anagrams")
+add_subdirectory("exercise_solutions/sol04_anagrams_multiwords")
+add_subdirectory("exercise_solutions/sol04_anagrams_multiwords_optimized")
