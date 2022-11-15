@@ -1,18 +1,17 @@
 # Testat-Exercise 2: KWIC with word class
 
-**Hand-in time is Monday 29. Nov 2021, 10:00 (AM) (CET)**
+**Hand-in time is Tuesday 29. Nov 2022, 18:40 (CET)**
 
-Hand in your solution via MS Teams using the assignment Testat 2.
-Hand in the following files
+Hand in you solution via [ALF](https://alf.sifs0005.infs.ch/project/18/submission/new/) **Cpl Testat 2 KWIC**. In case ALF does not work or is too slow, you can send an email.
 
-* Test.cpp
+* tests.cpp
 * main.cpp
-* word.h
+* word.hpp
 * word.cpp
-* kwic.h
+* kwic.hpp
 * kwic.cpp
 
-`Test.cpp` combines all test functions you created for your `Word` class as well as for your `kwic` solution.
+`tests.cpp` combines all test functions you created for your `Word` class as well as for your `kwic` solution.
 `main.cpp` contains the `main()` function for your `kwic` program.
 
 ## KWIC - Keyword in Context (Testat)
