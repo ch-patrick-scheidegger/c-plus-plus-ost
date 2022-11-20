@@ -206,7 +206,7 @@ TEST(test_wordoccurrence_with_lorem_ipsum_input) {
 
 auto main(int argc, char const *argv[]) -> int {
   auto suite = cute::suite{
-    "'nthWord' Tests",
+    "'wordLineOccurrence' Tests",
     {
       test_woccurrence_with_empty_input,
       test_woccurrence_with_one_input_word,

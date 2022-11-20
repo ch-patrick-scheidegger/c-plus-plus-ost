@@ -44,7 +44,7 @@ TEST(test_print_primes_up_to_1000) {
 
 auto main(int argc, char const *argv[]) -> int {
   auto suite = cute::suite{
-    "'nthWord' Tests",
+    "'primes' Tests",
     {
       test_two_is_prime,
       test_print_primes_up_to_two,
