@@ -1,58 +1,51 @@
-
-
-char min(char left, char right) {
+auto min(char left, char right) -> char {
   return left < right ? left : right;
 }
 
-short min(short left, short right) {
+auto min(short left, short right) -> short {
   return left < right ? left : right;
 }
 
-int min(int left, int right) {
+auto min(int left, int right) -> int {
   return left < right ? left : right;
 }
 
-long min(long left, long right) {
+auto min(long left, long right) -> long {
   return left < right ? left : right;
 }
 
-long long min(long long left, long long right) {
+auto min(long long left, long long right) -> long long {
   return left < right ? left : right;
 }
 
-unsigned char min(unsigned char left, unsigned char right) {
+auto min(unsigned char left, unsigned char right) -> unsigned char {
   return left < right ? left : right;
 }
 
-unsigned short min(unsigned short left, unsigned short right) {
+auto min(unsigned short left, unsigned short right) -> unsigned short {
   return left < right ? left : right;
 }
 
-unsigned min(unsigned left, unsigned right) {
+auto min(unsigned left, unsigned right) -> unsigned {
   return left < right ? left : right;
 }
 
-unsigned long min(unsigned long left, unsigned long right) {
+auto min(unsigned long left, unsigned long right) -> unsigned long {
   return left < right ? left : right;
 }
 
-unsigned long long min(unsigned long long left, unsigned long long right) {
+auto min(unsigned long long left, unsigned long long right) -> unsigned long long {
   return left < right ? left : right;
 }
 
-float min(float left, float right) {
+auto min(float left, float right) -> float {
   return left < right ? left : right;
 }
 
-double min(double left, double right) {
+auto min(double left, double right) -> double {
   return left < right ? left : right;
 }
 
-long double min(long double left, long double right) {
+auto min(long double left, long double right) -> long double {
   return left < right ? left : right;
-}
-
-
-int main() {
-
 }

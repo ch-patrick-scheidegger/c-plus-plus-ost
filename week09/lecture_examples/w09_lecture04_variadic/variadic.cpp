@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
 
-void printAll(std::ostream & out) {
+auto printAll(std::ostream & out) -> void {
 }
 
 template<typename First, typename...Types>
-void printAll(std::ostream & out, First const & first, Types const &...rest) {
+auto printAll(std::ostream & out, First const & first, Types const &...rest) -> void {
   out << first;
   if (sizeof...(Types)) {
     out << ", ";
@@ -13,7 +13,7 @@ void printAll(std::ostream & out, First const & first, Types const &...rest) {
   printAll(out, rest...);
 }
 
-int main() {
-	int i{42}; double d{1.25}; std::string book{"Lucid C++"};
-	printAll(std::cout, i, d, book);
+auto main() -> int {
+  int i{42}; double d{1.25}; std::string book{"Lucid C++"};
+  printAll(std::cout, i, d, book);
 }

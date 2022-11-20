@@ -1,11 +1,11 @@
 #include <iostream>
 
 template <typename F, typename...T>
-F min(F const & first, T const &...rest) {
+auto min(F const & first, T const &...rest) -> F {
   auto const & restMin = min(rest...);
   return first < restMin ? first : restMin;
 }
 
-int main() {
+auto main() -> int {
   std::cout << min(3, 1, 4, 1, 5);
 }

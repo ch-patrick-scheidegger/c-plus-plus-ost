@@ -2,21 +2,20 @@
 #include <string>
 
 template <typename T>
-T min(T left, T right) {
+auto min(T left, T right) -> T {
   return left < right ? left : right;
 }
 
 template <typename T>
-T * min(T * left, T * right) {
+auto min(T * left, T * right) -> T * {
   return *left < *right ? left : right;
 }
 
-char const * min(char const * left,
-                 char const * right) {
+auto min(char const * left, char const * right) -> char const * {
   return std::string{left} < std::string{right} ? left : right;
 }
 
-int main() {
+auto main() -> int {
   std::cout << min("Gregor Clegane", "Tyrion Lannister") << '\n';
   std::cout << min("Samwell Tarly", "Sansa Stark") << '\n';
 }

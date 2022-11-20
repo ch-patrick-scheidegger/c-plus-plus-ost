@@ -1,17 +1,16 @@
 #include <iostream>
 
 template <typename T>
-T min(T left, T right) {
+auto min(T left, T right) -> T {
   return left < right ? left : right;
 }
 
 template <typename T>
-T * min(T * left, T * right) {
+auto min(T * left, T * right) -> T * {
   return *left < *right ? left : right;
 }
 
-
-int main() {
+auto main() -> int {
   std::cout << min("Gregor Clegane", "Tyrion Lannister") << '\n';
   std::cout << min("Samwell Tarly", "Sansa Stark") << '\n';
 }

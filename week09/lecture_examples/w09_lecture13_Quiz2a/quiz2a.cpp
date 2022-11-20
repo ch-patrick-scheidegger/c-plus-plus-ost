@@ -1,11 +1,10 @@
 #include <iostream>
 
 template <typename T>
-T const &
-min(T const & left, T const & right) {
+auto min(T const & left, T const & right) -> T const & {
   return left < right ? left : right;
 }
 
-int main() {
+auto main() -> int {
   std::cout << min("Java", "Rust");
 }

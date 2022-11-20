@@ -3,7 +3,7 @@
 
 
 template <typename T>
-T min(T left, T right) {
+auto min(T left, T right) -> T {
   return left < right ? left : right;
 }
 

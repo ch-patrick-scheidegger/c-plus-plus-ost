@@ -1,7 +1,7 @@
-#include "min.h"
+#include "min.hpp"
 #include <iostream>
 
-int main() {
+auto main() -> int {
   int first;
   int second;
   if (std::cin >> first >> second) {
