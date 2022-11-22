@@ -4,21 +4,17 @@
 
 * Write a function template `median(a, b, c)` taking three arguments of the same type and returning the one in the middle, i.e., neither min/max.
 * Provide useful unit tests for your function.
-* **Hint:** You can implement the function in a header file within your CUTE test project.
 
 ## Function Template `rotate3arguments()`
 
 * Write a function template `rotate3arguments` taking three variables of the same type as arguments and exchanging the values, so that a obtains the value of `b`, `b` of `c`, and `c` of `a`.
 * Provide useful unit tests for your function.
-* **Hint:** You can implement the function in a header file within your CUTE test project.
 
 ## Variadic Function Template `readln(std::istream&, ...)`
 
 * Write a variadic function template `readln(std::istream&, ...)` that takes a variable number of reference arguments and uses `operator>>` to read in successive values from a line read from the `std::istream`.
 * Create useful unit tests for your function(s). 
 * **Hint:** you might need to create a second function that takes an `std::istream` and reads all values from it, whereas `readln` just reads a line and passes that line as an `std::istringstream` to the second function.
-
-
 
 # Algorithms (Continued)
 
