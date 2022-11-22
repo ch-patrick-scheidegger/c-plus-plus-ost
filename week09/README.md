@@ -7,7 +7,7 @@
 
 ## Function Template `rotate3arguments()`
 
-* Write a function template `rotate3arguments` taking three variables of the same type as arguments and exchanging the values, so that a obtains the value of `b`, `b` of `c`, and `c` of `a`.
+* Write a function template `rotate3arguments` taking three variables of the same type as arguments and exchanging the values, so that `a` obtains the value of `b`, `b` of `c`, and `c` of `a`.
 * Provide useful unit tests for your function.
 
 ## Variadic Function Template `readln(std::istream&, ...)`
