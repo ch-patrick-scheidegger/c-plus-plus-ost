@@ -6,6 +6,7 @@ target_include_directories("${CPL_TARGET_WEEK_PREFIX}lecture02_static_member_of_
 
 add_executable("${CPL_TARGET_WEEK_PREFIX}lecture02_static_member_of_template"
     "app/main.cpp"
+    "app/setMemberTo42.cpp"
 )
 
 target_link_libraries("${CPL_TARGET_WEEK_PREFIX}lecture02_static_member_of_template" PRIVATE
