@@ -1,1 +1,0 @@
-This is a faster solution to the topological_sort problem.
