@@ -14,6 +14,7 @@ add_executable("${CPL_TARGET_WEEK_PREFIX}sol02_dyn_array_tests"
 
 target_link_libraries("${CPL_TARGET_WEEK_PREFIX}sol02_dyn_array_tests" PRIVATE
     "${CPL_TARGET_WEEK_PREFIX}sol02_dyn_array"
+    "cpl::boost"
     "cpl::cute"
 )
 
