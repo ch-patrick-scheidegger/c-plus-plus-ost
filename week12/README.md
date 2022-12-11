@@ -4,7 +4,7 @@
 
 *  Given the following code:
 
-```
+```c++
 struct Base {
   void function() const{}
 };
@@ -37,69 +37,70 @@ What changes are required to the code above in order to have the member function
 
 Please look at the following code and guess the output the main function generates. Do this, before you compile and run the code, because you might get a similar question in the exam where you can not just run the program. First check your result against the result of your neighbour then check your theoretical assumptions with the real output generated. If there are any discrepancies, can you explain them?
 
-Header file: `Inheritance.h`
-```
-#ifndef INHERITANCE_H_
-#define INHERITANCE_H_
+Header file: `inheritance.hpp`
+```c++
+#ifndef INHERITANCE_HPP
+#define INHERITANCE_HPP
+
 #include <iostream>
-using std::cout;
 
-struct monster{
-	monster(){ cout << "a monster is bread\n"; }
-	~monster(){ cout << "monster killed\n"; }
-	void health(){ cout << "immortal?\n";  }
-	virtual void attack(){ cout << "roar\n";}
+struct monster {
+  monster() { std::cout << "a monster is bread\n"; }
+  ~monster() { std::cout << "monster killed\n"; }
+  auto health() -> void { std::cout << "immortal?\n"; }
+  virtual auto attack() -> void { std::cout << "roar\n"; }
 };
 
-struct troll: monster {
-	troll(){ cout << "a troll grows\n";}
-	~troll() { cout << "troll petrified\n";}
-	void attack(){ swing_club();}
-	virtual void swing_club(){
-		cout << "clubbing kills me\n";
-		myhealth--;
-	}
-	void health(){cout << "troll-health:"<< myhealth<<'\n';}
+struct troll : monster {
+  troll() { std::cout << "a troll grows\n"; }
+  ~troll() { std::cout << "troll petrified\n"; }
+  auto attack() -> void { swing_club(); }
+  virtual auto swing_club() -> void {
+    std::cout << "clubbing kills me\n";
+    myhealth--;
+  }
+  void health() { std::cout << "troll-health:" << myhealth << '\n'; }
+
 protected:
-	int myhealth{10};
+  int myhealth{10};
 };
 
-struct forum_troll: troll {
-	forum_troll():troll{}{ cout << "not quite a monster\n";}
-	~forum_troll(){ cout << "troll banned\n";}
-	virtual void swing_club(){
-		cout << "swinging is healthy\n";
-		myhealth++;
-	}
-	void attack(){ cout << "write stupid things\n";}
+struct forum_troll : troll {
+  forum_troll() : troll{} { std::cout << "not quite a monster\n"; }
+  ~forum_troll() { std::cout << "troll banned\n"; }
+   auto swing_club() -> void {
+    std::cout << "swinging is healthy\n";
+    myhealth++;
+  }
+  void attack() { std::cout << "write stupid things\n"; }
 };
 
-#endif /* INHERITANCE_H_ */
+#endif
 ```
 
 `main.cpp`
 
-```
-#include "Inheritance.h"
+```c++
+#include "inheritance.hpp"
 
-int main(){
-	cout << "a ------\n";
-	forum_troll ft{};
-	troll t{ft} ;
-	monster &m{ft};
-	cout << "b ------\n";
-	ft.attack();
-	t.attack();
-	m.attack();
-	cout << "c ------\n";
-	ft.swing_club();
-	t.swing_club();
-	cout << "d ------\n";
-	ft.health();
-	t.health();
-	m.health();
-	cout << "end ------\n";
-} 
+auto main() -> int {
+  std::cout << "a ------\n";
+  forum_troll ft{};
+  troll t{ft};
+  monster &m{ft};
+  std::cout << "b ------\n";
+  ft.attack();
+  t.attack();
+  m.attack();
+  std::cout << "c ------\n";
+  ft.swing_club();
+  t.swing_club();
+  std::cout << "d ------\n";
+  ft.health();
+  t.health();
+  m.health();
+  std::cout << "end ------\n";
+}
 ```
 
 *  Considering what you have learned in C++ and Software Engineering, what bad practices does the above code contain? Try to find as many as possible and give yourself a short reason why that code is bad and how it could be improved.
