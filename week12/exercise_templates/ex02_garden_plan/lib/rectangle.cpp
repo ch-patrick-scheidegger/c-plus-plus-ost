@@ -1,3 +1,3 @@
-#include "square.hpp"
+#include "rectangle.hpp"
 
-// TODO: Implement class square
+// TODO: Implement class rectangle

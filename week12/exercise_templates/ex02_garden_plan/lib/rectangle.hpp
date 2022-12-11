@@ -1,6 +1,6 @@
-#ifndef SQUARE_HPP
-#define SQUARE_HPP
+#ifndef RECTANGLE_HPP
+#define RECTANGLE_HPP
 
-// TODO: Implement class square
+// TODO: Implement class rectangle
 
 #endif

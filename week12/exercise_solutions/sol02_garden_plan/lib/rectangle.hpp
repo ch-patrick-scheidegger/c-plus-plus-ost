@@ -1,6 +1,23 @@
-#ifndef SQUARE_HPP
-#define SQUARE_HPP
+#ifndef RECTANGLE_HPP
+#define RECTANGLE_HPP
 
-// TODO: Implement class square
+#include "bed.hpp"
+
+#include <iosfwd>
+
+struct Rectangle : Bed
+{
+    Rectangle(double shortSide, double longSide);
+
+    auto pegs() const -> unsigned override;
+    auto ropes() const -> double override;
+    auto seeds() const -> double override;
+
+private:
+    auto name() const -> std::string override;
+
+    double shortSide;
+    double longSide;
+};
 
 #endif

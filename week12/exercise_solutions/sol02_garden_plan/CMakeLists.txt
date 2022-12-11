@@ -4,6 +4,7 @@ add_library("${CPL_TARGET_WEEK_PREFIX}sol02_garden_plan_lib"
     "lib/bed.cpp"
     "lib/diamond.cpp"
     "lib/rectangle.cpp"
+    "lib/shoppingList.cpp"
     "lib/square.cpp"
     "lib/triangle.cpp"
 )
