@@ -9,17 +9,17 @@ Given the following piece of code, name the forms of initialization used:
 
 std::array<char const *, 4> names{{"Freely", "Cally", "Sofieus", "Avren"}};
 
-void print_names(std::ostream & out) {
+auto print_names(std::ostream & out) -> void {
   std::size_t name_count;
   name_count = names.size();
 
-  for(int i = 0; i < name_count; ++i) {
+  for(auto i = 0; i < name_count; ++i) {
     std::string name{names[i]};
     out << name << '\n';
   }
 }
 
-int main() {
+auto main() -> int {
   std::size_t name_count(names.size());
 
   std::cout << "will print " << name_count << " names\n";
@@ -30,10 +30,10 @@ int main() {
 
 # 1 Phone Book
 
-Implement a simple phone-book type library.
+Implement a simple header-only phone-book type library.
 Write the following types:
 
-* `Address` with the fields `zipCode`, `city`, and `street`
+* `Address` with the fields `zipCode`, `city`, `street`, `streetNumber`
 * `Person` with the fields `firstName`, `lastName`
 * `Entry`, representing a simple phone-book entry with the following fields: `person`, `address`, `phoneNumber`.
 
