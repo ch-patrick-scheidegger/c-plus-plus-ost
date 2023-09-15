@@ -1,7 +1,7 @@
 ---
 #title: "Document Title" # taken from specific documents metadata
-subtitle: 'C++, HS 2022'
-mycopyright: '`\copyright 2022 Thomas~Corbat. All rights reserved.`{=latex}'
+subtitle: 'C++, HS 2023'
+mycopyright: '`\copyright 2023 Thomas~Corbat. All rights reserved.`{=latex}'
 author: ["Thomas Corbat", "Felix Morgner"]
 institute: [OST Ostschweizerfachhochschule", "Studiengang I", "Oberseestrasse 10", "CH-8640 Rapperswil"]
 contact: ["thomas.corbat@ost.ch", "felix.morgner@ost.ch", "\\url{https://www.ost.ch}"]
