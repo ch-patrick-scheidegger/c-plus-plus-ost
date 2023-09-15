@@ -1,8 +1,8 @@
-# Module: C++ in HS22
+# Module: C++ in HS23
 
 This repository contains all materials for the C++ (CPl) modules at OST.
-We use the [`TS-CPl-HS22`](https://teams.microsoft.com/l/team/19%3afklDlnHjSarVrkvYZo1vHV3iWwNWWSDbqihG1H_RJcI1%40thread.tacv2/conversations?groupId=768978a4-af2b-4c69-827c-57e07334518c&tenantId=a6e70fa3-1c7a-4aa2-a25e-836eea52ca22) channel on the OST MS Teams instance.
-Lectures will be available on [Switch Tube](https://tube.switch.ch/channels/889a82a4).
+We use the [`CPl-HS23`](https://teams.microsoft.com/l/team/19%3aWtnSYHrCoB7jj2s8w92DtRt0C77MizhRjNbuw0ioRGs1%40thread.tacv2/conversations?groupId=fb519984-3a6b-4441-9cbd-74a69636d5c8&tenantId=a6e70fa3-1c7a-4aa2-a25e-836eea52ca22) Team on the OST MS Teams instance.
+Recordings of the lecture in Sankt Gallen will be available in the same Team.
 
 ## Goal
 
@@ -14,26 +14,24 @@ This working draft lacks only minor editorial fixes compared to the official sta
 
 A much more accessible reference to the standard document exists in [cppreference]( https://en.cppreference.com/w/)
 
-
 ## Lecture Plan and Resources (TBA)
 
-| Week | Lecture                                                           | Plan | Exercise                                                                                | Topics                                                 | Remarks        |
-|------|-------------------------------------------------------------------|------|-----------------------------------------------------------------------------------------|--------------------------------------------------------|----------------|
-| 38   | [Slides](week01), [Video](https://tube.switch.ch/videos/41b34752) | COT  | [E01](week01/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week01.pdf)) | Introduction                                           |                |
-| 39   | [Slides](week02), [Video](https://tube.switch.ch/videos/af786ac1) | COT  | [E02](week02/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week02.pdf)) | Values                                                 |                |
-| 40   | [Slides](week03), [Video](https://tube.switch.ch/videos/0216adb3) | COT  | [E03](week03/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week03.pdf)) | Sequences and Iterators                                |                |
-| 41   | [Slides](week04), [Video](https://tube.switch.ch/videos/ffb06a12) | COT  | [E04](week04/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week04.pdf)) | Functions and Exceptions                               | **Testat 1**   |
-| 42   | [Slides](week05), [Video](https://tube.switch.ch/videos/3f9e7d90) | COT  | [E05](week05/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week05.pdf)) | Classes and Operator Overloading                       |                |
-| 43   | [Slides](week06), [Video](https://tube.switch.ch/videos/cb762743) | COT  | [E06](week06/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week06.pdf)) | Namespaces, Arithmetic Overloading, Enums              |                |
-| 44   |   |   |  |  | 1. November, no lecture               |
-| 45   | [Slides](week07), [Video](https://tube.switch.ch/videos/a00095cb) | COT  | [E07](week07/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week07.pdf)) | Standard Containers                                    |                |
-| 46   | [Slides](week08), [Video](https://tube.switch.ch/videos/39d2de67) | MOF  | [E08](week08/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week08.pdf)) | Algorithms                                             | **Testat 2**   |
-| 47   | [Slides](week09)                                                  | MOF  | [E09](week09/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week09.pdf)) | Function Templates                                     |                |
-| 48   | [Slides](week10)                                                  | MOF  | [E10](week10/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week10.pdf)) | Class Templates                                        |                |
-| 49   | [Slides](week11)                                                  | MOF  | [E11](week11/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week11.pdf)) | Heap Memory                                            | **Testat 3**   |
-| 50   | [Slides](week12)                                                  | MOF  | [E12](week12/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week12.pdf)) | Dynamic Polymorphism, Variant                          |                |
-| 51   | [Slides](week13)                                                  | MOF  | [E13](week13/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week13.pdf)) | Initialization & Aggregates                            |                |
-
+| Week | Lecture          | Exercise                                                                       | Topics                                    | Remarks        |
+|------|------------------|--------------------------------------------------------------------------------|-------------------------------------------|----------------|
+| 38   | [Slides](week01) | [E01](week01/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week01.pdf)) | Introduction                              |                |
+| 39   | [Slides](week02) | [E02](week02/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week02.pdf)) | Values                                    |                |
+| 40   | [Slides](week03) | [E03](week03/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week03.pdf)) | Sequences and Iterators                   |                |
+| 41   | [Slides](week04) | [E04](week04/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week04.pdf)) | Functions and Exceptions                  | **Testat 1**   |
+| 42   | [Slides](week05) | [E05](week05/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week05.pdf)) | Classes and Operator Overloading          |                |
+| 43   | [Slides](week06) | [E06](week06/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week06.pdf)) | Namespaces, Arithmetic Overloading, Enums |                |
+| 44   |                  |                                                                                |                                           |                |
+| 45   | [Slides](week07) | [E07](week07/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week07.pdf)) | Standard Containers                       |                |
+| 46   | [Slides](week08) | [E08](week08/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week08.pdf)) | Algorithms                                | **Testat 2**   |
+| 47   | [Slides](week09) | [E09](week09/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week09.pdf)) | Function Templates                        |                |
+| 48   | [Slides](week10) | [E10](week10/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week10.pdf)) | Class Templates                           |                |
+| 49   | [Slides](week11) | [E11](week11/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week11.pdf)) | Heap Memory                               | **Testat 3**   |
+| 50   | [Slides](week12) | [E12](week12/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week12.pdf)) | Dynamic Polymorphism, Variant             |                |
+| 51   | [Slides](week13) | [E13](week13/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week13.pdf)) | Initialization & Aggregates               |                |
 
 ### Useful Links
 
