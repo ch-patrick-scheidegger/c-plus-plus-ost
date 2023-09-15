@@ -24,10 +24,10 @@ A much more accessible reference to the standard document exists in [cppreferenc
 | 41   | [Slides](week04) | [E04](week04/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week04.pdf)) | Functions and Exceptions                  | **Testat 1**   |
 | 42   | [Slides](week05) | [E05](week05/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week05.pdf)) | Classes and Operator Overloading          |                |
 | 43   | [Slides](week06) | [E06](week06/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week06.pdf)) | Namespaces, Arithmetic Overloading, Enums |                |
-| 44   |                  |                                                                                |                                           |                |
 | 45   | [Slides](week07) | [E07](week07/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week07.pdf)) | Standard Containers                       |                |
 | 46   | [Slides](week08) | [E08](week08/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week08.pdf)) | Algorithms                                | **Testat 2**   |
 | 47   | [Slides](week09) | [E09](week09/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week09.pdf)) | Function Templates                        |                |
+| 48   | No Lecture       |                                                                                | Digital Exam                              |                |
 | 48   | [Slides](week10) | [E10](week10/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week10.pdf)) | Class Templates                           |                |
 | 49   | [Slides](week11) | [E11](week11/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week11.pdf)) | Heap Memory                               | **Testat 3**   |
 | 50   | [Slides](week12) | [E12](week12/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week12.pdf)) | Dynamic Polymorphism, Variant             |                |
