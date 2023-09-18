@@ -6,7 +6,9 @@ add_library("${CPL_TARGET_WEEK_PREFIX}04_ring5_lib"
 
 target_include_directories("${CPL_TARGET_WEEK_PREFIX}04_ring5_lib" PUBLIC "lib")
 
-
+target_link_libraries("${CPL_TARGET_WEEK_PREFIX}04_ring5_lib" PUBLIC
+    "cpl::boost"
+)
 
 #[===[ TESTS ]===]
 
