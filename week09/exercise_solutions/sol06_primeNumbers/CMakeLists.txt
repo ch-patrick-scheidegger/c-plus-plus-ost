@@ -8,6 +8,10 @@ target_include_directories("${CPL_TARGET_WEEK_PREFIX}sol06_primeNumbers_lib" PUB
     "lib"
 )
 
+target_link_libraries("${CPL_TARGET_WEEK_PREFIX}sol06_primeNumbers_lib" PUBLIC
+    "cpl::boost"
+)
+
 #[===[ Tests ]===]
 
 add_executable("${CPL_TARGET_WEEK_PREFIX}sol06_primeNumbers_tests"
@@ -16,7 +20,6 @@ add_executable("${CPL_TARGET_WEEK_PREFIX}sol06_primeNumbers_tests"
 
 target_link_libraries("${CPL_TARGET_WEEK_PREFIX}sol06_primeNumbers_tests" PRIVATE
     "${CPL_TARGET_WEEK_PREFIX}sol06_primeNumbers_lib"
-    "cpl::boost"
     "cpl::cute"
 )
 
