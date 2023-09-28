@@ -3,6 +3,7 @@
 
 #include <algorithm>
 #include <iterator>
+#include <ostream>
 #include <unordered_map>
 
 namespace {

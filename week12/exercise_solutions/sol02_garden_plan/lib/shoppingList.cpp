@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <iterator>
 #include <numeric>
+#include <ostream>
 #include <string>
 
 struct ShoppingData

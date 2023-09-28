@@ -12,7 +12,7 @@ auto applyAndPrint(double x, std::function<auto(double) -> double> f) -> void {
 
 
 auto main() -> int {
-  applyAndPrint(25, ::sqrt);
+  applyAndPrint(25, static_cast<double(*)(double)>(::sqrt));
 
   double factor{3.0};
   auto const multiply = [factor](double value) {
