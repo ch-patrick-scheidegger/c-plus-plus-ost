@@ -58,7 +58,7 @@ auto execute_measurement(std::vector<int> const &values, std::ostream &out) -> v
 }
 
 auto main(int argc, char **argv) -> int {
-  std::vector<int> const values(100000000, 1);
+  std::vector<int> const values(100'000'000, 1);
   for (auto i = 0; i < 10; i++) {
     execute_measurement(values, std::cout);
   }
