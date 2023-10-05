@@ -18,7 +18,7 @@ target_link_libraries("${CPL_TARGET_WEEK_PREFIX}ex02a_charc_algorithm" PRIVATE
 )
 
 add_executable("${CPL_TARGET_WEEK_PREFIX}ex02b_allcharc_algorithm"
-    "apps/Charc.cpp"
+    "apps/Allcharc.cpp"
 )
 
 target_link_libraries("${CPL_TARGET_WEEK_PREFIX}ex02b_allcharc_algorithm" PRIVATE
@@ -26,7 +26,7 @@ target_link_libraries("${CPL_TARGET_WEEK_PREFIX}ex02b_allcharc_algorithm" PRIVAT
 )
 
 add_executable("${CPL_TARGET_WEEK_PREFIX}ex02c_wc_algorithm"
-    "apps/Charc.cpp"
+    "apps/Wc.cpp"
 )
 
 target_link_libraries("${CPL_TARGET_WEEK_PREFIX}ex02c_wc_algorithm" PRIVATE
@@ -34,7 +34,7 @@ target_link_libraries("${CPL_TARGET_WEEK_PREFIX}ex02c_wc_algorithm" PRIVATE
 )
 
 add_executable("${CPL_TARGET_WEEK_PREFIX}ex02d_lc_algorithm"
-    "apps/Charc.cpp"
+    "apps/Lc.cpp"
 )
 
 target_link_libraries("${CPL_TARGET_WEEK_PREFIX}ex02d_lc_algorithm" PRIVATE
