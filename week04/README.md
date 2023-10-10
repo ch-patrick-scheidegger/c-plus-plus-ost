@@ -55,9 +55,9 @@ auto main() -> int {
 
 ## 1 _Testat-Exercise 1_: Calculator with Retro Style Output
 
-**Hand in time is Monday Oct 24 2022, 10:00 (AM)**
+**Hand in time is Sunday Oct 22 2023, 23:59 (PM)**
 
-Hand in you solution via [ALF](https://alf.sifs0005.infs.ch/project/9/submission/new/) **CPl Testat 1 Pocketcalculator**. In case ALF does not work or is too slow, you can send an email.
+Hand in you solution via [ALF](https://alf.sifs0005.infs.ch/project/23/submission/new/) **CPl23 Testat 1 Pocketcalculator**. In case ALF does not work or is too slow, you can send an email to both Thomas and Felix.
 
 Use the functions implemented in the previous two weeks to create a simple pocket calculator simulation. Allow the user to enter a calculation using two integers and an infix operator symbol. This input should stand on a single line and the result of the calculation should be displayed in a large way using your seven segment display simulation from last week. In this exercise the display width should be limited to a maximum number of eight digits (<=8) including a large minus sign for negative numbers. This limitation should be implemented in the pocket calculator, not the seven segment functionality itself. For the underlying calculation use your function **`calc()`**. Read the input line by line (`std::getline()`) and interpret each line as a calculation (operand operator operand). Expected signature: `void pocketcalculator(std::istream &, std::ostream&)`
 
