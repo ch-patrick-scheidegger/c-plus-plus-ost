@@ -145,6 +145,39 @@ Write a program **wlist** that reads all words (as defined by `std::string`'s in
 
 Implement a function **countingToLower** that makes the following test cases pass.
 
+```cpp
+TEST(testLowerNone) {
+	std::string str("no uppercase characters here");
+	ASSERT_EQUAL(0, countingToLower(str));
+	ASSERT_EQUAL("no uppercase characters here", str);
+}
+
+TEST(testLowerSeveralCharacters) {
+	std::string str("Hello World, its ME!");
+	ASSERT_EQUAL(4, countingToLower(str));
+	ASSERT_EQUAL("hello world, its me!", str);
+}
+
+TEST(testLowerAll) {
+	std::string str("LOL");
+	ASSERT_EQUAL(3, countingToLower(str));
+	ASSERT_EQUAL("lol", str);
+}
+
+TEST(testLowerEmpty) {
+	std::string str("");
+	ASSERT_EQUAL(0, countingToLower(str));
+	ASSERT_EQUAL("", str);
+}
+
+
+TEST(testUmlautsAreNotChanged) {
+	std::string str("ÄÖÜ");
+	ASSERT_EQUAL(0, countingToLower(str));
+	ASSERT_EQUAL("ÄÖÜ", str);
+}
+```
+
 * What signature do you need to implement that function? Think about it, before you look at the exercise template.
 * Is the resulting design and interface of the function `countingToLower` a good design? Why is it not good? If so, how could it be improved?
 * The test cases are already provided for you in the exercise template. As we would like to have all tests in the repository pass, most tests are not registered in the corresponding suite. You need to uncomment them.
