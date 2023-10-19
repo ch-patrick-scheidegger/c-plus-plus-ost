@@ -8,7 +8,7 @@ Create a class **Word** that represents a **single** word.
 
 *  It can be input with `>>` and output with `<<` (from `std::istream` and to `std::ostream`). 
 *  When input, a word will only consist of letters (`std::isalpha(c)`). Any other character terminates the word. You have to ignore all leading non-alpha characters, like white-space, digit or punctuation. 
-*  You either need to implement the input `>>` and output `<<` operators as `friend` functions in the `word` class or you have to add `read(std::istream &)` and `write(std::ostrem&)` as member functions of your class `Word`. Then the I/O operator functions can be implemented delegating to these member functions in `Word.hpp`.
+*  You either need to implement the input `>>` and output `<<` operators as free functions/operators. As the output operator needs to access internals (private members) of the `word` class it is advisable to add a `print(std::ostrem&)` member function to actually perform the opreation. Then the output operator can be implemented by delegating to the `print` member function in `Word`.
 
 **Example:** 
 An `std::istream` containing the sequence `"compl33tely ~ weird !!?!! 4matted in_put"` would result in six Words ("compl", "tely", "weird", "matted", "in", "put"). Each call of the input operator reads one word.
