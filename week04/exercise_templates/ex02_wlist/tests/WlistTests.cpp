@@ -15,7 +15,7 @@ TEST(testWlistEmptyInput) {
   ASSERT_EQUAL("", output.str());
 }
 
-auto createPrintFunctionTableSuite() -> cute::suite {
+auto createWlistSuite() -> cute::suite {
   cute::suite wlistSuite{
     "Wlist Suite",
     {
@@ -49,7 +49,7 @@ auto main(int argc, char const* argv[]) -> int {
   cute::ide_listener<cute::summary_listener<>> listener{};
   auto runner = cute::makeRunner(listener, argc, argv);
 
-  bool suiteResult = runner(createPrintFunctionTableSuite());
+  bool suiteResult = runner(createWlistSuite());
   suiteResult &= runner(createWlistCaselessSuite());
 
   return suiteResult ? EXIT_SUCCESS : EXIT_FAILURE;
