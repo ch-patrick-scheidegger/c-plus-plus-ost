@@ -6,5 +6,6 @@ add_subdirectory("lecture_examples/03_classes_right_or_wrong_2")
 add_subdirectory("lecture_examples/04_classes_right_or_wrong_3")
 
 add_subdirectory("exercise_templates/ex01_word")
+add_subdirectory("exercise_templates/ex02_wlist")
 
 
