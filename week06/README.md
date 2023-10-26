@@ -38,6 +38,8 @@ In this exercise you have to implement a finite field (galois field/endlicher Ko
 
 Remove all operator implementations you can replace with Boost operators.
 
+*Warning:* When inheriting operators with Boost, the `==` operator cannot be defaulted, as the comparison is missing in the base class!
+
  
 # 4 (Optional) Refresher on Stream States
 
