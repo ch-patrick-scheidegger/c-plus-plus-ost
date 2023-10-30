@@ -6,7 +6,8 @@
 #include <cute/ide_listener.h>
 #include <cute/summary_listener.h>
 
-#include <sstream>
+
+#include <string>
 
 
 TEST(testLowerNone) {
