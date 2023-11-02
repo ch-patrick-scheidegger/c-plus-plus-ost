@@ -7,7 +7,7 @@ The solution becomes a little simpler, as the `Word` class already takes care of
 ```cpp
 auto wlist_caseless(std::istream &input, std::ostream &output) -> void {
   using in = std::istream_iterator<Word>;
-  std::set<Word> wlist{in{input}, input{}};
+  std::set<Word> wlist{in{input}, in{}};
   std::ranges::copy(wlist, std::ostream_iterator<Word>{std::cout,"\n"});
 }
 ```
