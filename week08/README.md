@@ -1,8 +1,8 @@
 # Testat-Exercise 2: KWIC with word class
 
-**Hand-in time is Tuesday 29. Nov 2022, 18:40 (CET)**
+**Hand-in time is Tuesday 21. Nov 2023, 16:50 (CET)**
 
-Hand in you solution via [ALF](https://alf.sifs0005.infs.ch/project/18/submission/new/) **Cpl Testat 2 KWIC**. In case ALF does not work or is too slow, you can send an email.
+Hand in you solution via [ALF](https://alf.sifs0005.infs.ch/project/24/submission/new/) **CPl23 Testat 2 KWIC**. In case ALF does not work or is too slow, you can send an email.
 
 * tests.cpp
 * main.cpp
