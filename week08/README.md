@@ -91,9 +91,9 @@ void kwic(std::istream & in, std::ostream & out);
 }
 ```
 
-Use [ALF](https://alf.sifs0005.infs.ch/project/18/submission/new/) to automatically check your `kwic` function and `Word` class (functionality, not style).
+Use [ALF](https://alf.sifs0005.infs.ch/project/24/submission/new/) to automatically check your `kwic` function and `Word` class (functionality, not style).
 
-* You need an account on gitlab.dev.ifs.hsr.ch for this
+* You need an account on gitlab.ost.ch for this
 * Our tests expect the `Word` class and the `kwic` function to be in the namespace `text`
  
 
