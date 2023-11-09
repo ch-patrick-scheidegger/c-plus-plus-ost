@@ -4,12 +4,12 @@
 
 Hand in you solution via [ALF](https://alf.sifs0005.infs.ch/project/24/submission/new/) **CPl23 Testat 2 KWIC**. In case ALF does not work or is too slow, you can send an email.
 
-* tests.cpp
-* main.cpp
-* word.hpp
-* word.cpp
-* kwic.hpp
-* kwic.cpp
+* Tests.cpp
+* Main.cpp
+* Word.hpp
+* Word.cpp
+* Kwic.hpp
+* Kwic.cpp
 
 `tests.cpp` combines all test functions you created (if any) for your `Word` class as well as for your `kwic` solution.
 `main.cpp` contains the `main()` function for your `kwic` program.
@@ -95,7 +95,7 @@ Use [ALF](https://alf.sifs0005.infs.ch/project/24/submission/new/) to automatica
 
 * You need an account on gitlab.ost.ch for this
 * Our tests expect the `Word` class and the `kwic` function to be in the namespace `text`
- 
+* The files `Tests.cpp` and `Main.cpp` from the hand-in will not be compiled and are just submitted to get feedback.
 
 # Algorithms
 
