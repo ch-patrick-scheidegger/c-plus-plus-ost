@@ -109,6 +109,8 @@ Since there are quite a few algorithms you don't have to solve all algorithms at
 
 Have Fun!
 
+If you'd rather solve this in Godbolt, Peter Sommerlad made this exercise available there as well: https://godbolt.org/z/vMjhdbWP8
+
 
 ## Checking for Palindromes
 
