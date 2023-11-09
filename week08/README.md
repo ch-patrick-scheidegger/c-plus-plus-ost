@@ -11,7 +11,7 @@ Hand in you solution via [ALF](https://alf.sifs0005.infs.ch/project/24/submissio
 * kwic.hpp
 * kwic.cpp
 
-`tests.cpp` combines all test functions you created for your `Word` class as well as for your `kwic` solution.
+`tests.cpp` combines all test functions you created (if any) for your `Word` class as well as for your `kwic` solution.
 `main.cpp` contains the `main()` function for your `kwic` program.
 
 ## KWIC - Keyword in Context (Testat)
