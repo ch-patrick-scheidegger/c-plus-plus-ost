@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week06/exercise_solutions/sol01_date_with_enum",
+		"source" : "week06/exercise_solutions/sol01_date_with_enum"
+	}
+}

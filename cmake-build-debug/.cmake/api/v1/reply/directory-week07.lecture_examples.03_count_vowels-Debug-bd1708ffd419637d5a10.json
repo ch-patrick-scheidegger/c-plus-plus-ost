@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week07/lecture_examples/03_count_vowels",
+		"source" : "week07/lecture_examples/03_count_vowels"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week08/exercise_solutions/sol03_palindromes",
+		"source" : "week08/exercise_solutions/sol03_palindromes"
+	}
+}

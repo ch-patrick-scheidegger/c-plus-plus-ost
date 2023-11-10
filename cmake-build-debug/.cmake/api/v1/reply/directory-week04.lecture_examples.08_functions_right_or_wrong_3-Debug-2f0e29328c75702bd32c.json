@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week04/lecture_examples/08_functions_right_or_wrong_3",
+		"source" : "week04/lecture_examples/08_functions_right_or_wrong_3"
+	}
+}

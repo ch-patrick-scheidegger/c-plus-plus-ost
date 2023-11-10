@@ -65,11 +65,11 @@ auto createPrintFunctionTableSuite() -> cute::suite {
     "PrintFunctionTable Suite",
     {
       testPrintFunctionTableNoSteps,
-      // testPrintFunctionTableIdentitiy,
-      // testPrintFunctionTableSingleValue,
-      // testPrintFunctionTableSquares,
-      // testPrintFunctionTableNegativeRange,
-      // testPrintFunctionTableRangeOverZero,
+       testPrintFunctionTableIdentitiy,
+       testPrintFunctionTableSingleValue,
+       testPrintFunctionTableSquares,
+       testPrintFunctionTableNegativeRange,
+       testPrintFunctionTableRangeOverZero,
     }
   };
   return printFunctionTableSuite;

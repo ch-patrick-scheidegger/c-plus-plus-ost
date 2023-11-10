@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week04/lecture_examples/16_error_handling_right_or_wrong",
+		"source" : "week04/lecture_examples/16_error_handling_right_or_wrong"
+	}
+}

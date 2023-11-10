@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week09/exercise_solutions/sol01_median",
+		"source" : "week09/exercise_solutions/sol01_median"
+	}
+}

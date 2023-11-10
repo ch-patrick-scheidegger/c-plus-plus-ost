@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week02/exercise_solutions/sol05_miscellaneous",
+		"source" : "week02/exercise_solutions/sol05_miscellaneous"
+	}
+}

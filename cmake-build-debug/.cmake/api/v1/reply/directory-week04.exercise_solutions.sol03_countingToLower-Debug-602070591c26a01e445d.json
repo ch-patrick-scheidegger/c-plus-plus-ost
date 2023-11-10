@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week04/exercise_solutions/sol03_countingToLower",
+		"source" : "week04/exercise_solutions/sol03_countingToLower"
+	}
+}

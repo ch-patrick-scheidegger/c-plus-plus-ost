@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week13/exercise_solutions/sol01_phone_book",
+		"source" : "week13/exercise_solutions/sol01_phone_book"
+	}
+}

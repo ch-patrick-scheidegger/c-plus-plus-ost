@@ -2,6 +2,8 @@
 
 add_library("${CPL_TARGET_WEEK_PREFIX}ex01_word_lib"
     "lib/Word.cpp"
+    lib/Kwic.hpp
+    lib/Kwic.cpp
 )
 
 target_include_directories("${CPL_TARGET_WEEK_PREFIX}ex01_word_lib" PUBLIC "lib")

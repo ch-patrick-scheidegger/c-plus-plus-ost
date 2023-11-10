@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week02/lecture_examples/01_typeinfo_for_literals",
+		"source" : "week02/lecture_examples/01_typeinfo_for_literals"
+	}
+}

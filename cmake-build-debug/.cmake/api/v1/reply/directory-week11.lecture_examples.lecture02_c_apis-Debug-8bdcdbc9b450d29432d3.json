@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week11/lecture_examples/lecture02_c_apis",
+		"source" : "week11/lecture_examples/lecture02_c_apis"
+	}
+}

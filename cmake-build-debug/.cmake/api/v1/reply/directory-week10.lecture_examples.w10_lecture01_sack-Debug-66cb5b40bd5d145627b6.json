@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week10/lecture_examples/w10_lecture01_sack",
+		"source" : "week10/lecture_examples/w10_lecture01_sack"
+	}
+}

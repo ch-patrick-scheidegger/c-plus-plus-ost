@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week08/lecture_examples/quiz_03_primes",
+		"source" : "week08/lecture_examples/quiz_03_primes"
+	}
+}

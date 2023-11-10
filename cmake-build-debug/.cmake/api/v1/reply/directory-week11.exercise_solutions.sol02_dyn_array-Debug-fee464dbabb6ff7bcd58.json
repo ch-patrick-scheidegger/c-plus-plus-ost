@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week11/exercise_solutions/sol02_dyn_array",
+		"source" : "week11/exercise_solutions/sol02_dyn_array"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week02/lecture_examples/10_how_old_are_you_robust_ignoring",
+		"source" : "week02/lecture_examples/10_how_old_are_you_robust_ignoring"
+	}
+}

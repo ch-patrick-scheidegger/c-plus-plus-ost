@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week02/exercise_templates/ex05_miscellaneous",
+		"source" : "week02/exercise_templates/ex05_miscellaneous"
+	}
+}

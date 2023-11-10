@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week04/lecture_examples/10_error_handling_undefined_behavior",
+		"source" : "week04/lecture_examples/10_error_handling_undefined_behavior"
+	}
+}

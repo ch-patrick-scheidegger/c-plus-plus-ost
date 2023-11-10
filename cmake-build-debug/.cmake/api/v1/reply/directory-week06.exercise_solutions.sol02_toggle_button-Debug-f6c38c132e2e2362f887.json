@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week06/exercise_solutions/sol02_toggle_button",
+		"source" : "week06/exercise_solutions/sol02_toggle_button"
+	}
+}

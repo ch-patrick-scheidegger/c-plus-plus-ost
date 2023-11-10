@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week09/exercise_solutions/sol02_rotate3arguments",
+		"source" : "week09/exercise_solutions/sol02_rotate3arguments"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week12/lecture_examples/lecture01_multiple_bases_ctors",
+		"source" : "week12/lecture_examples/lecture01_multiple_bases_ctors"
+	}
+}

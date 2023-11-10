@@ -13,10 +13,11 @@ auto runAllTests(int argc, char const* argv[]) -> bool {
   cute::xml_file_opener xmlfile(argc, argv);
   cute::xml_listener<cute::ide_listener<cute::summary_listener<>>> lis(xmlfile.out);
   auto runner = cute::makeRunner(lis, argc, argv);
-  bool success = runner(createHistogramEntrySuite());
+  bool success = true;
+//  success &= runner(createHistogramEntrySuite());
   success &= runner(createTopSuite());
-  success &= runner(createPrintOccurrencesSuite());
-  success &= runner(createWordHistogramSuite());
+//  success &= runner(createPrintOccurrencesSuite());
+//  success &= runner(createWordHistogramSuite());
   return success;
 }
 

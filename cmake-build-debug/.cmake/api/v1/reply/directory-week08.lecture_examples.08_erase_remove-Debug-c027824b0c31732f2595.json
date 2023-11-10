@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week08/lecture_examples/08_erase_remove",
+		"source" : "week08/lecture_examples/08_erase_remove"
+	}
+}

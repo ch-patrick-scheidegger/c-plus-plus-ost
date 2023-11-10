@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week12/lecture_examples/lecture07_slicing",
+		"source" : "week12/lecture_examples/lecture07_slicing"
+	}
+}

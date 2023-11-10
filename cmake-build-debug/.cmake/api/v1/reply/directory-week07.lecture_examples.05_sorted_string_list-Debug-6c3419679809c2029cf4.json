@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week07/lecture_examples/05_sorted_string_list",
+		"source" : "week07/lecture_examples/05_sorted_string_list"
+	}
+}

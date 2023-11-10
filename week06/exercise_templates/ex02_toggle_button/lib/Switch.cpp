@@ -1,3 +1,9 @@
 #include "Switch.hpp"
 
-//TODO: Add implementation here
+auto Switch::pressButton() -> void {
+    if(state == blinking) {
+        state = off;
+    } else {
+        state = static_cast<SwitchState>(static_cast<int>(state) + 1);
+    }
+}

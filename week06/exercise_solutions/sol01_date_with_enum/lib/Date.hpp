@@ -48,7 +48,7 @@ private:
 
 auto operator<<(std::ostream &out, Date const &d) -> std::ostream&;
 auto operator>>(std::istream &in, Date &d) -> std::istream&;
-auto operator <<(std::ostream &out, Date::DayOfWeek dayOfWeek) -> std::ostream&;
+auto operator<<(std::ostream &out, Date::DayOfWeek dayOfWeek) -> std::ostream&;
 
 auto makeDate(std::istream &in) -> Date;
 

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week11/lecture_examples/lecture03_ostream_ptr",
+		"source" : "week11/lecture_examples/lecture03_ostream_ptr"
+	}
+}

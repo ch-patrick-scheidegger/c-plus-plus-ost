@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week08/exercise_templates/ex02_algorithm_trivia",
+		"source" : "week08/exercise_templates/ex02_algorithm_trivia"
+	}
+}

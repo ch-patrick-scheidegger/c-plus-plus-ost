@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week12/lecture_examples/lecture05_fuel_non_virtual_dtor",
+		"source" : "week12/lecture_examples/lecture05_fuel_non_virtual_dtor"
+	}
+}

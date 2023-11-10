@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week12/exercise_templates/ex01_inheritance",
+		"source" : "week12/exercise_templates/ex01_inheritance"
+	}
+}

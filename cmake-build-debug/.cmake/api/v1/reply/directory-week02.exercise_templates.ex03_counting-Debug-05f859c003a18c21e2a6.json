@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week02/exercise_templates/ex03_counting",
+		"source" : "week02/exercise_templates/ex03_counting"
+	}
+}

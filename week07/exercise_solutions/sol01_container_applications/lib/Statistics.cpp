@@ -27,23 +27,23 @@ namespace statistics {
 //   return result;
 // }
 
-// auto top(std::map<text::Word, int> const& occurrences, int n)
-//     -> std::set<statistics::HistogramEntry> {
-//   if (n < 0) {
-//     throw std::invalid_argument{"n must not be negative"};
-//   }
-//   std::set<statistics::HistogramEntry> result{};
-//   std::ranges::transform(occurrences,
-//                  std::inserter(result, std::begin(result)),
-//                  [](auto const& entry) {
-//                    return HistogramEntry{entry.first, entry.second};
-//                  });
-//   auto elementsInResult =
-//       std::min(static_cast<std::size_t>(n), result.size());
-//   auto start = std::next(std::begin(result), elementsInResult);
-//   result.erase(start, std::end(result));
-//   return result;
-// }
+ auto top(std::map<text::Word, int> const& occurrences, int n)
+     -> std::set<statistics::HistogramEntry> {
+   if (n < 0) {
+     throw std::invalid_argument{"n must not be negative"};
+   }
+   std::set<statistics::HistogramEntry> result{};
+   std::ranges::transform(occurrences,
+                  std::inserter(result, std::begin(result)),
+                  [](auto const& entry) {
+                    return HistogramEntry{entry.first, entry.second};
+                  });
+   auto elementsInResult =
+       std::min(static_cast<std::size_t>(n), result.size());
+   auto start = std::next(std::begin(result), elementsInResult);
+   result.erase(start, std::end(result));
+   return result;
+ }
 
 // auto operator<<(std::ostream& out, HistogramEntry const& entry) -> std::ostream& {
 //   return out << entry.word << ": " << entry.occurrences;

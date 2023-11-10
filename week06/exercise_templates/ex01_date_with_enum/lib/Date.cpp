@@ -11,10 +11,16 @@
 
 namespace calendar {
 
+Date::Date(int year, Month month, int day) : year{year}, month{month}, day{day} {
+    if (!isValidDate(year, month, day)) {
+        throw std::out_of_range{"invalid date"};
+    }
+}
+
 auto Date::print(std::ostream& out) const -> void {
   auto const previousFillChar = out.fill('0');
   out << std::setw(2) << day << '.';
-  out << std::setw(2) << month << '.';
+  out << std::setw(2) << static_cast<int>(month) << '.';
   out << std::setw(4) << year;
   out.fill(previousFillChar);
 }
@@ -32,35 +38,31 @@ auto Date::isLeapYear(int year) -> bool {
   return !(year % 4) && ((year % 100) || !(year % 400));
 }
 
-auto Date::isValidDate(int year, int month, int day) -> bool {
-  return isValidYear(year) && month > 0 && month < 13 && day > 0 &&
+auto Date::isValidDate(int year, Month month, int day) -> bool {
+  return isValidYear(year) && static_cast<int>(month) > 0 && static_cast<int>(month) < 13 && day > 0 &&
          day <= endOfMonth(year, month);
 }
 
-Date::Date(int year, int month, int day) : year{year}, month{month}, day{day} {
-  if (!isValidDate(year, month, day)) {
-    throw std::out_of_range{"invalid date"};
-  }
-}
+Date::Date(int year, int month, int day) : Date(year, static_cast<Month>(month), day) {}
 
-Date::Date() : year{9999}, month{12}, day{31} {}
+Date::Date() : year{9999}, month{Month::December}, day{31} {}
 
-auto Date::endOfMonth(int year, int month) -> int {
+auto Date::endOfMonth(int year, Month month) -> int {
   switch (month) {
-    case 1:
-    case 3:
-    case 5:
-    case 7:
-    case 8:
-    case 10:
-    case 12:
+    case Month::January:
+    case Month::March:
+    case Month::May:
+    case Month::July:
+    case Month::August:
+    case Month::October:
+    case Month::December:
       return 31;
-    case 4:
-    case 6:
-    case 9:
-    case 11:
+    case Month::April:
+    case Month::June:
+    case Month::September:
+    case Month::November:
       return 30;
-    case 2:
+    case Month::February:
       return (isLeapYear(year) ? 29 : 28);
   }
   throw std::invalid_argument{"invalid month"};
@@ -71,8 +73,8 @@ auto Date::nextDay() const -> Date {
   auto tomorrowMonth = month;
   auto tomorrowYear = year;
   if (tomorrowDay == 1) {
-    tomorrowMonth = (month == 12) ? 1 : month + 1;
-    if (tomorrowMonth == 1) {
+    tomorrowMonth = (month == Month::December) ? Month::January : static_cast<Month>(static_cast<int>(month) + 1);
+    if (tomorrowMonth == Month::January) {
       tomorrowYear++;
     }
   }
@@ -97,7 +99,7 @@ auto operator>>(std::istream& in, Date& date) -> std::istream& {
     inYear += 2000;
   }
   if (!in.fail() && Date::isValidSeparator(sep1) && sep1 == sep2 &&
-      Date::isValidDate(inYear, inMonth, inDay)) {
+      Date::isValidDate(inYear, static_cast<Month>(inMonth), inDay)) {
     date = Date{inYear, inMonth, inDay};
   } else {
     in.setstate(std::ios::failbit);
@@ -111,6 +113,8 @@ Date::Date(std::istream& in) : year{}, month{}, day{} {
     throw std::out_of_range{"invalid date"};
   }
 }
+
+
 
 auto makeDate(std::istream& in) -> Date try {
   return Date{in};

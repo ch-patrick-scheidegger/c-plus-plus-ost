@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "week12/lecture_examples/lecture08_slicing_books",
+		"source" : "week12/lecture_examples/lecture08_slicing_books"
+	}
+}
