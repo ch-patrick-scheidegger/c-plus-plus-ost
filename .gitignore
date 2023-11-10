@@ -55,3 +55,6 @@ wiki2md.pl
 
 # compile commands für clangd
 compile_commands.json
+
+# debug information
+cmake-build-debug/
