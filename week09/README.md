@@ -19,6 +19,10 @@
 
 # Algorithms (Continued)
 
+## Trivia
+
+If you haven't completed it yet, this might be a good time to solve a few of the algorithm trivia exercises.
+
 ## Word Statistics
 
 Use your class `Word` and create the following simple programs that provide the following results. 

@@ -6,3 +6,7 @@ Use the time to catch up on previous exercises and clear up any uncertainties yo
 In any case, we wish you a relaxing winter break!
 Use the time to recharge and have some fun.
 Stay safe and have a good start into the new year!
+
+# Algorithm Trivia
+
+You have completed them, right? Right? Otherwise, last chance to do it before christmas!

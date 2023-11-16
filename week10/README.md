@@ -3,6 +3,10 @@
 We expect that you all worked hard on the testat hand-in so that other exercises from the past weeks where not worked on deeply enough yet.
 Please solve the function template exercises from last week and play around with the `Sack` template class presented in the lecture.
 
+## Algorithm Trivia
+
+If you still haven't completed it yet, this might be a good time to solve some more of the algorithm trivia exercises.
+
 # 1 exercise: examine and extend Sack<T>
 
 Take the example code including unit tests of the class template Sack

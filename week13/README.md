@@ -1,3 +1,8 @@
+# Algorithm Trivia
+
+I guess you're getting bad feeling by now if you still haven't complete all algorithm trivia task. It is a fun exercise (some claim), so you might want to get started with them as warm up.
+
+
 # 0 Initialization
 
 Given the following piece of code, name the forms of initialization used:
