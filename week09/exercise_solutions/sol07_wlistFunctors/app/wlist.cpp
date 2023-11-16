@@ -13,7 +13,7 @@ struct WordLengthComparator {
     auto lhsContent = wordToString(lhs);
     auto rhsContent = wordToString(rhs);
     return lhsContent.length() < rhsContent.length() ||
-           (lhsContent.length() < rhsContent.length() && lhs < rhs);
+           (lhsContent.length() == rhsContent.length() && lhs < rhs);
   }
 
 private:
@@ -27,6 +27,7 @@ private:
 auto wlist(std::istream &in, std::ostream &out) -> void {
   using inIter = std::istream_iterator<text::Word>;
 
+  // Descending: std::set<text::Word, std::greater<>> words{intIter{in}, inIter{}};
   std::set<text::Word, WordLengthComparator> words{inIter{in}, inIter{}};
   copy(begin(words), end(words), std::ostream_iterator<text::Word>{out, "\n"});
 }
