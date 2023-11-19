@@ -2,5 +2,5 @@
 #include <iostream>
 
 auto main() -> int {
-    text::kwicTest(std::cin, std::cout);
+    text::kwic(std::cin, std::cout);
 }

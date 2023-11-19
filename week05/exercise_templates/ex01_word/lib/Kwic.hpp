@@ -5,8 +5,6 @@
 
 namespace text {
     void kwic(std::istream & in, std::ostream & out);
-
-    void kwicTest(std::istream & in, std::ostream & out);
 } // namespace text
 
 #endif //CPL_KWIC_HPP

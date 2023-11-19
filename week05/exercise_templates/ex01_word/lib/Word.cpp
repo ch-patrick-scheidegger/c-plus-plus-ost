@@ -22,66 +22,23 @@ namespace text {
     }
 
     auto Word::readFrom(std::istream &is) -> std::istream& {
-        bool wordStarted = false;
-        std::string wordValue {};
+        std::string newWordValue{};
         while (is.good()) {
             char character = is.peek();
-
             if (isalpha(character)) {
-                is.ignore();
-
-                if (wordStarted) {
-                    wordValue += character;
-                } else {
-                    wordValue = character;
-                    wordStarted = true;
-                }
-            } else {
-                if (!wordStarted) {
-                    is.ignore();
-                } else {
-                    word = wordValue;
-                    break;
-                }
+                newWordValue += character;
+            } else if (!newWordValue.empty()) { // is non alpha and word has already started
+                word = newWordValue;
+                break;
             }
+            is.ignore();
         }
-        if (!wordStarted) {
+        if (newWordValue.empty()) {
             is.setstate(std::ios_base::failbit);
         }
 
         return is;
     }
-
-//    auto Word::readFrom2(std::istream &is) -> std::istream& {
-//        bool wordStarted = false;
-//        std::string wordValue {};
-//        while (is.good()) {
-//            char character = is.peek();
-//
-//            if (isalpha(character)) {
-//                is.ignore();
-//
-//                if (wordStarted) {
-//                    wordValue += character;
-//                } else {
-//                    wordValue = character;
-//                    wordStarted = true;
-//                }
-//            } else {
-//                if (!wordStarted) {
-//                    is.ignore();
-//                } else {
-//                    word = wordValue;
-//                    break;
-//                }
-//            }
-//        }
-//        if (!wordStarted) {
-//            is.setstate(std::ios_base::failbit);
-//        }
-//
-//        return is;
-//    }
 
     auto areEqualIgnoringCase(unsigned char a, unsigned char b)-> bool {
         return std::tolower(a) == std::tolower(b);

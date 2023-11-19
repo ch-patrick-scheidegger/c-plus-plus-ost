@@ -8,7 +8,7 @@
 
 #include <sstream>
 
-//TODO: Add more tests
+using namespace text;
 
 TEST(test_cannot_create_empty_word) {
    ASSERT_THROWS(Word{""}, std::invalid_argument);
@@ -141,11 +141,11 @@ TEST(test_input_operator_stops_on_slash) {
 }
 
 TEST(test_input_operator_stops_at_end_of_word) {
-//   std::istringstream input{"VB6"};
-//   Word w{};
-//   int i{};
-//   input >> w >> i;
-//   ASSERT_EQUAL(6, i);
+   std::istringstream input{"VB6"};
+   Word w{};
+   int i{};
+   input >> w >> i;
+   ASSERT_EQUAL(6, i);
 }
 
 TEST(test_input_operator_skips_leading_non_alpha) {
@@ -222,12 +222,12 @@ auto createWordSuite() -> cute::suite {
   return wordSuite;
 }
 
-auto main(int argc, char const* argv[]) -> int {
-    
-  cute::ide_listener<cute::summary_listener<>> listener{};
-  auto runner = cute::makeRunner(listener, argc, argv);
-
-  bool suiteResult = runner(createWordSuite());
-
-  return suiteResult ? EXIT_SUCCESS : EXIT_FAILURE;
-}
+//auto main(int argc, char const* argv[]) -> int {
+//
+//  cute::ide_listener<cute::summary_listener<>> listener{};
+//  auto runner = cute::makeRunner(listener, argc, argv);
+//
+//  bool suiteResult = runner(createWordSuite());
+//
+//  return suiteResult ? EXIT_SUCCESS : EXIT_FAILURE;
+//}

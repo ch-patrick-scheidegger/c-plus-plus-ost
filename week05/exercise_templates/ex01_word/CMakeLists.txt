@@ -14,6 +14,7 @@ target_include_directories("${CPL_TARGET_WEEK_PREFIX}ex01_word_lib" PUBLIC "lib"
 
 add_executable("${CPL_TARGET_WEEK_PREFIX}ex01_word_tests"
     "tests/WordTests.cpp"
+    "tests/Tests.cpp"
 )
 
 target_link_libraries("${CPL_TARGET_WEEK_PREFIX}ex01_word_tests" PRIVATE

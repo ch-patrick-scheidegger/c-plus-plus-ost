@@ -11,28 +11,32 @@
 
 namespace text {
 
-    auto getWordsOfLine(std::istream& in) -> std::vector<text::Word> {
-        std::vector<text::Word> result{};
+    using Line = std::vector<text::Word>;
+
+    auto getWordsOfLine(std::istream& in) -> Line {
+        Line result{};
         while(in.good()){
             Word word{};
             word.readFrom(in);
-            result.push_back(word);
+            if(!in.fail()) {
+                result.push_back(word);
+            }
         }
         return result;
     }
 
-    auto getKwicResult(std::vector<std::vector<text::Word>> linesOfWords) -> std::set<std::vector<text::Word>> {
-        std::set<std::vector<text::Word>> kwicResult{};
-        std::for_each(begin(linesOfWords), end(linesOfWords), [&kwicResult](auto lineOfWords) {
-            for(int i = 0; i < lineOfWords.size(); i++) {
-                kwicResult.insert(lineOfWords);
-                std::rotate(lineOfWords.rbegin(), lineOfWords.rbegin() + 1, lineOfWords.rend());
-            }
+    auto getKwicResult(std::vector<Line> lines) -> std::set<Line> {
+        std::set<Line> kwicResult{};
+        std::ranges::for_each(lines, [&kwicResult](auto line) {
+            std::ranges::for_each(line, [&kwicResult, &line](auto _) {
+                kwicResult.insert(line);
+                std::rotate(line.rbegin(), line.rbegin() + 1, line.rend());
+            });
         });
         return kwicResult;
     }
 
-    auto printOnSeparateLines(std::ostream& out, std::set<std::vector<text::Word>> kwicResult) -> void {
+    auto printOnSeparateLines(std::ostream& out, std::set<Line> kwicResult) -> void {
         std::ranges::for_each(kwicResult, [&out](auto line){
             std::ranges::for_each(line, [&out](auto word){
                 out << word << " ";
@@ -43,21 +47,12 @@ namespace text {
 
     void kwic(std::istream& in, std::ostream& out) {
         std::string line{};
-        std::vector<std::vector<text::Word>> linesOfWords{};
+        std::vector<Line> lines{};
         while (std::getline(in, line)) {
             std::istringstream is{line};
-            linesOfWords.push_back(getWordsOfLine(is));
+            lines.push_back(getWordsOfLine(is));
         }
-        auto kwicResult = getKwicResult(linesOfWords);
-        printOnSeparateLines(out, kwicResult);
-    }
-
-    void kwicTest(std::istream& in, std::ostream& out) {
-        std::string line{"A B C"};
-        std::vector<std::vector<text::Word>> linesOfWords{};
-        std::istringstream is{line};
-        linesOfWords.push_back(getWordsOfLine(is));
-        auto kwicResult = getKwicResult(linesOfWords);
+        auto kwicResult = getKwicResult(lines);
         printOnSeparateLines(out, kwicResult);
     }
 
