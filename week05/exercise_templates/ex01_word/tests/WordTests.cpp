@@ -6,7 +6,7 @@
 #include <cute/ide_listener.h>
 #include <cute/summary_listener.h>
 
-#include <sstream>
+#include <cstdlib>
 
 //TODO: Add more tests
 

@@ -27,11 +27,11 @@ A much more accessible reference to the standard document exists in [cppreferenc
 | 44   | [Slides](week07) | [E07](week07/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week07.pdf)) | Standard Containers                       |                |
 | 45   | [Slides](week08) | [E08](week08/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week08.pdf)) | Algorithms                                | **Testat 2**   |
 | 46   | [Slides](week09) | [E09](week09/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week09.pdf)) | Function Templates                        |                |
-| 47   | No Lecture       |                                                                                | Digital Exam                              |                |
-| 48   | [Slides](week10) | [E10](week10/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week10.pdf)) | Class Templates                           |                |
-| 49   | [Slides](week11) | [E11](week11/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week11.pdf)) | Heap Memory                               | **Testat 3**   |
-| 50   | [Slides](week12) | [E12](week12/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week12.pdf)) | Dynamic Polymorphism, Variant             |                |
-| 51   | [Slides](week13) | [E13](week13/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week13.pdf)) | Initialization & Aggregates               |                |
+| 47   | [Slides](week10) | [E10](week10/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week10.pdf)) | Class Templates                           |                |
+| 48   | [Slides](week11) | [E11](week11/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week11.pdf)) | Heap Memory                               | **Testat 3**   |
+| 49   | [Slides](week12) | [E12](week12/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week12.pdf)) | Dynamic Polymorphism, Variant             |                |
+| 50   | [Slides](week13) | [E13](week13/README.md) ([PDF](http://cxx.pages.gitlab.ost.ch/cpl/week13.pdf)) | Initialization & Aggregates               |                |
+| 51   | TBD              |                                                                                |                                           |                |
 
 ### Useful Links
 

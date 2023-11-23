@@ -5,27 +5,29 @@
 #include <cute/cute_runner.h>
 #include <cute/ide_listener.h>
 #include <cute/summary_listener.h>
+
+#include <cstdlib>
 #include <sstream>
 
 
 TEST(testOutputOfSwitch) {
-	// Switch s{};
-	// std::ostringstream out{};
-	// out << s << '\n';
-	// s.pressButton();
-	// out << s << '\n';
-	// s.pressButton();
-	// out << s << '\n';
-	// s.pressButton();
-	// out << s << '\n';
-	// s.pressButton();
-	// out << s << '\n';
-	// ASSERT_EQUAL(
-	// 		"off\n"
-	// 		"on\n"
-	// 		"blinking\n"
-	// 		"off\n"
-	// 		"on\n", out.str());
+	Switch s{};
+	std::ostringstream out{};
+	out << s << '\n';
+	s.pressButton();
+	out << s << '\n';
+	s.pressButton();
+	out << s << '\n';
+	s.pressButton();
+	out << s << '\n';
+	s.pressButton();
+	out << s << '\n';
+	ASSERT_EQUAL(
+			"off\n"
+			"on\n"
+			"blinking\n"
+			"off\n"
+			"on\n", out.str());
 }
 
 auto testToggleSuite() -> cute::suite {

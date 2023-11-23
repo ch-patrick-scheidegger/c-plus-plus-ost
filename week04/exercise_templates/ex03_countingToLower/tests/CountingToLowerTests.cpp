@@ -6,8 +6,8 @@
 #include <cute/ide_listener.h>
 #include <cute/summary_listener.h>
 
-#include <sstream>
-
+#include <cstdlib>
+#include <string>
 
 TEST(testLowerNone) {
 	std::string str("no uppercase characters here");

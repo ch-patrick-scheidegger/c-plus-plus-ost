@@ -105,8 +105,12 @@ auto main() -> int {
 
 *  Considering what you have learned in C++ and Software Engineering, what bad practices does the above code contain? Try to find as many as possible and give yourself a short reason why that code is bad and how it could be improved.
 
+## Algorithm Trivia
+
+By now you should have solved almost all of the algorithm tivia examples... No? Time to continue then. There is not much time left.
 
 <hr/>
+
 
 ## Support landscape architects' garden planning
 

@@ -1,6 +1,6 @@
-#[===[ Apo ]===]
+#[===[ App ]===]
 
-add_library("${CPL_TARGET_WEEK_PREFIX}sol07_wlistFunctors"
+add_executable("${CPL_TARGET_WEEK_PREFIX}sol07_wlistFunctors"
     "app/wlist.cpp"
 )
 

@@ -1,3 +1,8 @@
+## Algorithm Trivia
+
+Kind reminder. There might be some algorithm trivia riddles to solve.
+
+
 ## 0 Indexable Set Class Template (3.TESTAT)
 
 **Hand-in time is Tuesday 20. Dec 2022, 11:59 (PM) (CET)**

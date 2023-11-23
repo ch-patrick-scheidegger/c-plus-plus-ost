@@ -1,17 +1,17 @@
 # Testat-Exercise 2: KWIC with word class
 
-**Hand-in time is Tuesday 29. Nov 2022, 18:40 (CET)**
+**Hand-in time is Tuesday 21. Nov 2023, 16:50 (CET)**
 
-Hand in you solution via [ALF](https://alf.sifs0005.infs.ch/project/18/submission/new/) **Cpl Testat 2 KWIC**. In case ALF does not work or is too slow, you can send an email.
+Hand in you solution via [ALF](https://alf.sifs0005.infs.ch/project/24/submission/new/) **CPl23 Testat 2 KWIC**. In case ALF does not work or is too slow, you can send an email.
 
-* tests.cpp
-* main.cpp
-* word.hpp
-* word.cpp
-* kwic.hpp
-* kwic.cpp
+* Tests.cpp
+* Main.cpp
+* Word.hpp
+* Word.cpp
+* Kwic.hpp
+* Kwic.cpp
 
-`tests.cpp` combines all test functions you created for your `Word` class as well as for your `kwic` solution.
+`tests.cpp` combines all test functions you created (if any) for your `Word` class as well as for your `kwic` solution.
 `main.cpp` contains the `main()` function for your `kwic` program.
 
 ## KWIC - Keyword in Context (Testat)
@@ -91,11 +91,11 @@ void kwic(std::istream & in, std::ostream & out);
 }
 ```
 
-Use [ALF](https://alf.sifs0005.infs.ch/project/18/submission/new/) to automatically check your `kwic` function and `Word` class (functionality, not style).
+Use [ALF](https://alf.sifs0005.infs.ch/project/24/submission/new/) to automatically check your `kwic` function and `Word` class (functionality, not style).
 
-* You need an account on gitlab.dev.ifs.hsr.ch for this
+* You need an account on gitlab.ost.ch for this
 * Our tests expect the `Word` class and the `kwic` function to be in the namespace `text`
- 
+* The files `Tests.cpp` and `Main.cpp` from the hand-in will not be compiled and are just submitted to get feedback.
 
 # Algorithms
 
@@ -108,6 +108,8 @@ For using the existing STL algorithms effectively you have to familiarize yourse
 Since there are quite a few algorithms you don't have to solve all algorithms at one. We suggest to solve 2-3 test suites each week. Each suite contains a hint header that lists the algorithms that have to be used in the corresponding suite file. Each algorithm is required once. Read the description of the algorithms first and then try to insert the correct calls. Some algorthims require a predicate. Most of the time we have used an `is_prime` function that just checks whether the parameter is prime.
 
 Have Fun!
+
+If you'd rather solve this in Godbolt, Peter Sommerlad made this exercise available there as well: https://godbolt.org/z/vMjhdbWP8
 
 
 ## Checking for Palindromes

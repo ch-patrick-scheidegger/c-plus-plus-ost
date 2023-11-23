@@ -15,8 +15,13 @@
 * Write a variadic function template `readln(std::istream&, ...)` that takes a variable number of reference arguments and uses `operator>>` to read in successive values from a line read from the `std::istream`.
 * Create useful unit tests for your function(s). 
 * **Hint:** you might need to create a second function that takes an `std::istream` and reads all values from it, whereas `readln` just reads a line and passes that line as an `std::istringstream` to the second function.
+* **Variant:** You can provide an overload that is applied if the last (or only remaining) argument to read in is an `std::string` you put the remaining content of the line into it.
 
 # Algorithms (Continued)
+
+## Trivia
+
+If you haven't completed it yet, this might be a good time to solve a few of the algorithm trivia exercises.
 
 ## Word Statistics
 

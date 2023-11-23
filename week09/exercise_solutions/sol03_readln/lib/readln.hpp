@@ -7,8 +7,8 @@
 
 namespace readln_impl {
 
-template <typename... I>
-auto doread(std::istream &in, I &...vars) -> void;
+auto doread(std::istream &in) -> void {
+}
 
 auto doread(std::istream &in, std::string &rest) -> void {
   getline(in, rest); // consume the rest of the line into rest

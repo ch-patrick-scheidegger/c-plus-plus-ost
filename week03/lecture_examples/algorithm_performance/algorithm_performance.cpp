@@ -48,7 +48,7 @@ auto execute_measurement(std::vector<int> const &values, std::ostream &out) -> v
       << algorithm_duration.count() << "ms" << std::endl;
 
   auto const range_algorithm_start = std::chrono::high_resolution_clock::now();
-  auto const range_algorithm_result = find_with_algorithm(values, 2);
+  auto const range_algorithm_result = find_with_range_algorithm(values, 2);
   auto const range_algorithm_end = std::chrono::high_resolution_clock::now();
   auto const range_algorithm_duration =
       std::chrono::duration_cast<std::chrono::milliseconds>(range_algorithm_end -
