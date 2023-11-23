@@ -5,11 +5,24 @@
 #include <cute/summary_listener.h>
 #include <cute/cute_runner.h>
 
+TEST(should_rotate_int_pointers) {
+    // Given
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    // when
+    rotate3arguments(a, b, c);
+    // then
+    ASSERT_EQUAL(2, a);
+    ASSERT_EQUAL(3, b);
+    ASSERT_EQUAL(1, c);
+}
+
 auto main(int argc, char const *argv[]) -> int {
   auto suite = cute::suite{
     "Function Template 'rotate3arguments' Tests",
     {
-      // ADD YOUR TESTS
+            should_rotate_int_pointers,
     }
   };
 

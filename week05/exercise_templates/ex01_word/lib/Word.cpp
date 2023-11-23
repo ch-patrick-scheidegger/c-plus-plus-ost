@@ -22,28 +22,18 @@ namespace text {
     }
 
     auto Word::readFrom(std::istream &is) -> std::istream& {
-        bool wordStarted = false;
+        std::string newWordValue{};
         while (is.good()) {
             char character = is.peek();
-
             if (isalpha(character)) {
-                is.ignore();
-
-                if (wordStarted) {
-                    word += character;
-                } else {
-                    word = character;
-                    wordStarted = true;
-                }
-            } else {
-                if (!wordStarted) {
-                    is.ignore();
-                } else {
-                    break;
-                }
+                newWordValue += character;
+            } else if (!newWordValue.empty()) { // is non alpha and word has already started
+                word = newWordValue;
+                break;
             }
+            is.ignore();
         }
-        if (!wordStarted) {
+        if (newWordValue.empty()) {
             is.setstate(std::ios_base::failbit);
         }
 
