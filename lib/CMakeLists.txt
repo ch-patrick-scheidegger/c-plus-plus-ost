@@ -11,7 +11,11 @@ target_sources("CUTE" INTERFACE ${CUTE_HEADERS})
 
 add_library("cpl::cute" ALIAS "CUTE")
 
-add_library("boost" INTERFACE)
+add_library("boost" INTERFACE
+        ../week99/day1/lib/MapNumberReader.hpp
+        ../week99/day1/lib/MapNumberReader.hpp
+        ../week99/day1/app/main.h
+        ../week99/day1/lib/MapNumberReader.hpp)
 
 target_include_directories("boost" SYSTEM BEFORE INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/boost")
 
